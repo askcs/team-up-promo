@@ -13,14 +13,14 @@ app.configure(function ()
 	next();
   });*/
 
-  app.use(express.static(__dirname + '/war'));
+  app.use(express.static(__dirname + '/'));
 
   app.use(express.logger('dev'));
 });
 
 app.get('/', function (req, res)
 {
-  res.sendfile(__dirname + '/war/index.html');
+  res.sendfile(__dirname + 'index.html');
 });
 
 
@@ -45,5 +45,5 @@ if (cluster.isMaster)
 }
 else
 {
-	app.listen(8888);
+	app.listen(9000);
 }
