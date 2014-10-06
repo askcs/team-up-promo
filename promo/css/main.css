@@ -252,10 +252,7 @@ td {
 /*@import "modules/navbar";*/
 /*GENERAL*/
 html, body {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
+  height: 100%; }
 
 body {
   font-family: "Helvetica", Arial, sans-serif;
@@ -316,8 +313,8 @@ p {
       margin: 0 auto 40px; }
     #intro .hero-unit #welcomeArrow {
       border-bottom: 15px solid #FFFAF0;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
+      border-left: 32px solid transparent;
+      border-right: 32px solid transparent;
       height: 0;
       left: 50%;
       margin: -15px 0 0 -80px;
@@ -360,7 +357,7 @@ p {
   margin: 100px 0 0; }
   #deviceArea2 #deviceArrow {
     border-bottom: 32px solid transparent;
-    border-left: 15px solid floralwhite;
+    border-left: 15px solid #fffaf0;
     border-top: 32px solid transparent;
     margin-top: 40px;
     height: 0;
@@ -400,8 +397,8 @@ p {
     z-index: -1; }
     #photoArea1 .cloudContainer #topArrow {
       border-bottom: 15px solid #FFFAF0;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
+      border-left: 32px solid transparent;
+      border-right: 32px solid transparent;
       height: 0;
       margin: -15px 0 0 40px;
       position: absolute;
@@ -452,7 +449,7 @@ p {
       height: 60px; }
       #deviceArea3 .span4 .bub2 p {
         margin-top: 8px;
-        color: floralwhite !important; }
+        color: #fffaf0 !important; }
     #deviceArea3 .span4 .bub3 {
       margin-top: 80%;
       margin-left: -10%;
@@ -461,7 +458,7 @@ p {
       height: 100px; }
       #deviceArea3 .span4 .bub3 p {
         margin-top: 6px;
-        color: floralwhite !important; }
+        color: #fffaf0 !important; }
     #deviceArea3 .span4 .bub4 {
       margin-top: 24%;
       margin-left: 70%;
@@ -470,9 +467,9 @@ p {
       height: 100px; }
       #deviceArea3 .span4 .bub4 p {
         margin-top: 6px;
-        color: floralwhite !important; }
+        color: #fffaf0 !important; }
     #deviceArea3 .span4 .bub5 {
-      margin-top: 120%;
+      margin-top: 180%;
       margin-left: 50%;
       background-color: #f5a962;
       width: 130px !important;
@@ -480,28 +477,28 @@ p {
       #deviceArea3 .span4 .bub5 p {
         margin-top: 6px; }
     #deviceArea3 .span4 .bub6 {
-      margin-top: 80%;
-      margin-left: 20%;
+      margin-top: 60%;
+      margin-left: 70%;
       background-color: #f5a962;
       width: 90px !important;
       height: 90px; }
       #deviceArea3 .span4 .bub6 p {
         margin-top: 14px; }
     #deviceArea3 .span4 .bub7 {
-      margin-top: 60%;
+      margin-top: 130%;
       margin-left: 80%;
       background-color: #833c11;
       width: 80px !important;
       height: 80px; }
       #deviceArea3 .span4 .bub7 p {
         margin-top: 18px;
-        color: floralwhite !important; }
+        color: #fffaf0 !important; }
 
 /*CONTACT*/
 #contact {
   margin: 100px 0; }
   #contact h1 {
-    color: floralwhite;
+    color: #fffaf0;
     text-transform: uppercase;
     text-align: center;
     font-size: 5em;
@@ -552,11 +549,11 @@ footer {
   padding: 0 20px; }
   footer p {
     text-align: center;
-    color: floralwhite; }
+    color: #fffaf0; }
     footer p span {
       margin-right: 20px; }
     footer p a, footer p a:hover, footer p a:focus, footer p a:active {
-      color: floralwhite; }
+      color: #fffaf0; }
 
 /*GENERAL SPECIFIC*/
 .btn-primary {
@@ -572,10 +569,10 @@ footer {
   .btn-primary:hover, .btn-primary:focus {
     background-color: #f5a962;
     background-image: none;
-    color: floralwhite; }
+    color: #fffaf0; }
 
 .talkCloud {
-  background-color: floralwhite;
+  background-color: #fffaf0;
   padding: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -682,3 +679,5 @@ footer {
 
   #photoArea1 {
     background-size: 180%; } }
+
+/*# sourceMappingURL=main.css.map */
