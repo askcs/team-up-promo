@@ -12,7 +12,7 @@ war/WEB-INF/classes/
 node_modules/
 npm-debug.log
 
-sass/.sass-cache/
+.sass-cache/
 
 todos/
 
