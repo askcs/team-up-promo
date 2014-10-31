@@ -88,9 +88,15 @@ p {
 /*  background: url("../img/photo01.jpg") no-repeat top center;
   background-size: cover;*/
 
+
   .hero-unit {
     background-color: transparent;
     margin-top:60px;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 200;
+    @include border-radius(6px);
     #heroLogo{
       background-image: url("../img/logo.png");
       width: 160px;
