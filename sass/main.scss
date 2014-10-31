@@ -2,15 +2,15 @@
 // @import "modules/normalize";
 
 // See modules/_base.scss
-@import "modules/base";
-@import "modules/mixins";
-@import "modules/normalize";
-@import "modules/variables";
+@import "../promo/css/modules/_base";
+@import "../promo/css/modules/_mixins";
+@import "../promo/css/modules/_normalize";
+@import "../promo/css/modules/_variables";
 /*@import "modules/navbar";*/
 
-@import "partials/header";
-@import "partials/footer";
-@import "partials/ie";
+@import "../promo/css/partials/_header";
+@import "../promo/css/partials/_footer";
+@import "../promo/css/partials/_ie";
 
 
 
@@ -88,9 +88,15 @@ p {
 /*  background: url("../img/photo01.jpg") no-repeat top center;
   background-size: cover;*/
 
+
   .hero-unit {
     background-color: transparent;
     margin-top:60px;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 200;
+    @include border-radius(6px);
     #heroLogo{
       background-image: url("../img/logo.png");
       width: 160px;
@@ -227,7 +233,7 @@ p {
   background-color: $beige;
   width: 100%;
   padding-bottom: 100px;
-
+    overflow: hidden ;
   .span4 {
     position: relative;
     img {

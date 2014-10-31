@@ -50,13 +50,13 @@ module.exports = function (grunt)
       },
       dist: {
         options: {
-          cssDir: 'war/dist',
+          cssDir: 'promo/css',
           outputStyle: 'compressed'
         }
       },
       dev: {
         options: {
-          cssDir: 'war/css',
+          cssDir: 'promo/css',
           debugInfo: false,
           outputStyle: 'expanded'
         }

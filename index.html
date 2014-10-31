@@ -13,23 +13,18 @@
         <meta property="og:title" content="TeamUp" />
         <meta property="og:type" content="image" />
         <meta property="og:url" content="https://teamup.ask-cs.nl/" />
-        <meta property="og:image" content="https://teamup.ask-cs.nl/war/img/logoTeamUp02.png" />
+        <meta property="og:image" content="promo/img/logoTeamUp02.png" />
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-
-
-        <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/promo/css/bootstrap.min.css">-->
-
-        <link rel="stylesheet" href="promo/css/bootstrap.min.css">
-        <link rel="stylesheet" href="promo/css/responsive.min.css">
+        <link rel="stylesheet" href="promo/css/bootstrap.css">
+        <link rel="stylesheet" href="promo/css/bootstrap-responsive.min.css">
         <link rel="stylesheet" href="promo/css/app.min.css">
         <link rel="stylesheet" href="promo/css/main.css">
         <link rel="stylesheet" href="promo/css/ie.css">
-        <!--<script src="promo/js/vendor/modernizr-2.6.2.min.js"></script>-->
 
         <!-- Fonts -->
-        <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
         <!-- favicons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="promo/img/ico/apple-touch-icon-144-precomposed.png">
@@ -39,10 +34,8 @@
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="icon" href="/favicon.ico">
 		
-
 		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
 		<!--<script src="war/libs/jquery/1.9.1/jquery-1.9.1.min.js"></script> -->
 
         </head>
@@ -129,10 +122,10 @@
                 <div class="row-fluid">
                     <div class="span8">
                         <div id="deviceArrow"></div>
-                        <div class="deviceInfo talkCloud"><h2>Visie op thuiszorgsector</h2>
-                        <p>ASK staat voor bottom-up. Voor de thuiszorgsector betekent dit decentraal werken met zelfstandige teams. Deze zijn bovendien kleinschalig, zodat een cliënt niet te veel gezichten ziet. De teamleden dienen meer verantwoordelijkheid te krijgen, waaronder meer regelruimte. Dit zorgt voor een minimale overhead, eenvoudigere processen, betere routeplanning en een betere samenwerking met collega's. U krijgt hier een financieel gezonde thuiszorgorganisatie voor terug met een nog betere kwaliteit van zorg. Kortom, een leukere organisatie om in te werken.</p>
-                      </div>
-
+                        <div class="deviceInfo talkCloud">
+                            <h2>Visie op thuiszorgsector</h2>
+                            <p>ASK staat voor bottom-up. Voor de thuiszorgsector betekent dit decentraal werken met zelfstandige teams. Deze zijn bovendien kleinschalig, zodat een cliënt niet te veel gezichten ziet. De teamleden dienen meer verantwoordelijkheid te krijgen, waaronder meer regelruimte. Dit zorgt voor een minimale overhead, eenvoudigere processen, betere routeplanning en een betere samenwerking met collega's. U krijgt hier een financieel gezonde thuiszorgorganisatie voor terug met een nog betere kwaliteit van zorg. Kortom, een leukere organisatie om in te werken.</p>
+                        </div>
                     </div><!--/span-->
                     <div class="span4 tuGirl">
                     </div><!--/span-->
@@ -238,7 +231,7 @@
 							var rightColor = "white";
 							var rightFontColor = "#833C11";
 
-							var sendMailURL = "http://ask70.ask-cs.nl/~ask/demo_110907/rpc/sendMail.php";
+							var sendMailURL = "https://standby.ask-cs.nl/tymon/sendMail.php";
 							sendMailURL += "?contactName="+contactName +
 										  "&contactEmail="+contactEmail+										  
 										  "&contactSubject="+contactSubject+
@@ -279,7 +272,7 @@
 							}
 										  
 							$.ajax({
-							  url: sendMailURL,							  
+							  url: sendMailURL,
 							}).done(function( data ) {
 								console.log(data);
 								alert("Bericht is verzonden!");
@@ -320,21 +313,19 @@
 
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="promo/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="promo/js/plugins.js"></script>
         <script src="promo/js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics -->
         <script>
-            /*
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-            */
+            ga('create','UA-49063927-1');ga('send','pageview');
         </script>
     </body>
 </html>
