@@ -117,6 +117,15 @@
 
 
 
+        <div id="videoArea1" class="row-fluid">
+            <div class="videoContainer">
+                <iframe src="//player.vimeo.com/video/112692827" width="960" height="540" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+
+
         <div id="deviceArea2" class="row-fluid">
             <div class="container-narrow">
                 <div class="row-fluid">
@@ -272,7 +281,7 @@
 							}
 										  
 							$.ajax({
-							  url: sendMailURL,							  
+							  url: sendMailURL
 							}).done(function( data ) {
 								console.log(data);
 								alert("Bericht is verzonden!");

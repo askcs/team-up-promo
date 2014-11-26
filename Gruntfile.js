@@ -14,7 +14,7 @@ module.exports = function (grunt)
      */
     sass: {
       options: {
-        sourcemap: false,
+        sourcemap: 'none',
         trace: true,
         cacheLocation:  'sass/.sass-cache'
       },
