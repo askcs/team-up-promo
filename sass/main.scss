@@ -30,7 +30,7 @@ h2{
   color: $turq;
   font-style: italic;
 }
-p {
+p, li {
   color: $brown;
   line-height: 22px;
   font-size: 16px;
@@ -159,7 +159,7 @@ p {
   position: fixed;
   text-align: center;
   width: 100%;
-  bottom: 0;;
+  bottom: 0;
 }
 
 
@@ -245,9 +245,7 @@ p {
     width: 320px !important;
     height: 320px;
     background: $orange;
-    -moz-border-radius: 200px;
-    -webkit-border-radius: 200px;
-    border-radius: 200px;
+    @include border-radius(50%);
     display: table-cell;
     vertical-align: middle;
     float: right;
@@ -302,9 +300,7 @@ p {
       -moz-hyphens: auto;
       hyphens: auto;
       padding: 10px;
-      -moz-border-radius: 200px;
-      -webkit-border-radius: 200px;
-      border-radius: 200px;
+      @include border-radius(50%);
       p {
         text-align: center;
       }
@@ -471,6 +467,352 @@ footer {
 
 
 
+/*-----------------------------------------------------------------------------TeamTelefoon-----------------------------------------------------------------------------*/
+
+
+/*TT INTRO*/
+
+#TTintro{
+  .container-narrow {
+    position: relative;
+    margin-top:60px;
+    padding: 60px 20px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 200;
+    #heroLogo{
+      background-image: url("../img/logo.png");
+      width: 160px;
+      height: 82px;
+      margin: 0 auto 40px;
+    }
+    #welcomeArrow {
+      border-bottom: 15px solid $offwhite;
+      border-left: 32px solid rgba(0, 0, 0, 0);
+      border-right: 32px solid rgba(0, 0, 0, 0);
+      height: 0;
+      left: 50%;
+      margin: -15px 0 0 -80px;
+      position: absolute;
+      width: 0;
+    }
+    #welcome {
+      background-color: $offwhite;
+      margin: 0 auto 280px;
+      max-width: 300px;
+      padding: 22px 22px 6px;
+      @include border-radius(20px);
+      p {
+        font-size: 22px;
+        font-style: italic;
+        line-height: 26px;
+        text-align: center;
+        span{
+          color: $orange;
+          font-size: 16px;
+          font-weight: bold;
+          font-style: normal;
+          line-height: 20px;
+        }
+      }
+    }
+    #introTeamMember{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    #introClient{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+
+
+#TTdeviceArea1 {
+  position: relative;
+  background-color: $beige;
+  width: 100%;
+  padding-bottom: 80px;
+  img {
+    margin: -100px 0 0;
+  }
+  h2 {
+    /*    text-align: center;*/
+    line-height: 36px;
+  }
+}
+
+
+
+/*TT PHOTO AREA 1*/
+
+
+.photoBub {
+  width: 320px !important;
+  height: 320px;
+  background: $orange;
+  @include border-radius(50%);
+  display: table-cell;
+  vertical-align: middle;
+  float: right;
+  margin-top: 300px;
+  p {
+    text-align: center;
+    margin-top: 28px;
+  }
+}
+
+
+#TTphotoArea1 {
+  background: url("../img/teamtelefoon/onBike.jpg") no-repeat top center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  .bgImage {
+    width: 100%;
+    height: auto;
+  }
+  .photoBub {
+    background: $brown;
+
+    p {
+      color: $offwhite;
+    }
+  }
+  .cloudContainer {
+    margin-top: 40px;
+    #topArrow {
+      border-bottom: 15px solid #FFFAF0;
+      border-left: 32px solid rgba(0, 0, 0, 0);
+      border-right: 32px solid rgba(0, 0, 0, 0);
+      height: 0;
+      margin: -15px 0 0 40px;
+      position: absolute;
+      width: 0;
+    }
+  }
+}
+
+
+#TTavailabilityCheck {
+  background-color: $beige;
+  .container-narrow{
+    position: relative;
+    padding-top: 100px;
+    h2 {
+/*      color: $offwhite;*/
+    }
+    .clientPhone{
+      background-size: auto 413px;
+      height: 413px;
+      margin-top: -100px;
+    }
+    img {
+      float: bottom;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      max-height: 100%;
+    }
+  }
+  .photoBub {
+    width: 290px !important;
+    height: 290px;
+    margin-top: 0px;
+    p {
+      text-align: center;
+      margin-top: 28px;
+    }
+  }
+}
+
+
+#TTavailabilityCheck2 {
+  padding-top: 100px;
+  .noBg{
+    h2, p, li {
+      color: $offwhite;
+    }
+  }
+  .talkCloud {
+    background-color: $brown;
+    h2 {
+      color: $orange;
+    }
+    p, li {
+      color: $offwhite;
+    }
+  }
+}
+
+
+
+
+#TTphotoArea2 {
+  background: url("../img/teamtelefoon/inTram.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  .bgImage {
+    width: 100%;
+    height: auto;
+  }
+  h2 {
+    color: $offwhite;
+    margin-bottom: 600px;
+    margin-top: 100px;
+    text-align: right;
+  }
+  .photoBub{
+    float: left;
+    width: 250px !important;
+    height: 250px;
+    margin:  100px 0 300px;
+  }
+}
+
+
+/*TT DEVICE AREA 2*/
+
+#TTdeviceArea2 {
+  width: 100%;
+  padding-top: 100px;
+  #deviceArrow {
+    border-bottom: 32px solid transparent;
+    border-left: 15px solid $offwhite;
+    border-top: 32px solid transparent;
+    margin-top:40px;
+    height: 0;
+    float: right;
+    width: 0;
+  }
+  .tuGirl{
+    background: url("../img/teamupgirl01.png") no-repeat top center;
+    background-size: auto 413px;
+    height: 413px;
+    margin-top: 70px;
+  }
+}
+
+
+
+/*TT BUBBLES*/
+
+#TTbubbles {
+  background-color: $beige;
+  width: 100%;
+  padding-bottom: 100px;
+  overflow: hidden ;
+  .span4 {
+    position: relative;
+    img {
+      margin: 100px 0 0px;
+      height: auto;
+    }
+    .mobileBubble{
+      left:0px;
+      top:0px;
+      z-index:1;
+      text-align: center;
+      vertical-align: middle;
+      float: left;
+      margin-bottom: 5%;
+      word-wrap: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+      padding: 10px;
+      @include border-radius(50%);
+      p {
+        text-align: center;
+      }
+    }
+    .bub1{
+      margin-top: 70%;
+      margin-left: 0%;
+      background-color: $orange;
+      width: 90px !important;
+      height: 90px;
+      p {
+        margin-top: 12px;
+      }
+    }
+    .bub2{
+      margin-top: 80%;
+      margin-left: 30%;
+      background-color: $turq;
+      width: 110px !important;
+      height: 110px;
+      p {
+        margin-top: 2px;
+        color: $offwhite !important;
+      }
+    }
+    .bub3{
+      margin-top: 80%;
+      margin-left: -10%;
+      background-color: $brown;
+      width: 110px !important;
+      height: 110px;
+      p {
+        margin-top: 10px;
+        color: $offwhite !important;
+      }
+    }
+    .bub4{
+      margin-top: 10%;
+      margin-left: 70%;
+      background-color: $turq;
+      width: 100px !important;
+      height: 100px;
+      p {
+        margin-top: 6px;
+        color: $offwhite !important;
+      }
+    }
+    .bub5{
+      margin-top: 50%;
+      margin-left: 50%;
+      background-color: $orange;
+      width: 110px !important;
+      height: 110px;
+      p {
+        margin-top: 10px;
+      }
+    }
+    .bub6{
+      margin-top: 60%;
+      margin-left: 50%;
+      background-color: $orange;
+      width: 120px !important;
+      height: 120px;
+      p {
+        margin-top: 28px;
+      }
+    }
+    .bub7{
+      margin-top: 70%;
+      margin-left: 55%;
+      background-color: $brown;
+      width: 90px !important;
+      height: 90px;
+      p {
+        margin-top: 14px;
+        color: $offwhite !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
 
 /*GENERAL SPECIFIC*/
 
@@ -499,53 +841,6 @@ footer {
   margin-bottom: 100px;
 }
 
-
-/*.circle{
-  width: 200px !important;
-  height: 200px;
-  background: red;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border-radius: 100px;
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  display: block;
-  float: left;
-  margin-bottom: 5%;
-}*/
-
-/*.pos1{
-  margin-top: 80%;
-  margin-left: 5%;
-}
-.pos2{
-  margin-top: 10%;
-  margin-left: 5%;
-}
-.pos3{
-  margin-top: 60%;
-  margin-right: 5%;
-  float: right;
-}*/
-
-/*div {
-  .bgBrown{
-    background-color: $brown;
-    p {
-      color: $offwhite !important;
-    }
-  }
-  .bgTurq{
-    background-color: $turq;
-    p {
-      color: $offwhite !important;
-    }
-  }
-  .bgBeige{
-    background-color: $beige;
-  }
-}*/
 
 
 
