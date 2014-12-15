@@ -134,9 +134,33 @@ p {
       }
     }
   }
+  .temp {
+      padding-top: 50%;
+      margin-top: -60px;
+      #welcome {
+        padding-top: 30px;
+        padding-bottom: 12px;
+        p {
+          font-size: 48px;
+          font-weight: bold;
+          font-style: normal;
+          line-height: 40px;
+
+          span {
+            font-size: 36px;
+            font-style: italic;
+          }
+        }
+      }
+  }
 }
 
-
+.tempFooter {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  bottom: 0;;
+}
 
 
 /*DEVICE AREA 1*/
