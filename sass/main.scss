@@ -69,11 +69,74 @@ p, li {
 
 
 
+.photoArea{
+  padding: 100px 0;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  .cloudContainer {
+    z-index: -1;
+    .topArrow {
+      border-bottom: 15px solid #FFFAF0;
+      border-left: 32px solid rgba(0, 0, 0, 0);
+      border-right: 32px solid rgba(0, 0, 0, 0);
+      height: 0;
+      margin: -15px 0 0 40px;
+      position: absolute;
+      width: 0;
+    }
+    .bottomArrow {
+      border-top: 15px solid #FFFAF0;
+      border-left: 32px solid rgba(0, 0, 0, 0);
+      border-right: 32px solid rgba(0, 0, 0, 0);
+      height: 0;
+      margin: 0 0 0 40px;
+      position: absolute;
+      width: 0;
+    }
+  }
+}
+
+.photoBub {
+  width: 320px !important;
+  height: 320px;
+  background: $orange;
+  @include border-radius(50%);
+  display: table-cell;
+  vertical-align: middle;
+  float: right;
+  margin-top: 200px;
+  p {
+    text-align: center;
+    margin-top: 28px;
+  }
+}
+
 .talkCloud {
   background-color: $offwhite;
   padding:20px;
   @include border-radius(20px);
   margin-right: 15px;
+}
+
+.rightArrow {
+  border-bottom: 32px solid transparent;
+  border-left: 15px solid $offwhite;
+  border-top: 32px solid transparent;
+  margin-top:40px;
+  height: 0;
+  float: right;
+  width: 0;
+}
+
+.girlArea {
+  width: 100%;
+  padding-top: 100px;
+  .tuGirl{
+    background: url("../img/teamupgirl01.png") no-repeat top center;
+    background-size: auto 413px;
+    height: 413px;
+  }
 }
 
 .quoteArea {
@@ -88,43 +151,6 @@ p, li {
   }
 }
 
-.photoArea{
-  padding: 100px 0;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-  .bgImage {
-    width: 100%;
-    height: auto;
-  }
-  .photoBub {
-    width: 320px !important;
-    height: 320px;
-    background: $orange;
-    @include border-radius(50%);
-    display: table-cell;
-    vertical-align: middle;
-    float: right;
-    margin-top: 200px;
-    p {
-      text-align: center;
-      margin-top: 28px;
-    }
-  }
-  .cloudContainer {
-    z-index: -1;
-    #topArrow {
-      border-bottom: 15px solid #FFFAF0;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
-      height: 0;
-      margin: -15px 0 0 40px;
-      position: absolute;
-      width: 0;
-    }
-  }
-}
-
 .textArea{
   padding: 100px 0;
 }
@@ -132,34 +158,29 @@ p, li {
 
 
 
-
-
 /*NAVBAR*/
 
 .navbar-inverse {
-
   .navbar-inner {
     background-color: $brown;
     background-image: none;
     border: none;
-  }
-}
-
-.navbar .brand {
-  padding: 0;
-  margin-left: 0;
-  background-position: top;
-}
-
-.loginBtn {
-  float: right !important;
-  width: 140px;
-  a {
-    text-decoration: none;
-  }
-  button {
-    padding: auto 10px;
-    margin-top: 4px !important;
+    .brand {
+      padding: 0;
+      margin-left: 0;
+      background-position: top;
+    }
+    .loginBtn {
+      float: right !important;
+      width: 140px;
+      a {
+        text-decoration: none;
+      }
+      button {
+        padding: auto 10px;
+        margin-top: 4px !important;
+      }
+    }
   }
 }
 
@@ -213,32 +234,89 @@ p, li {
       }
     }
   }
-  .temp {
-      padding-top: 50%;
-      margin-top: -60px;
-      #welcome {
-        padding-top: 30px;
-        padding-bottom: 12px;
-        p {
-          font-size: 48px;
-          font-weight: bold;
-          font-style: normal;
-          line-height: 40px;
+}
 
-          span {
-            font-size: 36px;
-            font-style: italic;
-          }
-        }
+
+
+
+/*CONTACT*/
+
+#contact {
+  margin: 100px 0;
+  h1 {
+    color: $offwhite;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 100px;
+    line-height: 60px;
+  }
+  .contactInfo {
+    margin-bottom: 100px;
+    p {
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    .contactText {
+      text-align: left;
+      font-style: italic;
+      span {
+        font-weight: bold;
+        font-style: normal;
       }
+    }
+    .contactIcon {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    a {
+      color: #ffffff;
+    }
+    .skypeBtn {
+      img {
+        margin: 6px 20px 10px 0 !important;
+        height: 21px;
+        width: auto;
+        padding: 0 !important;
+        float:left;
+      }
+    }
+  }
+  .contactInput {
+    @include border-radius(20px);
+    margin-bottom: 20px;
+    height: 40px;
+    padding: 0 10px;
+  }
+  .contactTextarea {
+    @include border-radius(20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    height: 160px;
+  }
+  .sendButton{
+    clear: both;
+    margin-left: 0;
   }
 }
 
-.tempFooter {
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
+
+
+
+/*FOOTER*/
+
+footer {
+  padding: 0 20px;
+  p {
+    text-align: center;
+    color: $offwhite;
+    span {
+      margin-right: 20px;
+    }
+    a, a:hover, a:focus, a:active {
+      color: $offwhite;
+    }
+  }
 }
 
 
@@ -258,11 +336,9 @@ p, li {
     margin: -260px 0 0px;
   }
   h2 {
-/*    text-align: center;*/
     line-height: 36px;
   }
 }
-
 
 
 
@@ -288,30 +364,14 @@ p, li {
 
 
 
+/*GIRL AREA 1*/
 
-/*DEVICE AREA 2*/
-
-#deviceArea2 {
+#girlArea1 {
   background-color: $beige;
-  width: 100%;
-  padding-top: 100px;
-  #deviceArrow {
-    border-bottom: 32px solid transparent;
-    border-left: 15px solid $offwhite;
-    border-top: 32px solid transparent;
-    margin-top:40px;
-    height: 0;
-    float: right;
-    width: 0;
-  }
   .tuGirl{
-    background: url("../img/teamupgirl01.png") no-repeat top center;
-    background-size: auto 413px;
-    height: 413px;
     margin-top: 30px;
   }
 }
-
 
 
 
@@ -323,7 +383,6 @@ p, li {
     margin-top: 40px;
   }
 }
-
 
 
 
@@ -439,86 +498,6 @@ p, li {
 
 
 
-/*CONTACT*/
-
-#contact {
-  margin: 100px 0;
-  h1 {
-    color: $offwhite;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 5em;
-    margin-bottom: 100px;
-    line-height: 60px;
-  }
-  .contactInfo {
-    margin-bottom: 100px;
-    p {
-      color: #ffffff;
-      margin-bottom: 20px;
-    }
-    .contactText {
-      text-align: left;
-      font-style: italic;
-      span {
-        font-weight: bold;
-        font-style: normal;
-      }
-    }
-    .contactIcon {
-      font-size: 16px;
-      margin-right: 10px;
-    }
-    a {
-      color: #ffffff;
-    }
-    .skypeBtn {
-      img {
-        margin: 6px 20px 10px 0 !important;
-        height: 21px;
-        width: auto;
-        padding: 0 !important;
-        float:left;
-      }
-    }
-  }
-  .contactInput {
-    @include border-radius(20px);
-    margin-bottom: 20px;
-    height: 40px;
-    padding: 0 10px;
-  }
-  .contactTextarea {
-    @include border-radius(20px);
-    margin-bottom: 20px;
-    padding: 10px;
-    height: 160px;
-  }
-  .sendButton{
-    clear: both;
-    margin-left: 0;
-  }
-}
-
-
-
-
-/*FOOTER*/
-
-footer {
-  padding: 0 20px;
-  p {
-    text-align: center;
-    color: $offwhite;
-    span {
-      margin-right: 20px;
-    }
-    a, a:hover, a:focus, a:active {
-      color: $offwhite;
-    }
-  }
-}
-
 
 
 /*-----------------------------------------------------------------------------TeamTelefoon-----------------------------------------------------------------------------*/
@@ -566,29 +545,9 @@ footer {
 /*TT PHOTO AREA 1*/
 
 
-.photoBub {
-  width: 320px !important;
-  height: 320px;
-  background: $orange;
-  @include border-radius(50%);
-  display: table-cell;
-  vertical-align: middle;
-  float: right;
-  margin-top: 200px;
-  p {
-    text-align: center;
-    margin-top: 28px;
-  }
-}
-
-
 #TTphotoArea1 {
   background: url("../img/teamtelefoon/onBike.jpg") no-repeat top center;
   background-size: cover;
-  .bgImage {
-    width: 100%;
-    height: auto;
-  }
   .photoBub {
     background: $brown;
     p {
@@ -603,9 +562,6 @@ footer {
   .container-narrow{
     position: relative;
     padding-top: 100px;
-    h2 {
-/*      color: $offwhite;*/
-    }
     .clientPhone{
       background-size: auto 413px;
       height: 413px;
@@ -650,15 +606,12 @@ footer {
 }
 
 
-
-
 #TTphotoArea2 {
   background: url("../img/teamtelefoon/inTram.jpg") no-repeat center center;
   background-size: cover;
   h2 {
     color: $offwhite;
-    margin-bottom: 600px;
-    margin-top: 100px;
+    margin: 240px 0 20px;
     text-align: right;
     display: inline-block;
   }
@@ -666,29 +619,15 @@ footer {
     float: left;
     width: 250px !important;
     height: 250px;
-    margin:  100px 0 300px;
+    margin:  0 0 400px;
   }
 }
 
 
-/*TT DEVICE AREA 2*/
+/*TT GIRL AREA 1*/
 
-#TTdeviceArea2 {
-  width: 100%;
-  padding-top: 100px;
-  #deviceArrow {
-    border-bottom: 32px solid transparent;
-    border-left: 15px solid $offwhite;
-    border-top: 32px solid transparent;
-    margin-top:40px;
-    height: 0;
-    float: right;
-    width: 0;
-  }
+#TTgirlArea1 {
   .tuGirl{
-    background: url("../img/teamupgirl01.png") no-repeat top center;
-    background-size: auto 413px;
-    height: 413px;
     margin-top: 70px;
   }
 }
@@ -827,33 +766,13 @@ footer {
   background: url("../img/decentrale/photo01.jpg") no-repeat center left;
   background-size: cover;
   .cloudContainer {
-    z-index: -1;
     margin-bottom: 400px;
-    .talkCloud {
-      margin-bottom: 0;
-    }
-    #bottomArrow {
-      border-top: 15px solid #FFFAF0;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
-      height: 0;
-      margin: 0 0 0 40px;
-      position: absolute;
-      width: 0;
-    }
   }
 }
 
 #DCphotoArea2 {
   background: url("../img/decentrale/photo02.jpg") no-repeat center left;
   background-size: cover;
-  width: 100%;
-  height: auto;
-  padding: 100px 0;
-  .bgImage {
-    width: 100%;
-    height: auto;
-  }
   h2 {
     color: $brown;
   }
@@ -873,61 +792,16 @@ footer {
       color: $beige !important;
     }
   }
-  .cloudContainer {
-    margin-top: 40px;
-    z-index: -1;
-    margin-bottom: 400px;
-    .talkCloud {
-      margin-bottom: 0;
-    }
-    #bottomArrow {
-      border-top: 15px solid #FFFAF0;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
-      height: 0;
-      margin: 0 0 0 40px;
-      position: absolute;
-      width: 0;
-    }
-  }
 }
 
 #DCphotoArea3 {
   background: url("../img/decentrale/photo03.jpg") no-repeat center left;
   background-size: cover;
-  width: 100%;
-  height: auto;
-  .bgImage {
-    width: 100%;
-    height: auto;
-  }
   .cloudContainer {
-    margin-top: 40px;
-    z-index: -1;
     margin-bottom: 400px;
-    .talkCloud {
-      margin-bottom: 0;
-    }
-    #bottomArrow {
-      border-top: 15px solid #FFFAF0;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
-      height: 0;
-      margin: 0 0 0 40px;
-      position: absolute;
-      width: 0;
-    }
   }
 }
 
-
-.photoBub {
-  span {
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-size: 22px;
-  }
-}
 
 #DCtextArea1 {
   background-color: $beige;
@@ -966,22 +840,16 @@ footer {
   }
 }
 
-#DCdeviceArea2 {
-  width: 100%;
-  padding-top: 100px;
-  #deviceArrow {
-    border-bottom: 32px solid transparent;
-    border-left: 15px solid $offwhite;
-    border-top: 32px solid transparent;
-    margin-top:40px;
-    height: 0;
-    float: right;
-    width: 0;
+#DCgirlArea1 {
+  .talkCloud{
+    li {
+      text-align: left;
+    }
+    li.liMargin {
+      margin-bottom: 20px;
+    }
   }
   .tuGirl{
-    background: url("../img/teamupgirl01.png") no-repeat top center;
-    background-size: auto 413px;
-    height: 413px;
     margin-top: 110px;
   }
 }
@@ -1055,8 +923,8 @@ footer {
     }
   }
 
-  #deviceArea2 {
-    #deviceArrow{
+  .girlArea {
+    .rightArrow{
       display: none;
     }
   }
@@ -1115,7 +983,7 @@ footer {
   }
 
   .talkCloud{
-    margin: 0 20px 100px 20px;
+    margin: 0 20px;
   }
 
   #deviceArea1 {
