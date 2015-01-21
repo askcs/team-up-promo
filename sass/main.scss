@@ -42,6 +42,95 @@ p, li {
   max-width: 800px ;
 }
 
+.btn-primary {
+  background-color: $orange;
+  background-image: none;
+  color:$brown;
+  text-shadow: none;
+  box-shadow: none;
+  border: none;
+  @include border-radius(20px);
+  &:hover,
+  &:focus {
+    background-color: $orange;
+    background-image: none;
+    color: $offwhite;
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+
+
+/*-----------------------------------------------------------------------------General Specific-----------------------------------------------------------------------------*/
+
+
+
+
+.talkCloud {
+  background-color: $offwhite;
+  padding:20px;
+  @include border-radius(20px);
+  margin-right: 15px;
+}
+
+.quoteArea {
+  background-color: $orange;
+  padding: 60px 0;
+  p {
+    text-align: center;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 20px 0;
+  }
+}
+
+.photoArea{
+  padding: 100px 0;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  .bgImage {
+    width: 100%;
+    height: auto;
+  }
+  .photoBub {
+    width: 320px !important;
+    height: 320px;
+    background: $orange;
+    @include border-radius(50%);
+    display: table-cell;
+    vertical-align: middle;
+    float: right;
+    margin-top: 200px;
+    p {
+      text-align: center;
+      margin-top: 28px;
+    }
+  }
+  .cloudContainer {
+    z-index: -1;
+    #topArrow {
+      border-bottom: 15px solid #FFFAF0;
+      border-left: 32px solid rgba(0, 0, 0, 0);
+      border-right: 32px solid rgba(0, 0, 0, 0);
+      height: 0;
+      margin: -15px 0 0 40px;
+      position: absolute;
+      width: 0;
+    }
+  }
+}
+
+.textArea{
+  padding: 100px 0;
+}
+
+
+
 
 
 
@@ -57,11 +146,6 @@ p, li {
 }
 
 .navbar .brand {
-/*  background-image: url("../img/logoHeader.png");
-  width: 126px;
-  height: 50px;
-  float: left;
-  display: block;*/
   padding: 0;
   margin-left: 0;
   background-position: top;
@@ -84,19 +168,14 @@ p, li {
 
 /*INTRO*/
 
-#intro{
-/*  background: url("../img/photo01.jpg") no-repeat top center;
-  background-size: cover;*/
-
-
-  .hero-unit {
-    background-color: transparent;
+.intro{
+  .container-narrow {
+    position: relative;
     margin-top:60px;
     padding: 60px 20px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     font-size: 18px;
     font-weight: 200;
-    @include border-radius(6px);
     #heroLogo{
       background-image: url("../img/logo.png");
       width: 160px;
@@ -161,6 +240,12 @@ p, li {
   width: 100%;
   bottom: 0;
 }
+
+
+
+/*-----------------------------------------------------------------------------TeamUp-----------------------------------------------------------------------------*/
+
+
 
 
 /*DEVICE AREA 1*/
@@ -234,39 +319,8 @@ p, li {
 
 #photoArea1 {
   background: url("../img/photo01.jpg") no-repeat top center;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-  .bgImage {
-    width: 100%;
-    height: auto;
-  }
-  .photoBub {
-    width: 320px !important;
-    height: 320px;
-    background: $orange;
-    @include border-radius(50%);
-    display: table-cell;
-    vertical-align: middle;
-    float: right;
-    margin-top: 300px;
-    p {
-      text-align: center;
-      margin-top: 28px;
-    }
-  }
   .cloudContainer {
     margin-top: 40px;
-    z-index: -1;
-    #topArrow {
-      border-bottom: 15px solid #FFFAF0;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
-      height: 0;
-      margin: -15px 0 0 40px;
-      position: absolute;
-      width: 0;
-    }
   }
 }
 
@@ -472,49 +526,10 @@ footer {
 
 /*TT INTRO*/
 
-#TTintro{
+#TTintro.intro{
   .container-narrow {
-    position: relative;
-    margin-top:60px;
-    padding: 60px 20px;
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: 200;
-    #heroLogo{
-      background-image: url("../img/logo.png");
-      width: 160px;
-      height: 82px;
-      margin: 0 auto 40px;
-    }
-    #welcomeArrow {
-      border-bottom: 15px solid $offwhite;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
-      height: 0;
-      left: 50%;
-      margin: -15px 0 0 -80px;
-      position: absolute;
-      width: 0;
-    }
     #welcome {
-      background-color: $offwhite;
-      margin: 0 auto 280px;
-      max-width: 300px;
-      padding: 22px 22px 6px;
-      @include border-radius(20px);
-      p {
-        font-size: 22px;
-        font-style: italic;
-        line-height: 26px;
-        text-align: center;
-        span{
-          color: $orange;
-          font-size: 16px;
-          font-weight: bold;
-          font-style: normal;
-          line-height: 20px;
-        }
-      }
+      max-width: 220px;
     }
     #introTeamMember{
       position: absolute;
@@ -536,6 +551,7 @@ footer {
   background-color: $beige;
   width: 100%;
   padding-bottom: 80px;
+  text-align: center;
   img {
     margin: -100px 0 0;
   }
@@ -558,7 +574,7 @@ footer {
   display: table-cell;
   vertical-align: middle;
   float: right;
-  margin-top: 300px;
+  margin-top: 200px;
   p {
     text-align: center;
     margin-top: 28px;
@@ -569,29 +585,14 @@ footer {
 #TTphotoArea1 {
   background: url("../img/teamtelefoon/onBike.jpg") no-repeat top center;
   background-size: cover;
-  width: 100%;
-  height: auto;
   .bgImage {
     width: 100%;
     height: auto;
   }
   .photoBub {
     background: $brown;
-
     p {
       color: $offwhite;
-    }
-  }
-  .cloudContainer {
-    margin-top: 40px;
-    #topArrow {
-      border-bottom: 15px solid #FFFAF0;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
-      height: 0;
-      margin: -15px 0 0 40px;
-      position: absolute;
-      width: 0;
     }
   }
 }
@@ -654,17 +655,12 @@ footer {
 #TTphotoArea2 {
   background: url("../img/teamtelefoon/inTram.jpg") no-repeat center center;
   background-size: cover;
-  width: 100%;
-  height: auto;
-  .bgImage {
-    width: 100%;
-    height: auto;
-  }
   h2 {
     color: $offwhite;
     margin-bottom: 600px;
     margin-top: 100px;
     text-align: right;
+    display: inline-block;
   }
   .photoBub{
     float: left;
@@ -812,40 +808,189 @@ footer {
 
 
 
+/*-----------------------------------------------------------------------------Decentrale-----------------------------------------------------------------------------*/
 
 
-/*GENERAL SPECIFIC*/
+/*DC INTRO*/
 
-.btn-primary {
-  background-color: $orange;
-  background-image: none;
-  color:$brown;
-  text-shadow: none;
-  box-shadow: none;
-  border: none;
-  @include border-radius(20px);
-  &:hover,
-  &:focus {
-    background-color: $orange;
-    background-image: none;
-    color: $offwhite;
+#DCintro.intro{
+  .container-narrow {
+    #welcome {
+      max-width: 220px;
+    }
+  }
+}
+
+/*DC PHOTO AREA 1*/
+
+#DCphotoArea1 {
+  background: url("../img/decentrale/photo01.jpg") no-repeat center left;
+  background-size: cover;
+  .cloudContainer {
+    z-index: -1;
+    margin-bottom: 400px;
+    .talkCloud {
+      margin-bottom: 0;
+    }
+    #bottomArrow {
+      border-top: 15px solid #FFFAF0;
+      border-left: 32px solid rgba(0, 0, 0, 0);
+      border-right: 32px solid rgba(0, 0, 0, 0);
+      height: 0;
+      margin: 0 0 0 40px;
+      position: absolute;
+      width: 0;
+    }
+  }
+}
+
+#DCphotoArea2 {
+  background: url("../img/decentrale/photo02.jpg") no-repeat center left;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  .bgImage {
+    width: 100%;
+    height: auto;
+  }
+  h2 {
+    color: $brown;
+  }
+  .photoBub {
+    margin-top: 100px;
+  }
+  .photoBub.mobileBub {
+    height: 290px;
+    width: 290px !important;
+    background: $beige;
+  }
+  .photoBub.flexBub {
+    height: 270px;
+    width: 270px !important;
+    background-color: $brown;
+    P {
+      color: $beige !important;
+    }
+  }
+  .cloudContainer {
+    margin-top: 40px;
+    z-index: -1;
+    margin-bottom: 400px;
+    .talkCloud {
+      margin-bottom: 0;
+    }
+    #bottomArrow {
+      border-top: 15px solid #FFFAF0;
+      border-left: 32px solid rgba(0, 0, 0, 0);
+      border-right: 32px solid rgba(0, 0, 0, 0);
+      height: 0;
+      margin: 0 0 0 40px;
+      position: absolute;
+      width: 0;
+    }
+  }
+}
+
+#DCphotoArea3 {
+  background: url("../img/decentrale/photo03.jpg") no-repeat center left;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  .bgImage {
+    width: 100%;
+    height: auto;
+  }
+  .cloudContainer {
+    margin-top: 40px;
+    z-index: -1;
+    margin-bottom: 400px;
+    .talkCloud {
+      margin-bottom: 0;
+    }
+    #bottomArrow {
+      border-top: 15px solid #FFFAF0;
+      border-left: 32px solid rgba(0, 0, 0, 0);
+      border-right: 32px solid rgba(0, 0, 0, 0);
+      height: 0;
+      margin: 0 0 0 40px;
+      position: absolute;
+      width: 0;
+    }
   }
 }
 
 
-.talkCloud {
-  background-color: $offwhite;
-  padding:20px;
-  @include border-radius(20px);
-  margin-right: 15px;
-  margin-bottom: 100px;
+.photoBub {
+  span {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+}
+
+#DCtextArea1 {
+  background-color: $beige;
+  padding: 100px 0;
+  .noBg{
+    h2, p, li {
+      //color: $offwhite;
+    }
+  }
+  .talkCloud {
+    background-color: $brown;
+    h2 {
+      color: $orange;
+    }
+    p, li {
+      color: $offwhite;
+    }
+  }
+}
+
+#DCtextArea2 {
+  padding: 100px 0;
+  .noBg{
+    h2, p, li {
+      color: $offwhite;
+    }
+  }
+  .talkCloud {
+    background-color: $brown;
+    h2 {
+      color: $orange;
+    }
+    p, li {
+      color: $offwhite;
+    }
+  }
+}
+
+#DCdeviceArea2 {
+  width: 100%;
+  padding-top: 100px;
+  #deviceArrow {
+    border-bottom: 32px solid transparent;
+    border-left: 15px solid $offwhite;
+    border-top: 32px solid transparent;
+    margin-top:40px;
+    height: 0;
+    float: right;
+    width: 0;
+  }
+  .tuGirl{
+    background: url("../img/teamupgirl01.png") no-repeat top center;
+    background-size: auto 413px;
+    height: 413px;
+    margin-top: 110px;
+  }
 }
 
 
 
 
 
-
+/*-----------------------------------------------------------------------------Responsive-----------------------------------------------------------------------------*/
 
 
 
@@ -862,6 +1007,23 @@ footer {
     padding: 0 10px !important;
   }
 
+  #introTeamMember {
+    img {
+      max-height: 300px;
+    }
+  }
+  
+  #introClient {
+    img {
+      max-height: 270px;
+    }
+  }
+
+  #TTavailabilityCheck, #TTavailabilityCheck2 {
+    h2 {
+      word-break: break-all;
+    }
+  }
 
 }
 
@@ -874,7 +1036,7 @@ footer {
 
 @media (max-width: 767px) {
 
-  #intro {
+  .intro {
     .hero-unit {
       #welcome {
         margin: 0 auto 200px;
@@ -944,7 +1106,7 @@ footer {
 
 @media (max-width: 480px) {
 
-  #intro {
+  .intro {
     .hero-unit {
       #welcome {
         margin: 0 auto 100px;
