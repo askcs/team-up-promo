@@ -62,6 +62,11 @@ p, li {
   font-style: italic;
 }
 
+.subTitle{
+  font-weight: bold;
+  font-size: 22px;
+}
+
 
 
 /*-----------------------------------------------------------------------------General Specific-----------------------------------------------------------------------------*/
@@ -155,6 +160,13 @@ p, li {
   padding: 100px 0;
 }
 
+p.asteriks {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  font-style: italic;
+}
+
 
 
 
@@ -236,6 +248,20 @@ p, li {
   }
 }
 
+
+/*PRESENT PRODUCT 1*/
+
+.presentProduct {
+  background-color: $beige;
+  width: 100%;
+  padding-bottom: 60px;
+  img {
+    margin: -260px 0 0px;
+  }
+  h2 {
+    line-height: 36px;
+  }
+}
 
 
 
@@ -326,18 +352,10 @@ footer {
 
 
 
-/*DEVICE AREA 1*/
+/*PRESENT PRODUCT*/
 
-#deviceArea1 {
-  background-color: $beige;
-  width: 100%;
-  padding-bottom: 80px;
-  img {
-    margin: -260px 0 0px;
-  }
-  h2 {
-    line-height: 36px;
-  }
+#TUpresentProduct {
+
 }
 
 
@@ -525,18 +543,11 @@ footer {
 
 
 
-#TTdeviceArea1 {
+#TTpresentProduct {
   position: relative;
-  background-color: $beige;
-  width: 100%;
-  padding-bottom: 80px;
   text-align: center;
   img {
-    margin: -100px 0 0;
-  }
-  h2 {
-    /*    text-align: center;*/
-    line-height: 36px;
+    margin-top: -100px;
   }
 }
 
@@ -549,10 +560,14 @@ footer {
   background: url("../img/teamtelefoon/onBike.jpg") no-repeat top center;
   background-size: cover;
   .photoBub {
+    margin-top: 100px;
     background: $brown;
     p {
       color: $offwhite;
     }
+  }
+  .cloudContainer {
+    margin-top: 40px;
   }
 }
 
@@ -609,6 +624,7 @@ footer {
 #TTphotoArea2 {
   background: url("../img/teamtelefoon/inTram.jpg") no-repeat center center;
   background-size: cover;
+  background-color: $beige;
   h2 {
     color: $offwhite;
     margin: 240px 0 20px;
@@ -760,6 +776,21 @@ footer {
   }
 }
 
+#DCpresentProduct {
+  .photoBub {
+    position: absolute;
+    margin-top: -200px;
+    width: 190px !important;
+    height: 190px;
+    p {
+      font-weight: bold;
+    }
+  }
+  img {
+    margin: -260px 0 0px;
+  }
+}
+
 /*DC PHOTO AREA 1*/
 
 #DCphotoArea1 {
@@ -771,23 +802,22 @@ footer {
 }
 
 #DCphotoArea2 {
-  background: url("../img/decentrale/photo02.jpg") no-repeat center left;
+  background: url("../img/decentrale/photo02.jpg") no-repeat bottom left;
   background-size: cover;
   h2 {
-    color: $brown;
-  }
-  .photoBub {
-    margin-top: 100px;
+    color: $turq;
   }
   .photoBub.mobileBub {
     height: 290px;
     width: 290px !important;
     background: $beige;
+    margin-top: 150px;
   }
   .photoBub.flexBub {
     height: 270px;
     width: 270px !important;
     background-color: $brown;
+    margin-top: 50px;
     P {
       color: $beige !important;
     }
@@ -798,32 +828,21 @@ footer {
   background: url("../img/decentrale/photo03.jpg") no-repeat center left;
   background-size: cover;
   .cloudContainer {
-    margin-bottom: 400px;
+    margin-top: 200px;
   }
 }
 
 
 #DCtextArea1 {
   background-color: $beige;
-  padding: 100px 0;
   .noBg{
     h2, p, li {
       //color: $offwhite;
     }
   }
-  .talkCloud {
-    background-color: $brown;
-    h2 {
-      color: $orange;
-    }
-    p, li {
-      color: $offwhite;
-    }
-  }
 }
 
 #DCtextArea2 {
-  padding: 100px 0;
   .noBg{
     h2, p, li {
       color: $offwhite;
@@ -831,11 +850,23 @@ footer {
   }
   .talkCloud {
     background-color: $brown;
-    h2 {
+    .subTitle {
       color: $orange;
     }
     p, li {
       color: $offwhite;
+    }
+  }
+  .textBlock {
+    margin-top: 20px;
+  }
+}
+
+#DCtextArea3 {
+  background-color: $beige;
+  .noBg{
+    h2, p, li {
+      //color: $offwhite;
     }
   }
 }
@@ -893,6 +924,13 @@ footer {
     }
   }
 
+  .photoArea {
+    background-position: top !important;
+    h2, .photoBub {
+      margin: 0 !important;
+    }
+  }
+
 }
 
 
@@ -912,7 +950,7 @@ footer {
     }
   }
 
-  #deviceArea1 {
+  #deviceArea1, #DCdeviceArea1 {
     img {
       margin: -200px 0 0;
     }
@@ -950,9 +988,9 @@ footer {
 
   }
 
-  #photoArea1{
-    background-size: contain;
-    #topArrow {
+  .photoArea{
+    background-size: contain !important;
+    .topArrow {
       display: none;
     }
   }
@@ -966,7 +1004,14 @@ footer {
     .container-narrow{
       padding: 0 100px;
     }
+  }
 
+  #TTavailabilityCheck {
+    .container-narrow {
+      .clientPhone {
+        margin-top: 0;
+      }
+    }
   }
 }
 
@@ -986,7 +1031,7 @@ footer {
     margin: 0 20px;
   }
 
-  #deviceArea1 {
+  #deviceArea1, #DCdeviceArea1 {
     img {
       margin: -100px 0 0;
     }
@@ -1004,9 +1049,8 @@ footer {
   }
 
 
-
-  #photoArea1{
-    background-size: 180%;
+  .photoArea{
+    background-size: 180% !important;
   }
 }
 
