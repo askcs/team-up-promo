@@ -942,15 +942,15 @@ footer {
 
 @media (max-width: 767px) {
 
-  .intro {
-    .hero-unit {
+  #TUintro {
+    .container-narrow {
       #welcome {
         margin: 0 auto 200px;
       }
     }
   }
 
-  #deviceArea1, #DCdeviceArea1 {
+  .presentProduct {
     img {
       margin: -200px 0 0;
     }
@@ -990,7 +990,7 @@ footer {
 
   .photoArea{
     background-size: contain !important;
-    .topArrow {
+    .topArrow, .bottomArrow {
       display: none;
     }
   }
@@ -1019,8 +1019,8 @@ footer {
 
 @media (max-width: 480px) {
 
-  .intro {
-    .hero-unit {
+  #TUintro {
+    .container-narrow {
       #welcome {
         margin: 0 auto 100px;
       }
@@ -1031,7 +1031,7 @@ footer {
     margin: 0 20px;
   }
 
-  #deviceArea1, #DCdeviceArea1 {
+  .presentProduct {
     img {
       margin: -100px 0 0;
     }
