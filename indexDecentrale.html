@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -33,7 +33,7 @@
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="promo/img/ico/apple-touch-icon-57-precomposed.png">
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="icon" href="/favicon.ico">
-		
+
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<!--<script src="war/libs/jquery/1.9.1/jquery-1.9.1.min.js"></script> -->
@@ -53,7 +53,7 @@
                         <a class="brand" href="#"></a>
                         <div class="row-fluid">
                             <div class="loginBtn">
-                                <a href="app/dist/index.html">
+                                <a href="app/index.html">
                                     <button class="btn btn-large btn-block btn-primary ng-binding" type="submit">Inloggen</button>
                                 </a>
                             </div>
@@ -70,12 +70,12 @@
                 <div class="row-fluid">
                     <div class="span12">
                         <div class="hero-unit">
-                            <div id="heroLogo"></div>
-                            <div id="welcomeArrow" class="ng-scope"></div>
-                            <div id="welcome" class="ng-scope">
-                                <p>“De functionaliteit van<br> een telefooncentrale<br> met de flexibiliteit van<br> een mobiele telefoon”
-                                </p>
-                            </div>
+                        <div id="heroLogo"></div>
+                        <div id="welcomeArrow" class="ng-scope"></div>
+                        <div id="welcome" class="ng-scope">
+                            <p>“De functionaliteit van<br> een telefooncentrale<br> met de flexibiliteit van<br> een mobiele telefoon”
+                            </p>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -323,88 +323,88 @@
                     <p><i class="icon-envelop contactIcon"></i><a href="mailto:pkradolfer@ask-cs.com">pkradolfer@ask-cs.com</a></p>
                 </div>
                 <div class="span8">
-                	<script>
-						function IsEmail(email) {
-						  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-						  return regex.test(email);
-						}	
-						
-						function sendMail(){
-							var contactName = $.trim($("#contactName").val());
-							var contactEmail = $.trim($("#contactEmail").val());
-							var contactSubject = $.trim($("#contactSubject").val());
-							var message = $.trim($("#message").val());
-							
-							var errorColor = "#c85a3c";
-							var errorFontColor = "white";
-							var rightColor = "white";
-							var rightFontColor = "#833C11";
+			<script>
+			function IsEmail(email) {
+				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				return regex.test(email);
+			}
 
-							var sendMailURL = "https://standby.ask-cs.nl/tymon/sendMail.php";
-							sendMailURL += "?contactName="+contactName +
-										  "&contactEmail="+contactEmail+										  
-										  "&contactSubject="+contactSubject+
-										  "&message="+message ;
-							if(contactName == '' ){
-								alert("Vul alstublieft uw naam in.");
-								$("#contactName").css("background-color" ,errorColor).css("color" ,errorFontColor);
-								return ; 
-							}else{
-								$("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
-							}
-							if(contactEmail == '' ){
-								alert("Vul alstublieft uw emailadres in.");
-								$("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-								return ; 
-							}else{
-								if(!IsEmail(contactEmail)){
-									alert("Uw emailadres is ongeldig.");
-									$("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-									return;
-								}else{
-									$("#contactEmail").css("background-color" ,rightColor).css("color" ,rightFontColor);
-								}								
-							}
-							if(contactSubject == '' ){
-								alert("Vul alstublieft een onderwerp in.");
-								$("#contactSubject").css("background-color" ,errorColor).css("color" ,errorFontColor);
-								return ; 
-							}else{
-								$("#contactSubject").css("background-color" ,rightColor).css("color" ,rightFontColor);
-							}
-							if(message == '' ){
-								alert("Vul alstublieft een bericht in.");
-								$("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
-								return ; 
-							}else{
-								$("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
-							}
-										  
-							$.ajax({
-					            url: sendMailURL
-							}).done(function( data ) {
-								console.log(data);
-								alert("Bericht is verzonden!");
-							}).fail(function( error){
-								console.log(error);
-								alert("Bericht is verzonden!");
-							});
-						}
+function sendMail(){
+	var contactName = $.trim($("#contactName").val());
+	var contactEmail = $.trim($("#contactEmail").val());
+	var contactSubject = $.trim($("#contactSubject").val());
+	var message = $.trim($("#message").val());
+
+	var errorColor = "#c85a3c";
+	var errorFontColor = "white";
+	var rightColor = "white";
+	var rightFontColor = "#833C11";
+
+	var sendMailURL = "https://standby.ask-cs.nl/tymon/sendMail.php";
+	sendMailURL += "?contactName="+contactName +
+		"&contactEmail="+contactEmail+
+		"&contactSubject="+contactSubject+
+		"&message="+message ;
+	if(contactName == '' ){
+		alert("Vul alstublieft uw naam in.");
+		$("#contactName").css("background-color" ,errorColor).css("color" ,errorFontColor);
+		return ;
+	}else{
+		$("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
+	}
+	if(contactEmail == '' ){
+		alert("Vul alstublieft uw emailadres in.");
+		$("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
+		return ;
+	}else{
+		if(!IsEmail(contactEmail)){
+			alert("Uw emailadres is ongeldig.");
+			$("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
+			return;
+		}else{
+			$("#contactEmail").css("background-color" ,rightColor).css("color" ,rightFontColor);
+		}
+	}
+	if(contactSubject == '' ){
+		alert("Vul alstublieft een onderwerp in.");
+		$("#contactSubject").css("background-color" ,errorColor).css("color" ,errorFontColor);
+		return ;
+	}else{
+		$("#contactSubject").css("background-color" ,rightColor).css("color" ,rightFontColor);
+	}
+	if(message == '' ){
+		alert("Vul alstublieft een bericht in.");
+		$("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
+		return ;
+	}else{
+		$("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
+	}
+
+	$.ajax({
+url: sendMailURL
+}).done(function( data ) {
+	console.log(data);
+	alert("Bericht is verzonden!");
+	}).fail(function( error){
+		console.log(error);
+		alert("Bericht is verzonden!");
+		});
+}
                 	</script>
-                    <form>
-                        <div class="span6">
-                            <input class="span12 contactInput" type="text" placeholder="Naam" id="contactName">
-                            <input class="span12 contactInput" type="text" placeholder="E-mail" id="contactEmail">
-                            <input class="span12 contactInput" type="text" placeholder="Onderwerp" id="contactSubject">
-                        </div>
-                        <div class="span6">
-                            <textarea class="span12 contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>
-                        </div>
-                        <div class="span12 sendButton" id="sendMailBtn">
-                            <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
-                        </div>
-                    </form>
-                </div>
+                        <form>
+                            <div class="span6">
+                                <input class="span12 contactInput" type="text" placeholder="Naam" id="contactName">
+                                <input class="span12 contactInput" type="text" placeholder="E-mail" id="contactEmail">
+                                <input class="span12 contactInput" type="text" placeholder="Onderwerp" id="contactSubject">
+                            </div>
+                            <div class="span6">
+                                <textarea class="span12 contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>
+                            </div>
+                            <div class="span12 sendButton" id="sendMailBtn">
+                                <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -413,7 +413,11 @@
 
 
         <footer>
-            <p><span>&copy; <a href="http://ask-cs.nl" target="_blank">ASK Community Systems</a></span>  Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 010 225 0130 | <a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
+            <p>
+	    	<span>&copy; <a href="http://ask-cs.nl" target="_blank">ASK Community Systems</a></span>
+		
+		Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 010 225 0130 | 
+		<a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
         </footer>
 
 
