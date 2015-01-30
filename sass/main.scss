@@ -178,6 +178,7 @@ p.asteriks {
     background-image: none;
     border: none;
     .brand {
+      background-image:url("../img/logoHeader.png");
       padding: 0;
       margin-left: 0;
       background-position: top;
@@ -521,10 +522,39 @@ footer {
 /*-----------------------------------------------------------------------------TeamTelefoon-----------------------------------------------------------------------------*/
 
 
+
+#TTnavbar.navbar-inverse {
+  .navbar-inner {
+    background-color: $brown;
+    background-image: none;
+    border: none;
+    .brand {
+      background-image: url("../img/teamtelefoon/logoHeader.png");
+      padding: 0;
+      margin-left: 0;
+      background-position: top;
+    }
+  }
+}
+
+
+
+
 /*TT INTRO*/
+
+
 
 #TTintro.intro{
   .container-narrow {
+    #heroLogoContainer {
+      max-width: 372px;
+      height: 82px;
+      margin: 0 auto 360px;
+      #heroLogo {
+        background-image: url("../img/teamtelefoon/logo.png");
+        width: 100%;;
+      }
+    }
     #welcome {
       max-width: 220px;
     }
