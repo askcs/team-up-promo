@@ -549,7 +549,7 @@ footer {
     #heroLogoContainer {
       max-width: 372px;
       height: 82px;
-      margin: 0 auto 360px;
+      margin: 0 auto 200px;
       #heroLogo {
         background-image: url("../img/teamtelefoon/logo.png");
         width: 100%;;
@@ -558,27 +558,47 @@ footer {
     #welcome {
       max-width: 220px;
     }
-    #introTeamMember{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
-    #introClient{
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
   }
 }
 
+#TTcloud {
+  width: 100%;
+  height: auto;
+}
 
+#TTintroCloud {
+  background-color: $offwhite;
+  .container-narrow{
+    position: relative;
+  }
+  #introTeamMember{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #introClient{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
 
 #TTpresentProduct {
+  background-color: $beige;
+  border-top: 0;
   position: relative;
   text-align: center;
+  width: 100%;
+  padding-top: 100px;
   img {
     margin-top: -100px;
   }
+}
+
+.TTmobile {
+  background: url("../img/teamtelefoon/mobile01.png") no-repeat top center;
+  background-size: auto 500px;
+  height: 500px;
 }
 
 
@@ -964,6 +984,13 @@ footer {
 }
 
 
+@media (min-width: 768px) {
+  .floatRight {
+    float: right !important;
+    padding: 0 20px;
+  }
+}
+
 
 @media (min-width: 768px) and (max-width: 979px) {
 }
@@ -971,6 +998,7 @@ footer {
 
 
 @media (max-width: 767px) {
+
 
   #TUintro {
     .container-narrow {
