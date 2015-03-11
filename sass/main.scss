@@ -229,8 +229,8 @@ p.asteriks {
     #welcome {
       background-color: #FFFAF0;
       margin: 0 auto 280px;
-      max-width: 300px;
-      padding: 22px 22px 6px;
+      max-width: 380px;
+      padding: 22px 22px 12px;
       @include border-radius(20px);
       p {
         font-size: 22px;
@@ -353,10 +353,43 @@ footer {
 
 
 
+/*TU INTRO*/
+
+#TUintro {
+  a.TTlink, a:hover, a:focus, a:active, a:visited{
+    background-color: $brown;
+    color: $orange;
+    right: 0;
+    position: absolute;
+    padding: 10px 20px;
+    margin-top: -140px;
+    @include border-radius(20px 0 0 20px);
+    opacity:0.9;
+    p {
+      color: $orange;
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0;
+      span.italic {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+
 /*PRESENT PRODUCT*/
 
 #TUpresentProduct {
-
+  a.photoBub {
+    height: 180px;
+    margin-top: -200px;
+    position: absolute;
+    width: 180px !important;
+    font-weight: bold;
+    padding-top: 6px;
+    color: $brown;
+  }
 }
 
 
