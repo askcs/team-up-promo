@@ -36,6 +36,18 @@
 
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script src="promo/js/vendor/scrollReveal.js"></script>
+        <script>
+            jQuery(function() {
+                window.sr = new scrollReveal({
+                    reset: true,
+                    move: '50px',
+                    mobile: true
+                });
+
+                jQuery("[data-sr]").css("visibility", "hidden");
+            });
+        </script>
 		<!--<script src="war/libs/jquery/1.9.1/jquery-1.9.1.min.js"></script> -->
 
         </head>
@@ -72,32 +84,16 @@
                         <div id="heroLogoContainer">
                             <img src="promo/img/teamtelefoon/logo.png">
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="TTcloud">
-            <img src="promo/img/teamtelefoon/cloud.png">
-        </div>
-
-        <div id="TTintroCloud">
-            <div class="container-narrow">
-                <div class="row-fluid">
-                    <div class="span12">
-                        <div id="introTeamMember">
+                        <div id="introTeamMember" data-sr="enter left over 1s and move 200px after 0.3s">
                             <img src="promo/img/teamtelefoon/teamMember.png">
                         </div>
-                        <div id="introClient">
+                        <div id="introClient" data-sr="enter right over 1s and move 200px after 0.3s">
                             <img src="promo/img/teamtelefoon/client.png">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
 
         <div id="TTpresentProduct" class="row-fluid">
             <div class="container-narrow">
@@ -112,7 +108,7 @@
                             <h2>Maximale flexibiliteit voor uw teamleden</h2>
                             <p>Met de TeamUp TeamTelefoon kunnen teamleden precies aangeven wanneer ze beschikbaar zijn. Vindt er een onverwachte gebeurtenis plaats die leidt tot verandering in beschikbaarheid, dan kunnen teamleden dit direct doorgeven via internet, hun mobiele telefoon of de TeamTelefoon-app op hun smartphone.</p>
                         </div>
-                        <div class="span5 TTmobile">
+                        <div class="span5 TTmobile" data-sr="hustle 500px, over 1.5s">
                         </div>
                     </div>
                 </div><!--/row-->
@@ -125,8 +121,18 @@
         <div id="TTphotoArea1" class="photoArea row-fluid">
             <div class="container-narrow">
                 <div class="row-fluid">
-                    <div class="span6 offset6">
-                        <p>“Onze zorgteams communiceren met elkaar via mobiele telefoons. Per week is één teamlid verantwoordelijk voor het telefonisch te woord staan van cliënten, dus heeft deze de teamtelefoon. Vaak wordt de telefoon dagelijks aan het volgende teamlid doorgegeven. Hierdoor hebben we voor elk team een extra telefoon met een extra abonnement moeten afsluiten.”</p>
+                    <div class="span6 photoBub floatRight">
+                        <p>
+                            “Onze zorgteams <br />
+                            communiceren met elkaar <br />
+                            via mobiele telefoons.
+                            Per week is <br />
+                            is één teamlid verantwoordelijk voor <br />
+                            het telefonisch te woord staan van cliënten, dus heeft deze de team-<br />
+                            telefoon. Vaak wordt de telefoon dagelijks aan het
+                            volgende teamlid doorgegeven. Hierdoor hebben we voor elk team een extra telefoon
+                            met een extra abonnement moeten afsluiten.”
+                        </p>
                     </div>
                 </div>
             </div>
@@ -134,7 +140,7 @@
                 <div class="row-fluid">
                     <div class="span7 cloudContainer">
                         <div class="topArrow ng-scope"></div>
-                        <div class="talkCloud">
+                        <div class="talkCloud ">
                             <h2>Overal bereikbaar</h2>
                             <p>“Onze zorgteams en teamleden willen werken hoe en wanneer het hén uitkomt. Ze werken al lang niet meer vanuit een vast kantoor. Mensen zijn mobiel, en dat moet hun kantoor dus ook zijn. Wij zoeken naar manieren om deze mensen toch altijd te blijven bereiken.”</p>
                         </div>
@@ -154,7 +160,7 @@
                         <h2>Beschikbaarheidsbewaking: Uw team altijd bereikbaar</h2>
                         <p>De TeamTelefoon van TeamUp maakt gebruik van beschikbaarheidsbewaking. Dit zorgt ervoor dat uw zorgteam altijd bereikbaar is. Als de eerste verantwoordelijke voor de teamtelefoon bezet is, dan schakelt de teamtelefoon automatisch door naar de volgende. Bellers krijgen dus altijd iemand aan de lijn.</p>
                     </div>
-                    <div class="span5 TTmobile">
+                    <div class="span5 TTmobile" data-sr="hustle 500px, over 1.5s">
                     </div>
                 </div>
             </div>
@@ -229,17 +235,17 @@
             <div class="container-narrow">
                 <div class="row-fluid">
                     <div class="span4">
-                        <div class="bub1 mobileBubble"><p>Nooit<br> meer onder-<br>bezetting</p></div>
-                        <div class="bub2 mobileBubble"><p>Meteen<br> de juiste<br> medewerker<br> aan de<br> lijn</p></div>
+                        <div class="bub1 mobileBubble" data-sr="wait 0.3s and scale up 15% after 2s"><p>Nooit<br> meer onder-<br>bezetting</p></div>
+                        <div class="bub2 mobileBubble" data-sr="wait 0.6s scale down 20% after 2s"><p>Meteen<br> de juiste<br> medewerker<br> aan de<br> lijn</p></div>
                     </div><!--/span-->
                     <div class="span4">
-                        <div class="bub3 mobileBubble"><p>Wacht-<br>tijden voor<br> cliënten korter<br> dan ooit</p></div>
-                        <div class="bub4 mobileBubble"><p>Geen<br> mobieltjes<br> meer door-<br>geven</p></div>
-                        <div class="bub5 mobileBubble"><p>Niet<br> meer zelf<br> hoeven door-<br>schakelen</p></div>
+                        <div class="bub3 mobileBubble" data-sr="wait 0.9s scale down 20% after 2s"><p>Wacht-<br>tijden voor<br> cliënten korter<br> dan ooit</p></div>
+                        <div class="bub4 mobileBubble" data-sr="wait 1.2s scale up 15% after 2s"><p>Geen<br> mobieltjes<br> meer door-<br>geven</p></div>
+                        <div class="bub5 mobileBubble" data-sr="wait 1.5s scale down 20% after 2s"><p>Niet<br> meer zelf<br> hoeven door-<br>schakelen</p></div>
                     </div><!--/span-->
                     <div class="span4">
-                        <div class="bub6 mobileBubble"><p>Makkelijk<br> beschikbaarheid<br> wijzigen</p></div>
-                        <div class="bub7 mobileBubble"><p>Minder<br> handmatig<br> plannen</p></div>
+                        <div class="bub6 mobileBubble" data-sr="wait 1.8s scale up 15% after 2s"><p>Makkelijk<br> beschikbaarheid<br> wijzigen</p></div>
+                        <div class="bub7 mobileBubble" data-sr="wait 2.1s scale down 20% after 2s"><p>Minder<br> handmatig<br> plannen</p></div>
                     </div><!--/span-->
                 </div>
             </div>
