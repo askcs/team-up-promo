@@ -5,6 +5,7 @@ jQuery(function() {
    */
   window.sr = new scrollReveal({
     reset: true,
+    opacity: 1,
     move: '50px',
     mobile: true
   });
