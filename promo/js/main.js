@@ -7,6 +7,7 @@ jQuery(function() {
     reset: true,
     opacity: 1,
     move: '50px',
+    //scale:    { direction: 'up', power: '0%' },
     mobile: true
   });
 

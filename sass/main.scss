@@ -271,7 +271,7 @@ p.asteriks {
 .presentProduct {
   background-color: $beige;
   width: 100%;
-  padding-bottom: 60px;
+  //padding-bottom: 60px;
   img {
     margin: -260px 0 0px;
   }
@@ -280,12 +280,25 @@ p.asteriks {
   }
 }
 
+/*PRESENT PRODUCT 2*/
+
+.presentProduct2 {
+  overflow: hidden;
+}
 
 
 /*CONTACT*/
 
 #contact {
-  margin: 100px 0;
+  padding: 100px 0;
+  background: rgba(152,212,202,1);
+  background: -moz-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(152,212,202,1)), color-stop(100%, rgba(61,188,177,1)));
+  background: -webkit-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  background: -o-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  background: -ms-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  background: linear-gradient(to bottom, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98d4ca', endColorstr='#3dbcb1', GradientType=0 );
   h1 {
     color: $offwhite;
     text-transform: uppercase;
@@ -349,8 +362,10 @@ p.asteriks {
 /*FOOTER*/
 
 footer {
-  padding: 0 20px;
+  padding: 1px 20px;
+  background-color: $turqDark !important;
   p {
+    background-color: $turqDark !important;
     text-align: center;
     color: $offwhite;
     span {
@@ -607,6 +622,7 @@ footer {
       max-width: 372px;
       height: 82px;
       margin: 0 auto 360px;
+      padding-bottom: 180px;
       #heroLogo {
         background-image: url("../img/teamtelefoon/logo.png");
         width: 100%;;
@@ -641,15 +657,15 @@ footer {
 //}
 
 #TTpresentProduct {
-  overflow: hidden;
-  background-color: $beige;
+  //overflow: hidden;
+  background-color: $offwhite;
   border-top: 0;
   position: relative;
   text-align: center;
   width: 100%;
   padding-top: 100px;
   img {
-    margin-top: -100px;
+    margin-top: -700px;
   }
 }
 
@@ -682,7 +698,7 @@ footer {
 
 #TTavailabilityCheck {
   overflow: hidden;
-  background-color: $beige;
+  background-color: $offwhite;
   .container-narrow{
     position: relative;
     padding-top: 100px;
@@ -762,7 +778,7 @@ footer {
 /*TT BUBBLES*/
 
 #TTbubbles {
-  background-color: $beige;
+  background-color: $offwhite;
   width: 100%;
   padding-bottom: 100px;
   overflow: hidden ;
