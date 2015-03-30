@@ -24,6 +24,12 @@ body {
     background-color: $turq;
 }
 
+@font-face {
+  font-family: 'Artbrush';
+  src: url('../fonts/Artbrush.ttf');
+  //format('truetype');
+}
+
 h2{
   text-align: left;
   color: $turq;
@@ -690,10 +696,25 @@ footer {
 }
 
 .TTarrowTextArea {
+  padding-bottom: 75px;
+  //width: 150px !important;
+  background: url("../img/teamtelefoon/arrowSmall.png") no-repeat bottom center;
   p {
+    font-family: 'Artbrush';
     text-align: center;
-    color: $brown;
   }
+}
+
+.TTarrowTextArea .arrowSmall {
+  background: url("../img/teamtelefoon/arrowSmall.png") no-repeat bottom center;
+}
+
+.TTarrowTextArea .arrowMedium {
+  background: url("../img/teamtelefoon/arrowMedium.png") no-repeat bottom center;
+}
+
+.TTarrowTextArea .arrowBig {
+  background: url("../img/teamtelefoon/arrowBig.png") no-repeat bottom center;
 }
 
 /*TT PHOTO AREA 1*/
@@ -783,6 +804,12 @@ footer {
       p {
         color: $white;
       }
+    }
+  }
+  .TTarrowTextArea {
+    margin-top: 80px;
+    p {
+      color: $white !important;
     }
   }
 //  h2 {
