@@ -675,7 +675,26 @@ footer {
   height: 500px;
 }
 
+/*TT PHOTO TEXT AREA 1*/
 
+.TTphotoTextArea {
+  opacity: 0.9;
+  padding: 15px 25px;
+  background: $orange;
+  h2 {
+    color: $white;
+  }
+  p {
+    color: $brown;
+  }
+}
+
+.TTarrowTextArea {
+  p {
+    text-align: center;
+    color: $brown;
+  }
+}
 
 /*TT PHOTO AREA 1*/
 
@@ -683,11 +702,16 @@ footer {
 #TTphotoArea1 {
   background: url("../img/teamtelefoon/onBike.jpg") no-repeat top center;
   background-size: cover;
-  .photoBub {
+  .TTphotoTextArea {
+    opacity: 0.9;
     margin-top: 100px;
-    background: $brown;
+    padding: 15px 25px;
+    background: $orange;
+    h2 {
+      color: $white;
+    }
     p {
-      color: $offwhite;
+      color: $brown;
     }
   }
   .cloudContainer {
@@ -750,18 +774,29 @@ footer {
   background: url("../img/teamtelefoon/inTramWithoutBrand.jpg") no-repeat center center;
   background-size: cover;
   background-color: $beige;
-  h2 {
-    color: $offwhite;
-    margin: 240px 0 20px;
-    text-align: right;
-    display: inline-block;
+  .photoArea {
+    .TTphotoTextArea {
+      background-color: $brown;
+      h2 {
+        color: $orange;
+      }
+      p {
+        color: $white;
+      }
+    }
   }
-  .photoBub{
-    float: left;
-    width: 250px !important;
-    height: 250px;
-    margin:  0 0 400px;
-  }
+//  h2 {
+//    color: $offwhite;
+//    margin: 240px 0 20px;
+//    text-align: right;
+//    display: inline-block;
+//  }
+//  .photoBub{
+//    float: left;
+//    width: 250px !important;
+//    height: 250px;
+//    margin:  0 0 400px;
+//  }
 }
 
 
@@ -773,10 +808,11 @@ footer {
   }
 }
 
+.TTquotedArea{
 
+}
 
 /*TT BUBBLES*/
-
 #TTbubbles {
   background-color: $offwhite;
   width: 100%;
