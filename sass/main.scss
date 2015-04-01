@@ -845,7 +845,7 @@ footer {
   background-color: $offwhite;
   .container-narrow{
     position: relative;
-    padding-top: 100px;
+    padding-top: 50px;
     .clientPhone{
       background-size: auto 413px;
       height: 413px;
@@ -893,7 +893,7 @@ footer {
     background: url("../img/teamtelefoon/mobileTeams.png") no-repeat top center;
     width: 100%;
     position: absolute;
-    top: 281px;
+    top: 234px;
     left: 200px;
     background-size: auto 540px;
     height: 540px;
@@ -901,7 +901,7 @@ footer {
   .span4 {
     .quoteBox {
       z-index: 2;
-      margin-top: 65px;
+      margin-top: 50px;
       background-color: $orange;
       border-top-color: $brown;
       .boxIcon {
@@ -925,7 +925,7 @@ footer {
         margin-top: 0;
       }
       &:last-child {
-        margin-bottom: 100px;
+        margin-bottom: 60px;
       }
     }
   }
@@ -933,7 +933,7 @@ footer {
     .quoteBox {
       font-weight: normal;
       font-style: normal;
-      margin-top: 333px;
+      margin-top: 337px;
       background-color: $beige;
       z-index: 9;
     }
