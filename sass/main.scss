@@ -613,6 +613,42 @@ footer {
   @include flip(-1);
 }
 
+.quoteBox {
+  border-top: $turq solid 8px;
+  border-radius: 0px;
+  padding: 15px 20px;
+  text-align: right;
+  display: block;
+  margin-top: 60px;
+  background-color: $white;
+  opacity: 0.9;
+  .boxIcon {
+    background-color: $turq;
+    border-radius: 50%;
+    display: table;
+    height: 90px;
+    margin: 0 auto;
+    width: 90px;
+    margin-top: -83px;
+    span {
+      color: #fff;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      background: url("../img/teamtelefoon/quote02.png") no-repeat 50% 50%;
+    }
+  }
+  .info {
+    margin-top: 10px;
+    p {
+      color: $brown;
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+}
+
 /* --END DEFAULTS-- */
 
 /* Navbar*/
@@ -756,7 +792,7 @@ footer {
 }
 
 .TTmobile {
-  background: url("../img/teamtelefoon/mobile01.png") no-repeat top center;
+  background: url("../img/teamtelefoon/mobileChat02.png") no-repeat top center;
   background-size: auto 500px;
   height: 500px;
 }
@@ -767,6 +803,7 @@ footer {
   opacity: 0.9;
   padding: 15px 25px;
   background: $orange;
+  margin-bottom: 90px;
   h2 {
     color: $white;
   }
@@ -825,6 +862,53 @@ footer {
     p {
       text-align: center;
       margin-top: 28px;
+    }
+  }
+  .TTmobiles {
+    margin-top: 200px;
+  }
+  .TTmobile {
+    background: url("../img/teamtelefoon/mobileChatTeam.png") no-repeat top center;
+    background-size: auto 500px;
+    height: 500px;
+  }
+  .TTmobile.secondMobile {
+    background: url("../img/teamtelefoon/mobileTeams.png") no-repeat top center;
+    width: 100%;
+    position: absolute;
+    top: 281px;
+    left: 200px;
+    background-size: auto 540px;
+    height: 540px;
+  }
+  .span4 {
+    .quoteBox {
+      margin-top: 100px;
+      background-color: $orange;
+      border-top-color: $brown;
+      .boxIcon {
+        background-color: $brown;
+        span {
+          background-image: none;
+          font-size: 40px;
+          font-weight: bold;
+        }
+      }
+    }
+    .quoteBox {
+      &:first-child {
+        margin-top: 60px;
+      }
+      &:last-child {
+        margin-bottom: 100px;
+      }
+    }
+  }
+  .span3 {
+    .quoteBox {
+      margin-top: 333px;
+      background-color: $beige;
+      z-index: 9;
     }
   }
 }
