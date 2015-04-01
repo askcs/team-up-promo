@@ -591,7 +591,31 @@ footer {
 
 /*-----------------------------------------------------------------------------TeamTelefoon-----------------------------------------------------------------------------*/
 
+/* --DEFAULTS-- */
 
+/* Arrow text area*/
+
+.TTarrowTextArea {
+  width: 120px;
+  p {
+    font-family: 'Artbrush';
+    text-align: center;
+  }
+  .arrowBG {
+    background: url("../img/teamtelefoon/arrowMedium.png") no-repeat 60% 0;
+    height: 70px;
+  }
+}
+
+.arrowBG.flipLeft {
+  background-position: 75% 0;
+  margin-left: 0;
+  @include flip(-1);
+}
+
+/* --END DEFAULTS-- */
+
+/* Navbar*/
 
 #TTnavbar.navbar-inverse {
   .navbar-inner {
@@ -606,9 +630,6 @@ footer {
     }
   }
 }
-
-
-
 
 /*TT INTRO*/
 
@@ -631,7 +652,54 @@ footer {
       padding-bottom: 180px;
       #heroLogo {
         background-image: url("../img/teamtelefoon/logo.png");
-        width: 100%;;
+        width: 100%;
+      }
+      ul {
+        list-style: none;
+        li {
+          position: absolute;
+          z-index: 3;
+          .TTarrowTextArea {
+            .arrowBG {
+              background: url("../img/teamtelefoon/arrowSmall.png") no-repeat 60% 0;
+            }
+          }
+          &:first-child {
+            top: 40%;
+            left: -60px;
+          }
+          &:nth-child(2) {
+            top: 28%;
+            left: 115px;
+          }
+          &:nth-child(3) {
+            top: 182px;
+            left: 50%;
+            .TTarrowTextArea {
+              .arrowBG {
+                background: url("../img/teamtelefoon/arrowMedium.png") no-repeat 44% 0;
+                height: 135px;
+              }
+            }
+          }
+          &:nth-child(4) {
+            top: 38%;
+            right: 93px;
+            .TTarrowTextArea {
+              .arrowBG {
+                margin-left: -103px;
+                background: url("../img/teamtelefoon/arrowBig.png") no-repeat 100% 0;
+                height: 250px;
+                @include rotateFlip(58deg, -1);
+                margin-top: 50px;
+              }
+            }
+          }
+          &:nth-child(5) {
+            top: 40%;
+            right: -30px
+          }
+        }
       }
     }
     #introTeamMember{
@@ -670,8 +738,20 @@ footer {
   text-align: center;
   width: 100%;
   padding-top: 100px;
+  z-index: 1;
+  .TTarrowTextArea {
+    position: absolute;
+    top: 5%;
+    right: 210px;
+    .arrowBG {
+      @include rotateFlip(157deg, -1);
+      background-position: 41% 0;
+      height: 137px;
+      margin-left: -110px;
+    }
+  }
   img {
-    margin-top: -700px;
+    margin-top: -610px;
   }
 }
 
@@ -693,28 +773,6 @@ footer {
   p {
     color: $brown;
   }
-}
-
-.TTarrowTextArea {
-  padding-bottom: 75px;
-  //width: 150px !important;
-  background: url("../img/teamtelefoon/arrowSmall.png") no-repeat bottom center;
-  p {
-    font-family: 'Artbrush';
-    text-align: center;
-  }
-}
-
-.TTarrowTextArea .arrowSmall {
-  background: url("../img/teamtelefoon/arrowSmall.png") no-repeat bottom center;
-}
-
-.TTarrowTextArea .arrowMedium {
-  background: url("../img/teamtelefoon/arrowMedium.png") no-repeat bottom center;
-}
-
-.TTarrowTextArea .arrowBig {
-  background: url("../img/teamtelefoon/arrowBig.png") no-repeat bottom center;
 }
 
 /*TT PHOTO AREA 1*/
@@ -796,6 +854,7 @@ footer {
   background-size: cover;
   background-color: $beige;
   .photoArea {
+
     .TTphotoTextArea {
       background-color: $brown;
       h2 {
@@ -809,7 +868,7 @@ footer {
   .TTarrowTextArea {
     margin-top: 80px;
     p {
-      color: $white !important;
+      color: $brown;
     }
   }
 //  h2 {
