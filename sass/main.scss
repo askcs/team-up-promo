@@ -735,6 +735,21 @@ footer {
             top: 40%;
             right: -30px
           }
+          &:nth-child(6) {
+            bottom: -320px;
+            right: 120px;
+            .TTarrowTextArea {
+              top: 5%;
+              right: 210px;
+              .arrowBG {
+                background: url("../img/teamtelefoon/arrowMedium.png") no-repeat 44% 0;
+                @include rotateFlip(157deg, -1);
+                background-position: 41% 0;
+                height: 137px;
+                margin-left: -110px;
+              }
+            }
+          }
         }
       }
     }
@@ -775,19 +790,8 @@ footer {
   width: 100%;
   padding-top: 100px;
   z-index: 1;
-  .TTarrowTextArea {
-    position: absolute;
-    top: 5%;
-    right: 210px;
-    .arrowBG {
-      @include rotateFlip(157deg, -1);
-      background-position: 41% 0;
-      height: 137px;
-      margin-left: -110px;
-    }
-  }
   img {
-    margin-top: -610px;
+    margin: -610px 0 100px 0;
   }
 }
 
@@ -855,6 +859,19 @@ footer {
       max-height: 100%;
     }
   }
+  .TTarrowTextArea {
+    position: absolute;
+    z-index: 3;
+    top: 27%;
+    left: 167px;
+    .arrowBG {
+      background: url("../img/teamtelefoon/arrowSmall.png") no-repeat 60% 0;
+    }
+    &:first-child {
+      top: 59%;
+      left: -36px;
+    }
+  }
   .photoBub {
     width: 290px !important;
     height: 290px;
@@ -883,21 +900,29 @@ footer {
   }
   .span4 {
     .quoteBox {
-      margin-top: 100px;
+      z-index: 2;
+      margin-top: 65px;
       background-color: $orange;
       border-top-color: $brown;
       .boxIcon {
         background-color: $brown;
+        height: 70px;
+        width: 70px;
+        margin-top: -70px;
         span {
           background-image: none;
-          font-size: 40px;
+          font-size: 32px;
           font-weight: bold;
         }
+      }
+      p {
+        font-weight: normal;
+        font-style: normal;
       }
     }
     .quoteBox {
       &:first-child {
-        margin-top: 60px;
+        margin-top: 0;
       }
       &:last-child {
         margin-bottom: 100px;
@@ -906,6 +931,8 @@ footer {
   }
   .span3 {
     .quoteBox {
+      font-weight: normal;
+      font-style: normal;
       margin-top: 333px;
       background-color: $beige;
       z-index: 9;
