@@ -862,13 +862,13 @@ footer {
   .TTarrowTextArea {
     position: absolute;
     z-index: 3;
-    top: 27%;
+    top: 23%;
     left: 167px;
     .arrowBG {
       background: url("../img/teamtelefoon/arrowSmall.png") no-repeat 60% 0;
     }
     &:first-child {
-      top: 59%;
+      top: 57%;
       left: -36px;
     }
   }
@@ -882,7 +882,7 @@ footer {
     }
   }
   .TTmobiles {
-    margin-top: 200px;
+    margin-top: 130px;
   }
   .TTmobile {
     background: url("../img/teamtelefoon/mobileChatTeam.png") no-repeat top center;
@@ -893,7 +893,7 @@ footer {
     background: url("../img/teamtelefoon/mobileTeams.png") no-repeat top center;
     width: 100%;
     position: absolute;
-    top: 234px;
+    top: 167px;
     left: 200px;
     background-size: auto 540px;
     height: 540px;
@@ -933,7 +933,7 @@ footer {
     .quoteBox {
       font-weight: normal;
       font-style: normal;
-      margin-top: 337px;
+      margin-top: 270px;
       background-color: $beige;
       z-index: 9;
     }
