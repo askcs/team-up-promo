@@ -401,7 +401,7 @@ footer {
     padding: 10px 20px;
     margin-top: -140px;
     @include border-radius(20px 0 0 20px);
-    opacity:0.9;
+    @include opacity(0.9);
     p {
       color: $orange;
       font-size: 18px;
@@ -621,7 +621,7 @@ footer {
   display: block;
   margin-top: 60px;
   background-color: $white;
-  opacity: 0.9;
+  @include opacity(0.9 !important);
   .boxIcon {
     background-color: $turq;
     border-radius: 50%;
@@ -811,7 +811,7 @@ footer {
 /*TT PHOTO TEXT AREA 1*/
 
 .TTphotoTextArea {
-  opacity: 0.9;
+  @include opacity(0.9);
   padding: 15px 25px;
   background: $orange;
   margin-bottom: 90px;
@@ -830,7 +830,7 @@ footer {
   background: url("../img/teamtelefoon/onBike.jpg") no-repeat top center;
   background-size: cover;
   .TTphotoTextArea {
-    opacity: 0.9;
+    @include opacity(0.9);
     margin-top: 100px;
     padding: 15px 25px;
     background: $orange;

@@ -55,3 +55,9 @@
   transform: rotate($deg) scaleX($side);
   //transform: rotate(157deg) scaleX(-1);
 }
+
+@mixin  opacity($amount) {
+  -moz-opacity: $amount;
+  -khtml-opacity: $amount;
+  opacity: $amount;
+}
