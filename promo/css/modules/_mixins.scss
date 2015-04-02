@@ -27,3 +27,37 @@
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
+
+// Border Radius
+//to the left -1
+@mixin flip($side) {
+  -o-transform: scaleX($side);
+  -webkit-transform: scaleX($side);
+  -ms-transform: scaleX($side);
+  transform: scaleX($side);
+  -ms-filter: "FlipH";
+  filter: FlipH;
+}
+//$deg -90deg
+@mixin rotate($deg) {
+  webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin rotateFlip($deg, $side) {
+  webkit-transform: rotate($deg) scaleX($side);
+  -moz-transform: rotate($deg) scaleX($side);
+  -ms-transform: rotate($deg) scaleX($side);
+  -o-transform: rotate($deg) scaleX($side);
+  transform: rotate($deg) scaleX($side);
+  //transform: rotate(157deg) scaleX(-1);
+}
+
+@mixin  opacity($amount) {
+  -moz-opacity: $amount;
+  -khtml-opacity: $amount;
+  opacity: $amount;
+}

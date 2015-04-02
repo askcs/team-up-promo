@@ -64,27 +64,81 @@ module.exports = function (grunt)
       }
     },
 
+
+    /**
+     * Connect
+     */
+    connect: {
+      all: {
+        options:{
+          port: 3000,
+          hostname: "0.0.0.0",
+          // Prevents Grunt to close just after the task (starting the server) completes
+          // This will be removed later as `watch` will take care of that
+          keepalive: false,
+          middleware: function(connect, options)
+          {
+            return [
+              // Load the middleware provided by the livereload plugin
+              // that will take care of inserting the snippet
+              require('grunt-contrib-livereload/lib/utils').livereloadSnippet,
+
+              // Serve the project folder
+              connect.static(options.base)
+            ];
+          }
+        }
+      }
+    },
+
+    /**
+     * Open browser automaticly
+     */
+    open: {
+      all: {
+        // Gets the port from the connect configuration
+        path: 'http://localhost:<%= connect.all.options.port%>/indexTeamtelefoon.html'
+      }
+    },
+
     /**
      * watch for changes
      */
     watch: {
+      options: {
+        livereload: true
+      },
+      html: {
+        files: [
+          'index*.html'
+        ]
+      },
       css: {
         files: [
           'sass/**/*.scss'
         ],
         tasks: ['compass']
+      },
+      scripts: {
+        files: 'promo/js/**/*.js',
+        options: {
+          debounceDelay: 250
+        }
+      },
+      configFiles: {
+        files: [ 'Gruntfile.js'],
+        options: {
+          reload: true
+        }
       }
     }
-
   });
 
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  grunt.registerTask('watchcss',  ['watch:css']);
-  grunt.registerTask('sasser',    ['compass']);
+  grunt.registerTask('server',[
+    'open',
+    'connect',
+    'watch'
+  ]);
 };
