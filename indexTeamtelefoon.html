@@ -148,7 +148,9 @@
 
                 <div class="row-fluid">
                     <div class="span6 offset3">
-                        <img src="promo/img/teamtelefoon/mobileReachable.png">
+                        <div id="mainPhone">
+                            <img src="promo/img/teamtelefoon/mobileReachable.png">
+                        </div>
                     </div>
                 </div>
 
@@ -162,7 +164,15 @@
                             <!--</p>-->
                             <!--<br><br>-->
                             <h2>Maximale flexibiliteit voor uw teamleden</h2>
-                            <p>Met de TeamUp TeamTelefoon kunnen teamleden precies aangeven wanneer ze beschikbaar zijn. Vindt er een onverwachte gebeurtenis plaats die leidt tot verandering in beschikbaarheid, dan kunnen teamleden dit direct doorgeven via internet, hun mobiele telefoon of de TeamTelefoon-app op hun smartphone.</p>
+                            <p>
+                                De beschikbaarheid kan telefonisch, via de app of de pc worden doorgegeven!
+                            </p>
+                            <div class="TTarrowTextArea">
+                                <div class="arrowBG"></div>
+                                <p>
+                                    De teamtelefoon op uw mobiel
+                                </p>
+                            </div>
                         </div>
                         <div class="span7" >
                             <div class="TToldPhone" data-sr="hustle 500px, over 1.5s"></div>
@@ -179,7 +189,7 @@
             <div class="container-narrow">
                 <div class="row-fluid">
                     <div class="span7 TTphotoTextArea floatRight">
-                        <h2>De teamtelefoon op jouw mobiel</h2>
+                        <h2>De teamtelefoon uw mobiel</h2>
                         <p>
                             De TeamTelefoon is een cloudtelefoon die, op het moment
                             dat zorgmedewerkers het aangeven, van de eigen telefoon de
@@ -290,10 +300,10 @@
                     </div>
                     <div class="span5 TTmobiles">
                         <div class="TTmobile"></div>
-                        <div class="TTmobile secondMobile"></div>
+                        <!--<div class="TTmobile secondMobile"></div>-->
                     </div>
                     <div class="span3">
-                        <div class="quoteBox" data-sr="enter top over 1.5s and move 1000px scale up 0%">
+                        <div class="quoteBox">
                             <div class="boxIcon">
                                 <span class="fa fa-4x fa-html5"></span>
                             </div>
@@ -433,9 +443,11 @@
             <!--</div>-->
         <!--</div>-->
 
-        <div id="contact" class="row-fluid">
+        <div id="contact" class="row-fluid contactTeamTelephone">
             <div class="container-narrow">
-                <h1>Neem contact op</h1>
+                <h1>
+                    Neem contact op
+                </h1>
                 <div class="row-fluid">
                 <div class="span4 contactInfo">
                     <p class="contactText"><span>Vragen?</span><br>Neem contact op met ASK Community Systems!</p>
@@ -532,12 +544,16 @@ url: sendMailURL
 
 
 
-        <footer>
+        <footer id="footerTeamTelephone">
             <p>
-	    	<span>&copy; <a href="http://ask-cs.nl" target="_blank">ASK Community Systems</a></span>
-		<span><a href="http://teamup.ask-cs.nl" target="_blank">TeamUp website</a></span></span>  
-		Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 010 225 0130 | 
-		<a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
+	    	<span>
+                &copy; <a href="http://ask-cs.nl" target="_blank">ASK Community Systems</a>
+            </span>
+            <span>
+                <a href="http://teamup.ask-cs.nl" target="_blank">TeamUp website</a>
+            </span>
+            Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 010 225 0130 |
+            <a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
         </footer>
 
 
@@ -574,8 +590,9 @@ url: sendMailURL
             var google_remarketing_only = true;
             /* ]]> */
         </script>
-        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
+        <div style="display:none;">
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+        </div>
         <noscript>
             <div style="display:inline;">
                 <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/957938795/?value=0&amp;guid=ON&amp;script=0"/>

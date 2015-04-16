@@ -290,6 +290,24 @@ p.asteriks {
 
 .presentProduct2 {
   overflow: hidden;
+  .span5 {
+    z-index: 2;
+    .TTarrowTextArea {
+      z-index: 3;
+      position: absolute;
+      bottom: 7%;
+      left: 38%;
+      .arrowBG {
+        margin-left: 60px;
+        background: url("../img/teamtelefoon/arrowSmall.png") no-repeat 46% 0;
+        height: 70px;
+        @include rotate(-105deg);
+      }
+    }
+  }
+  .span7 {
+    z-index: 1;
+  }
 }
 
 
@@ -297,14 +315,6 @@ p.asteriks {
 
 #contact {
   padding: 100px 0;
-  background: rgba(152,212,202,1);
-  background: -moz-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(152,212,202,1)), color-stop(100%, rgba(61,188,177,1)));
-  background: -webkit-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
-  background: -o-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
-  background: -ms-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
-  background: linear-gradient(to bottom, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98d4ca', endColorstr='#3dbcb1', GradientType=0 );
   h1 {
     color: $offwhite;
     text-transform: uppercase;
@@ -362,16 +372,25 @@ p.asteriks {
   }
 }
 
-
+.contactTeamTelephone {
+  background: rgba(152,212,202,1);
+  background: -moz-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(152,212,202,1)), color-stop(100%, rgba(61,188,177,1)));
+  background: -webkit-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  background: -o-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  background: -ms-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  background: linear-gradient(to bottom, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98d4ca', endColorstr='#3dbcb1', GradientType=0 );
+}
 
 
 /*FOOTER*/
 
 footer {
   padding: 1px 20px;
-  background-color: $turqDark !important;
+  background-color: $turq !important;
   p {
-    background-color: $turqDark !important;
+    background-color: $turq !important;
     text-align: center;
     color: $offwhite;
     span {
@@ -382,6 +401,15 @@ footer {
     }
   }
 }
+
+#footerTeamTelephone {
+  background-color: $turqDark !important;
+  p {
+    background-color: $turqDark !important;
+  }
+}
+
+
 
 
 
@@ -418,15 +446,16 @@ footer {
 /*PRESENT PRODUCT*/
 
 #TUpresentProduct {
-  a.photoBub {
-    height: 180px;
-    margin-top: -200px;
-    position: absolute;
-    width: 180px !important;
-    font-weight: bold;
-    padding-top: 6px;
-    color: $brown;
-  }
+    padding-bottom: 60px;
+    a.photoBub {
+      height: 180px;
+      margin-top: -200px;
+      position: absolute;
+      width: 180px !important;
+      font-weight: bold;
+      padding-top: 6px;
+      color: $brown;
+    }
 }
 
 
@@ -803,8 +832,8 @@ footer {
 
 .TToldPhone {
   margin-bottom: 100px;
-  background: url("../img/teamtelefoon/oldPhone.png") no-repeat center bottom;
-  background-size: auto 240px;
+  background: url("../img/teamtelefoon/oldPhoneSmall.png") no-repeat top center;
+  background-size: contain;
   height: 260px;
 }
 
@@ -869,13 +898,13 @@ footer {
   .TTarrowTextArea {
     position: absolute;
     z-index: 3;
-    top: 23%;
+    top: 25%;
     left: 167px;
     .arrowBG {
       background: url("../img/teamtelefoon/arrowSmall.png") no-repeat 60% 0;
     }
     &:first-child {
-      top: 57%;
+      top: 59%;
       left: -36px;
     }
   }
@@ -891,24 +920,18 @@ footer {
   .TTmobiles {
     margin-top: 130px;
   }
+
   .TTmobile {
-    background: url("../img/teamtelefoon/mobileChatTeam.png") no-repeat top center;
-    background-size: auto 500px;
-    height: 500px;
+    margin-right: -105px;
+    background: url("../img/teamtelefoon/mobileChatAndDetail.png") no-repeat top center;
+    background-size: auto 560px;
+    height: 560px;
   }
-  .TTmobile.secondMobile {
-    background: url("../img/teamtelefoon/mobileTeams.png") no-repeat top center;
-    width: 100%;
-    position: absolute;
-    top: 167px;
-    left: 200px;
-    background-size: auto 540px;
-    height: 540px;
-  }
+
   .span4 {
     .quoteBox {
       z-index: 2;
-      margin-top: 50px;
+      margin-top: 60px;
       background-color: $orange;
       border-top-color: $brown;
       .boxIcon {
@@ -940,7 +963,7 @@ footer {
     .quoteBox {
       font-weight: normal;
       font-style: normal;
-      margin-top: 270px;
+      margin-top: 290px;
       background-color: $beige;
       z-index: 9;
     }
@@ -1283,6 +1306,16 @@ footer {
     }
   }
 
+  #TTpresentProduct img {
+    margin: -520px 0 100px 0;
+  }
+
+  #mainPhone {
+    img {
+      max-height: 550px;
+    }
+  }
+
   #TTavailabilityCheck, #TTavailabilityCheck2 {
     h2 {
       word-break: break-all;
@@ -1308,6 +1341,25 @@ footer {
 
 
 @media (min-width: 768px) and (max-width: 979px) {
+  .TTarrowTextArea {
+    display: none;
+  }
+
+  #TTpresentProduct img {
+    margin: -520px 0 100px 0;
+  }
+
+  #mainPhone {
+    img {
+      max-height: 700px;
+    }
+  }
+
+  #TTavailabilityCheck {
+    .TTmobile {
+      margin-right: -140px;
+    }
+  }
 }
 
 
@@ -1332,6 +1384,14 @@ footer {
         margin-bottom: 40px;
       }
     }
+  }
+
+  .TToldPhone {
+    margin: 40px 0 100px 0;
+  }
+
+  .TTarrowTextArea {
+    display: none;
   }
 
   .girlArea {
@@ -1359,6 +1419,25 @@ footer {
       }
     }
 
+  }
+
+  #TTavailabilityCheck {
+    .container-narrow {
+      margin: 50px 0 70px 0;
+      padding-top: 0;
+      .TTmobiles {
+        margin-top: 60px;
+        .TTmobile {
+          background-size: contain;
+          margin-right: 0;
+        }
+      }
+      .span3 {
+        .quoteBox {
+          margin-top: 0;
+        }
+      }
+    }
   }
 
   .photoArea{
@@ -1400,6 +1479,10 @@ footer {
     }
   }
 
+  .presentProduct .row-fluid p {
+    margin-bottom: 0;
+  }
+
   .talkCloud{
     margin: 0 20px;
   }
@@ -1408,6 +1491,10 @@ footer {
     img {
       margin: -100px 0 0;
     }
+  }
+
+  .TToldPhone {
+    height: 190px;
   }
 
   #deviceArea3 {
@@ -1421,9 +1508,28 @@ footer {
     }
   }
 
+  #TTpresentProduct img {
+    margin: -220px 0 100px 0;
+  }
+
+  #mainPhone {
+    img {
+      max-height: 550px;
+    }
+  }
+
+  #TTintro.intro .container-narrow #heroLogoContainer {
+    padding-bottom: 0;
+  }
 
   .photoArea{
     background-size: 180% !important;
+  }
+
+  #contact {
+    h1 {
+      font-size: 55px;
+    }
   }
 }
 
