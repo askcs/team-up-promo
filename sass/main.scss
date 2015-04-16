@@ -1386,6 +1386,16 @@ footer {
     }
   }
 
+  #TTphotoArea1 {
+    .quoteBox {
+      margin-top: 75px;
+      border-top-color: $orange;
+      .boxIcon {
+        background-color: $orange;
+      }
+    }
+  }
+
   .TToldPhone {
     margin: 40px 0 100px 0;
   }
