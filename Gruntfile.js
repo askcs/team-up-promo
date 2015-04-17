@@ -5,11 +5,27 @@
  */
 module.exports = function (grunt)
 {
+
+	var appConfig = {
+		app: 'app',
+		dist: 'dist'
+	};
+
   grunt.initConfig(
   {
     pkg: grunt.file.readJSON('package.json'),
+	paths: appConfig,
 
-    /**
+    
+	clean: {
+	  files: ['<%= paths.dist %>/*']
+	},
+	rev: {
+		files: {
+		  src: ['scripts/app.js', 'css/app.css']
+		}
+	},
+	/**
      * sass compiler
      */
     sass: {
@@ -140,5 +156,8 @@ module.exports = function (grunt)
     'open',
     'connect',
     'watch'
+  ]);
+  grunt.registerTask('build',[
+    'clean'
   ]);
 };
