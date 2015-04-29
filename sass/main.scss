@@ -1,19 +1,31 @@
-// CSS normalize.css reset
-// @import "modules/normalize";
+// REPEAT VARIABLES & MIXINS
+@import "app/variables"; // Modify this for custom colors, font-sizes, etc
+@import "app/mixins";
+
+// BOOTSTRAP
+@import 'app/bootstrap';
+@import 'app/bootstrap/bootstrap-responsive';
+
+// ENTYPO
+@import "app/entypo";
 
 // See modules/_base.scss
-@import "../promo/css/modules/_base";
-@import "../promo/css/modules/_mixins";
-@import "../promo/css/modules/_normalize";
-@import "../promo/css/modules/_variables";
-/*@import "modules/navbar";*/
+@import "app/modules/base";
+@import "app/modules/mixins";
+@import "app/modules/normalize";
+@import "app/modules/variables";
 
-@import "../promo/css/partials/_header";
-@import "../promo/css/partials/_footer";
-@import "../promo/css/partials/_ie";
+@import "app/partials/header";
+@import "app/partials/footer";
+@import "app/partials/ie";
 
+@import "app/icomoon";
 
+// RESPONSIVE
+@import 'app/responsive';
 
+// IE RELATED STUFF
+@import 'app/ie';
 
 /*GENERAL*/
 
