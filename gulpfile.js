@@ -21,8 +21,11 @@ gulp.task('watch', function(){
 });
 
 gulp.task('connect', function() {
-  connect.server({livereload: true});
+  connect.server({
+    livereload: true,
+    port: 3000
+  });
 })
 
 gulp.task('build', ['styles'])
-gulp.task('default', ['build', 'connect', 'watch']);
+gulp.task('default', ['styles', 'connect', 'watch']);
