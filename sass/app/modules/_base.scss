@@ -2,10 +2,6 @@
 // @import "compass";
 //@import "compass/css3";
 
-// Default project mixins
-@import "../_mixins";
-
-#intro{
-  /*  background: url("../img/photo01.jpg") no-repeat top center;
-    background-size: cover;*/
-}
+@import "mixins";
+@import "normalize";
+@import "variables";

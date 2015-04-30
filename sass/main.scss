@@ -6,20 +6,17 @@
 @import 'app/bootstrap';
 @import 'app/bootstrap/bootstrap-responsive';
 
-// ENTYPO
-@import "app/entypo";
-
-// See modules/_base.scss
+// DEFAULT MODULES
 @import "app/modules/base";
-@import "app/modules/mixins";
-@import "app/modules/normalize";
-@import "app/modules/variables";
 
-@import "app/partials/header";
-@import "app/partials/footer";
-@import "app/partials/ie";
+//@import "app/partials/header";
+//@import "app/partials/footer";
+//@import "app/partials/ie";
 
-@import "app/icomoon";
+//// ENTYPO
+//@import "app/entypo";
+
+//@import "app/icomoon";
 
 // RESPONSIVE
 @import 'app/responsive';
