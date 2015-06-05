@@ -1758,6 +1758,7 @@ footer {
       .contactText {
         text-align: left;
         font-style: italic;
+        font-size: 14px;
         span {
           font-weight: bold;
           font-style: normal;
@@ -1772,6 +1773,13 @@ footer {
         label:first-child {
           margin-bottom: 5px;
         }
+        label {
+          text-transform: none;
+        }
+      }
+      .contactTextarea {
+        color: $brown;
+        font-size: 15px;
       }
     }
     .modal-footer {
@@ -1808,4 +1816,13 @@ footer {
 
 .datetimepicker td, .datetimepicker th {
   line-height: 19px;
+}
+
+//** Alert
+.alertContact {
+  position: absolute;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+  width: calc(95% - 32px);
 }

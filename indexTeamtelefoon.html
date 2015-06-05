@@ -451,103 +451,35 @@
 <!--</div>-->
 <!--</div>-->
 
-<div id="contact" class="row-fluid contactTeamTelephone">
-    <div class="container-narrow">
-        <h1>
-            Neem contact op
-        </h1>
-        <div class="row-fluid">
-            <div class="span4 contactInfo">
-                <p class="contactText"><span>Vragen?</span><br>Neem contact op met ASK Community Systems!</p>
-                <p><i class="icon-phone5 contactIcon"></i>010 225 0130</p>
-                <p><i class="icon-envelop contactIcon"></i><a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
-            </div>
-            <div class="span8">
-                <script>
-                    function IsEmail(email) {
-                        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                        return regex.test(email);
-                    }
-
-                    function sendMail(){
-                        var contactName = $.trim($("#contactName").val());
-                        var contactEmail = $.trim($("#contactEmail").val());
-                        var contactSubject = $.trim($("#contactSubject").val());
-                        var message = $.trim($("#message").val());
-
-                        var errorColor = "#c85a3c";
-                        var errorFontColor = "white";
-                        var rightColor = "white";
-                        var rightFontColor = "#833C11";
-
-                        var sendMailURL = "https://standby.ask-cs.nl/tymon/sendMail.php";
-                        sendMailURL += "?contactName="+contactName +
-                                "&contactEmail="+contactEmail+
-                                "&contactSubject="+contactSubject+
-                                "&message="+message ;
-                        if(contactName == '' ){
-                            alert("Vul alstublieft uw naam in.");
-                            $("#contactName").css("background-color" ,errorColor).css("color" ,errorFontColor);
-                            return ;
-                        }else{
-                            $("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
-                        }
-                        if(contactEmail == '' ){
-                            alert("Vul alstublieft uw emailadres in.");
-                            $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-                            return ;
-                        }else{
-                            if(!IsEmail(contactEmail)){
-                                alert("Uw emailadres is ongeldig.");
-                                $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-                                return;
-                            }else{
-                                $("#contactEmail").css("background-color" ,rightColor).css("color" ,rightFontColor);
-                            }
-                        }
-                        if(contactSubject == '' ){
-                            alert("Vul alstublieft een onderwerp in.");
-                            $("#contactSubject").css("background-color" ,errorColor).css("color" ,errorFontColor);
-                            return ;
-                        }else{
-                            $("#contactSubject").css("background-color" ,rightColor).css("color" ,rightFontColor);
-                        }
-                        if(message == '' ){
-                            alert("Vul alstublieft een bericht in.");
-                            $("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
-                            return ;
-                        }else{
-                            $("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
-                        }
-
-                        $.ajax({
-                            url: sendMailURL
-                        }).done(function( data ) {
-                            console.log(data);
-                            alert("Bericht is verzonden!");
-                        }).fail(function( error){
-                            console.log(error);
-                            alert("Bericht is verzonden!");
-                        });
-                    }
-                </script>
-                <form>
-                    <div class="span6">
-                        <input class="span12 contactInput" type="text" placeholder="Naam" id="contactName">
-                        <input class="span12 contactInput" type="text" placeholder="E-mail" id="contactEmail">
-                        <input class="span12 contactInput" type="text" placeholder="Onderwerp" id="contactSubject">
-                    </div>
-                    <div class="span6">
-                        <textarea class="span12 contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>
-                    </div>
-                    <div class="span12 sendButton" id="sendMailBtn">
-                        <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div id="contact" class="row-fluid contactTeamTelephone">-->
+    <!--<div class="container-narrow">-->
+        <!--<h1>-->
+            <!--Neem contact op-->
+        <!--</h1>-->
+        <!--<div class="row-fluid">-->
+            <!--<div class="span4 contactInfo">-->
+                <!--<p class="contactText"><span>Vragen?</span><br>Neem contact op met ASK Community Systems!</p>-->
+                <!--<p><i class="icon-phone5 contactIcon"></i>010 225 0130</p>-->
+                <!--<p><i class="icon-envelop contactIcon"></i><a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>-->
+            <!--</div>-->
+            <!--<div class="span8">-->
+                <!--<form>-->
+                    <!--<div class="span6">-->
+                        <!--<input class="span12 contactInput" type="text" placeholder="Naam" id="contactName">-->
+                        <!--<input class="span12 contactInput" type="text" placeholder="E-mail" id="contactEmail">-->
+                        <!--<input class="span12 contactInput" type="text" placeholder="Onderwerp" id="contactSubject">-->
+                    <!--</div>-->
+                    <!--<div class="span6">-->
+                        <!--<textarea class="span12 contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>-->
+                    <!--</div>-->
+                    <!--<div class="span12 sendButton" id="sendMailBtn">-->
+                        <!--<button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
 
 
@@ -573,21 +505,24 @@
                 <h4 class="modal-title" id="myModalLabel">NEEM CONTACT OP</h4>
             </div>
             <div class="modal-body">
+                <div class="alert alert-success alertContact" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    Bedankt voor uw interesse in TeamTelefoon. Uw aanvraag is verstuurd en er wordt z.s.m contact met u opgenomen!
+                </div>
                 <form>
                     <div>
                         <div class="form-group has-feedback contactRadio">
-                            <labe>Ik wil*:</labe>
+                            <label>Ik wil:</label>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                                    een gratis demonstratie op locatie inplannen
-
+                                    <input class='contactRadios' type="radio" name="optionsRadios" value="demonstration" id="radioDemonstration">
+                                    Een gratis demonstratie op locatie inplannen
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
-                                    meer informatie over TeamTelefoon
+                                    <input class='contactRadios' type="radio" name="optionsRadios" value="info" id="radioInfo" checked>
+                                    Meer informatie over TeamTelefoon
                                 </label>
                             </div>
                         </div>
@@ -600,21 +535,19 @@
                         <input class="contactInput" type="text" placeholder="Bedrijfsnaam *" id="contactCompagnyName">
                         <input class="contactInput" type="text" placeholder="E-mail *" id="contactEmail">
                         <input class="contactInput" type="text" placeholder="Telefoonnummer" id="contactTelephone">
-                        <input class="contactInput form_datetime" type="text" id="contactDateTime" placeholder="Tijdstip *">
+                        <input class="contactInput form_datetime" type="text" id="contactDateTime" readonly placeholder="Tijdstip *">
+                        <textarea class="contactInput contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"></textarea>
                     </div>
                     <div>
                         <p class="contactText">
                             * Verplicht veld
                         </p>
                     </div>
-                    <!--<div class="span6">-->
-                    <!--<textarea class="contactTextarea span10" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>-->
-                    <!--</div>-->
                 </form>
             </div>
             <div class="modal-footer">
                 <div class="sendButton" id="sendMailBtn">
-                    <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
+                    <button class="btn-large btn-block btn-primary ng-binding" type="button" >Verzenden</button>
                 </div>
             </div>
         </div>
