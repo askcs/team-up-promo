@@ -54,9 +54,9 @@
                         <div class="row-fluid">
                             <div class="contactBtn">
                                 <a>
-                                    <button class="btn btn-large btn-block btn-primary ng-binding"
+                                    <button class="btn btn-large btn-block btn-primary"
                                             data-toggle="modal"
-                                            data-target="#myModal">Contact</button>
+                                            data-target="#contactModal">Contact</button>
                                 </a>
                             </div>
                             <div class="loginBtn">
@@ -450,25 +450,6 @@
             <!--</div>-->
         <!--</div>-->
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div id="contact" class="row-fluid contactTeamTelephone">
             <div class="container-narrow">
                 <h1>
@@ -582,7 +563,36 @@ url: sendMailURL
             <a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
         </footer>
 
-
+        <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">NEEM CONTACT OP</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="">
+                                <input class="contactInput " type="text" placeholder="Naam" id="contactName">
+                                <input class="contactInput " type="text" placeholder="Bedrijfsnaam" id="contactCompagnyName">
+                                <input class="contactInput " type="text" placeholder="E-mail" id="contactEmail">
+                                <input class="contactInput " type="text" placeholder="" id="contactTelephone">
+                                <!--<input class="contactInput span6" type="text" placeholder="Onderwerp" id="contactSubject">-->
+                            </div>
+                            <!--<div class="span6">-->
+                                <!--<textarea class="contactTextarea span10" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>-->
+                            <!--</div>-->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="sendButton" id="sendMailBtn">
+                            <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 

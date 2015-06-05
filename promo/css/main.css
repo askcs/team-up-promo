@@ -4664,3 +4664,19 @@ footer {
 @media (min-width: 992px) {
   .modal-lg {
     width: 900px; } }
+
+#contactModal .modal-content {
+  background: #98d4ca;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #98d4ca), color-stop(100%, #3dbcb1));
+  background: -webkit-linear-gradient(top, #98d4ca 0%, #3dbcb1 100%);
+  background: linear-gradient(to bottom, #98d4ca 0%, #3dbcb1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98d4ca', endColorstr='#3dbcb1', GradientType=0 ); }
+  #contactModal .modal-content .modal-header {
+    border: none; }
+    #contactModal .modal-content .modal-header .modal-title {
+      font-size: 4em;
+      color: #fffaf0;
+      text-transform: uppercase;
+      text-align: center; }
+  #contactModal .modal-content .modal-footer {
+    border: none; }
