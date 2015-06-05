@@ -46,14 +46,19 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
-
         <!-- navbar -->
             <div id="TTnavbar" class="navbar navbar-inverse navbar-fixed-top">
                 <div class="navbar-inner">
                     <div class="container-fluid">
                         <a class="brand" href="#"></a>
                         <div class="row-fluid">
+                            <div class="contactBtn">
+                                <a>
+                                    <button class="btn btn-large btn-block btn-primary ng-binding"
+                                            data-toggle="modal"
+                                            data-target="#myModal">Contact</button>
+                                </a>
+                            </div>
                             <div class="loginBtn">
                                 <a href="https://teamtelefoon.nl/app/index.html">
                                     <button class="btn btn-large btn-block btn-primary ng-binding" type="submit">Inloggen</button>
@@ -445,6 +450,25 @@
             <!--</div>-->
         <!--</div>-->
 
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="contact" class="row-fluid contactTeamTelephone">
             <div class="container-narrow">
                 <h1>
@@ -566,6 +590,7 @@ url: sendMailURL
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="promo/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="promo/js/vendor/bootstrap.js"></script>
         <script src="promo/js/vendor/scrollReveal.js"></script>
         <script src="promo/js/plugins.js"></script>
         <script src="promo/js/main.js"></script>
