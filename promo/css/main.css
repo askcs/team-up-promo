@@ -4678,5 +4678,43 @@ footer {
       color: #fffaf0;
       text-transform: uppercase;
       text-align: center; }
+  #contactModal .modal-content .modal-body .contactInput {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    padding: 0 10px;
+    width: 97%; }
+  #contactModal .modal-content .modal-body .contactTextarea {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    height: 160px; }
+  #contactModal .modal-content .modal-body .sendButton {
+    clear: both;
+    margin-left: 0; }
+  #contactModal .modal-content .modal-body .contactText {
+    text-align: left;
+    font-style: italic; }
+    #contactModal .modal-content .modal-body .contactText span {
+      font-weight: bold;
+      font-style: normal; }
   #contactModal .modal-content .modal-footer {
     border: none; }
+
+.datetimepicker {
+  background-color: #fff;
+  position: absolute;
+  left: 76.5px;
+  z-index: 1060;
+  top: 432px;
+  display: none;
+  color: #833c11; }
+
+.datetimepicker table tr td.active, .datetimepicker table tr td.active:hover, .datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover {
+  background-image: -webkit-linear-gradient(top, #96d4ca, #3ebdb2) !important; }
+
+.datetimepicker table tr td span.active, .datetimepicker table tr td span.active:hover, .datetimepicker table tr td span.active.disabled, .datetimepicker table tr td span.active.disabled:hover {
+  background-image: -webkit-linear-gradient(top, #96d4ca, #3ebdb2) !important; }
+
+.datetimepicker td, .datetimepicker th {
+  line-height: 19px; }

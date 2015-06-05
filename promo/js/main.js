@@ -12,4 +12,11 @@ jQuery(function() {
   });
 
   jQuery("[data-sr]").css("visibility", "hidden");
+
+  jQuery(".form_datetime").datetimepicker(
+    {
+      format: 'dd-mm-yyyy hh:ii',
+      language:  'nl'
+    }
+  );
 });

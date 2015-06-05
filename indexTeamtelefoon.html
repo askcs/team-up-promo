@@ -3,638 +3,651 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TeamTelefoon</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TeamTelefoon</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta property="og:title" content="TeamTelefoon" />
-        <meta property="og:type" content="image" />
-        <meta property="og:url" content="http://teamtelefoon.nl/" />
-        <meta property="og:image" content="promo/img/logoTeamUp02.png" />
+    <meta property="og:title" content="TeamTelefoon" />
+    <meta property="og:type" content="image" />
+    <meta property="og:url" content="http://teamtelefoon.nl/" />
+    <meta property="og:image" content="promo/img/logoTeamUp02.png" />
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!--<link rel="stylesheet" href="promo/css/bootstrap.css">-->
-        <!--<link rel="stylesheet" href="promo/css/bootstrap-responsive.min.css">-->
-        <!--<link rel="stylesheet" href="promo/css/app.min.css">-->
-        <!--<link rel="stylesheet" href="promo/css/main.css">-->
-        <!--<link rel="stylesheet" href="promo/css/ie.css">-->
+    <!--<link rel="stylesheet" href="promo/css/bootstrap.css">-->
+    <!--<link rel="stylesheet" href="promo/css/bootstrap-responsive.min.css">-->
+    <!--<link rel="stylesheet" href="promo/css/app.min.css">-->
+    <!--<link rel="stylesheet" href="promo/css/main.css">-->
+    <!--<link rel="stylesheet" href="promo/css/ie.css">-->
 
-        <link rel="stylesheet" href="promo/css/main.min.css">
+    <link rel="stylesheet" href="promo/css/main.min.css">
+    <link href="promo/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
-        <!-- Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
-        <!-- favicons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="promo/img/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="promo/img/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="promo/img/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="promo/img/ico/apple-touch-icon-57-precomposed.png">
-        <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="icon" href="/favicon.ico">
+    <!-- favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="promo/img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="promo/img/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="promo/img/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="promo/img/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
 
-		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<!--<script src="war/libs/jquery/1.9.1/jquery-1.9.1.min.js"></script> -->
+    <!--<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>-->
+    <!--<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+    <!--<script src="war/libs/jquery/1.9.1/jquery-1.9.1.min.js"></script> -->
 
-        </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
-        <!-- navbar -->
-            <div id="TTnavbar" class="navbar navbar-inverse navbar-fixed-top">
-                <div class="navbar-inner">
-                    <div class="container-fluid">
-                        <a class="brand" href="#"></a>
-                        <div class="row-fluid">
-                            <div class="contactBtn">
-                                <a>
-                                    <button class="btn btn-large btn-block btn-primary"
-                                            data-toggle="modal"
-                                            data-target="#contactModal">Contact</button>
-                                </a>
-                            </div>
-                            <div class="loginBtn">
-                                <a href="https://teamtelefoon.nl/app/index.html">
-                                    <button class="btn btn-large btn-block btn-primary ng-binding" type="submit">Inloggen</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<!-- navbar -->
+<div id="TTnavbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="brand" href="#"></a>
+            <div class="row-fluid">
+                <div class="contactBtn">
+                    <a>
+                        <button class="btn btn-large btn-block btn-primary"
+                                data-toggle="modal"
+                                data-target="#contactModal">Contact</button>
+                    </a>
+                </div>
+                <div class="loginBtn">
+                    <a href="https://teamtelefoon.nl/app/index.html">
+                        <button class="btn btn-large btn-block btn-primary ng-binding" type="submit">Inloggen</button>
+                    </a>
                 </div>
             </div>
-        <!-- end navbar -->
+        </div>
+    </div>
+</div>
+<!-- end navbar -->
 
 
 
-        <div id="TTintro" class="intro">
-            <div class="container-narrow">
-                <div class="row-fluid">
-                    <div class="span12">
-                        <div id="heroLogoContainer">
-                            <ul>
-                                <li>
-                                    <div class="TTarrowTextArea">
-                                        <p>
-                                            Niet meer
-                                            zelf hoeven
-                                            doorschakelen
-                                        </p>
-                                        <div class="arrowBG"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="TTarrowTextArea">
-                                        <p>
-                                            Nooit meer
-                                            mobieltjes
-                                            doorgeven
-                                        </p>
-                                        <div class="arrowBG flipLeft"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="TTarrowTextArea">
-                                        <p>
-                                            Uw team
-                                            altijd bereikbaar
-                                        </p>
-                                        <div class="arrowBG"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="TTarrowTextArea">
-                                        <p>
-                                            Maak van uw
-                                            eigen mobiel de
-                                            teamtelefoon
-                                        </p>
-                                        <div class="arrowBG"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="TTarrowTextArea">
-                                        <p>
-                                            Clienten krijgen
-                                            altijd iemand
-                                            aan de lijn
-                                        </p>
-                                        <div class="arrowBG flipLeft"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="TTarrowTextArea">
-                                        <div class="arrowBG"></div>
-                                        <p>
-                                            Beschikbaarheid
-                                            inzien en wijzigen
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <img src="promo/img/teamtelefoon/teamTelefoonLogo05.png">
-                        </div>
-                        <div id="introTeamMember">
-                            <img src="promo/img/teamtelefoon/teamMember.png" data-sr="enter left over 1s and move 300px scale up 0%, after 0.4s">
-                        </div>
-                        <div id="introClient">
-                            <img src="promo/img/teamtelefoon/client.png" data-sr="enter right over 1s and move 300px scale up 0%, after 0.4s">
-                        </div>
-                    </div>
+<div id="TTintro" class="intro">
+    <div class="container-narrow">
+        <div class="row-fluid">
+            <div class="span12">
+                <div id="heroLogoContainer">
+                    <ul>
+                        <li>
+                            <div class="TTarrowTextArea">
+                                <p>
+                                    Niet meer
+                                    zelf hoeven
+                                    doorschakelen
+                                </p>
+                                <div class="arrowBG"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="TTarrowTextArea">
+                                <p>
+                                    Nooit meer
+                                    mobieltjes
+                                    doorgeven
+                                </p>
+                                <div class="arrowBG flipLeft"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="TTarrowTextArea">
+                                <p>
+                                    Uw team
+                                    altijd bereikbaar
+                                </p>
+                                <div class="arrowBG"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="TTarrowTextArea">
+                                <p>
+                                    Maak van uw
+                                    eigen mobiel de
+                                    teamtelefoon
+                                </p>
+                                <div class="arrowBG"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="TTarrowTextArea">
+                                <p>
+                                    Clienten krijgen
+                                    altijd iemand
+                                    aan de lijn
+                                </p>
+                                <div class="arrowBG flipLeft"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="TTarrowTextArea">
+                                <div class="arrowBG"></div>
+                                <p>
+                                    Beschikbaarheid
+                                    inzien en wijzigen
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <img src="promo/img/teamtelefoon/teamTelefoonLogo05.png">
+                </div>
+                <div id="introTeamMember">
+                    <img src="promo/img/teamtelefoon/teamMember.png" data-sr="enter left over 1s and move 300px scale up 0%, after 0.4s">
+                </div>
+                <div id="introClient">
+                    <img src="promo/img/teamtelefoon/client.png" data-sr="enter right over 1s and move 300px scale up 0%, after 0.4s">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="TTpresentProduct" class="presentProduct row-fluid">
+    <div class="container-narrow">
+
+        <div class="row-fluid">
+            <div class="span6 offset3">
+                <div id="mainPhone">
+                    <img src="promo/img/teamtelefoon/mobileReachable.png">
                 </div>
             </div>
         </div>
 
-        <div id="TTpresentProduct" class="presentProduct row-fluid">
-            <div class="container-narrow">
+        <div class="row-fluid">
+            <div class="row-fluid presentProduct2">
+                <div class="span5">
 
-                <div class="row-fluid">
-                    <div class="span6 offset3">
-                        <div id="mainPhone">
-                            <img src="promo/img/teamtelefoon/mobileReachable.png">
-                        </div>
+                    <!--<h2>De teamtelefoon in de cloud</h2>-->
+                    <!--<p>-->
+                    <!--De TeamUp TeamTelefoon is een cloudtelefoon die, op het moment dat zorgmedewerkers het aangeven, van de eigen telefoon de teamtelefoon maakt. Ideaal voor mobiele teamwerkers, omdat de TeamUp TeamTelefoon een virtuele vervanger is van de fysieke teamtelefoon.-->
+                    <!--</p>-->
+                    <!--<br><br>-->
+                    <h2>Maximale flexibiliteit voor uw teamleden</h2>
+                    <p>
+                        De beschikbaarheid kan telefonisch, via de app of de pc worden doorgegeven!
+                    </p>
+                    <div class="TTarrowTextArea">
+                        <div class="arrowBG"></div>
+                        <p>
+                            De teamtelefoon op uw mobiel
+                        </p>
                     </div>
                 </div>
-
-                <div class="row-fluid">
-                    <div class="row-fluid presentProduct2">
-                        <div class="span5">
-
-                            <!--<h2>De teamtelefoon in de cloud</h2>-->
-                            <!--<p>-->
-                                <!--De TeamUp TeamTelefoon is een cloudtelefoon die, op het moment dat zorgmedewerkers het aangeven, van de eigen telefoon de teamtelefoon maakt. Ideaal voor mobiele teamwerkers, omdat de TeamUp TeamTelefoon een virtuele vervanger is van de fysieke teamtelefoon.-->
-                            <!--</p>-->
-                            <!--<br><br>-->
-                            <h2>Maximale flexibiliteit voor uw teamleden</h2>
-                            <p>
-                                De beschikbaarheid kan telefonisch, via de app of de pc worden doorgegeven!
-                            </p>
-                            <div class="TTarrowTextArea">
-                                <div class="arrowBG"></div>
-                                <p>
-                                    De teamtelefoon op uw mobiel
-                                </p>
-                            </div>
-                        </div>
-                        <div class="span7" >
-                            <div class="TToldPhone" data-sr="hustle 500px, over 1.5s"></div>
-                        </div>
-                    </div>
-                </div><!--/row-->
-            </div><!--/span-->
+                <div class="span7" >
+                    <div class="TToldPhone" data-sr="hustle 500px, over 1.5s"></div>
+                </div>
+            </div>
         </div><!--/row-->
+    </div><!--/span-->
+</div><!--/row-->
 
 
 
 
-        <div id="TTphotoArea1" class="photoArea row-fluid">
-            <div class="container-narrow">
-                <div class="row-fluid">
-                    <div class="span7 TTphotoTextArea floatRight">
-                        <h2>De teamtelefoon uw mobiel</h2>
+<div id="TTphotoArea1" class="photoArea row-fluid">
+    <div class="container-narrow">
+        <div class="row-fluid">
+            <div class="span7 TTphotoTextArea floatRight">
+                <h2>De teamtelefoon uw mobiel</h2>
+                <p>
+                    De TeamTelefoon is een cloudtelefoon die, op het moment
+                    dat zorgmedewerkers het aangeven, van de eigen telefoon de
+                    teamtelefoon maakt. Ideaal voor mobiele teamwerkers, omdat
+                    de TeamTelefoon een virtuele vervanger is van de fysieke
+                    teamtelefoon.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-narrow">
+        <div class="row-fluid">
+            <div class="span7">
+                <div class="quoteBox">
+                    <div class="boxIcon">
+                        <span class="fa fa-4x fa-html5"></span>
+                    </div>
+                    <div class="info">
                         <p>
-                            De TeamTelefoon is een cloudtelefoon die, op het moment
-                            dat zorgmedewerkers het aangeven, van de eigen telefoon de
-                            teamtelefoon maakt. Ideaal voor mobiele teamwerkers, omdat
-                            de TeamTelefoon een virtuele vervanger is van de fysieke
-                            teamtelefoon.
+                            “Onze zorgteams communiceren met elkaar via mobiele telefoons.
+                            Per week is één teamlid verantwoordelijk voor het telefonisch
+                            te woord staan van cliënten, dus heeft deze de teamtelefoon.
+                            Vaak wordt de telefoon dagelijks aan het volgende teamlid
+                            doorgegeven. Hierdoor hebben we voor elk team een extra
+                            telefoon met een extra abonnement moeten afsluiten.”
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="container-narrow">
-                <div class="row-fluid">
-                    <div class="span7">
-                        <div class="quoteBox">
-                            <div class="boxIcon">
-                                <span class="fa fa-4x fa-html5"></span>
-                            </div>
-                            <div class="info">
-                                <p>
-                                    “Onze zorgteams communiceren met elkaar via mobiele telefoons.
-                                    Per week is één teamlid verantwoordelijk voor het telefonisch
-                                    te woord staan van cliënten, dus heeft deze de teamtelefoon.
-                                    Vaak wordt de telefoon dagelijks aan het volgende teamlid
-                                    doorgegeven. Hierdoor hebben we voor elk team een extra
-                                    telefoon met een extra abonnement moeten afsluiten.”
-                                </p>
-                            </div>
-                        </div>
+            <div class="span5">
+                <div class="quoteBox">
+                    <div class="boxIcon">
+                        <span class="fa fa-4x fa-html5"></span>
                     </div>
-                    <div class="span5">
-                        <div class="quoteBox">
-                            <div class="boxIcon">
-                                <span class="fa fa-4x fa-html5"></span>
-                            </div>
-                            <div class="info">
-                                <p>
-                                    “Onze zorgteams en teamleden willen werken
-                                    hoe en wanneer het hén uitkomt. Ze werken al
-                                    lang niet meer vanuit een vast kantoor. Mensen
-                                    zijn mobiel, en dat moet hun kantoor dus
-                                    ook zijn. Wij zoeken naar manieren om deze
-                                    mensen toch altijd te blijven bereiken.”
-                                </p>
-                            </div>
-                        </div>
+                    <div class="info">
+                        <p>
+                            “Onze zorgteams en teamleden willen werken
+                            hoe en wanneer het hén uitkomt. Ze werken al
+                            lang niet meer vanuit een vast kantoor. Mensen
+                            zijn mobiel, en dat moet hun kantoor dus
+                            ook zijn. Wij zoeken naar manieren om deze
+                            mensen toch altijd te blijven bereiken.”
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 
 
 
 
-        <div id="TTavailabilityCheck" class="row-fluid">
-            <div class="container-narrow">
-                <div class="row-fluid">
-                    <div class="span4">
-                        <div class="TTarrowTextArea" data-sr="enter top over 1s and move 25px scale up 0%, after 0.3s">
-                            <div class="arrowBG"></div>
-                        </div>
-                        <div class="TTarrowTextArea" data-sr="enter top over 1s and move 25px scale up 0%, after 0.3s">
-                            <div class="arrowBG flipLeft"></div>
-                        </div>
-                        <div class="quoteBox">
-                            <div class="boxIcon">
-                                <span class="fa fa-4x fa-html5">1</span>
-                            </div>
-                            <div class="info">
-                                <p>
-                                    Het aantal beschikbare
-                                    zorgmedewerkers wordt
-                                    continu gemonitord.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="quoteBox">
-                            <div class="boxIcon">
-                                <span class="fa fa-4x fa-html5">2</span>
-                            </div>
-                            <div class="info">
-                                <p>
-                                    In het geval van <strong>acute
-                                    onderbezetting</strong> benadert
-                                    het systeem beschikbare
-                                    teamleden en vraagt of zij dit
-                                    tekort willen oplossen.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="quoteBox">
-                            <div class="boxIcon">
-                                <span class="fa fa-4x fa-html5">3</span>
-                            </div>
-                            <div class="info">
-                                <p>
-                                    Omdat het systeem ver van
-                                    tevoren de beschikbaarheid
-                                    uitvraagt, ziet het ook
-                                    <strong>dreigende onderbezetting</strong>
-                                    aankomen. In dit geval vraagt
-                                    het systeem aan beschikbare
-                                    teamleden of zij dit tekort
-                                    willen oplossen.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span5 TTmobiles">
-                        <div class="TTmobile"></div>
-                        <!--<div class="TTmobile secondMobile"></div>-->
-                    </div>
-                    <div class="span3">
-                        <div class="quoteBox">
-                            <div class="boxIcon">
-                                <span class="fa fa-4x fa-html5"></span>
-                            </div>
-                            <div class="info">
-                                <p>
-                                    “Als de eerste
-                                    verantwoordelijke
-                                    voor de teamtelefoon
-                                    bezet is, dan schakelt
-                                    de teamtelefoon
-                                    automatisch door
-                                    naar de volgende.
-                                    Bellers krijgen dus
-                                    altijd iemand aan de
-                                    lijn.”
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="span5 TTmobile" data-sr="hustle 500px, over 1.5s">-->
+<div id="TTavailabilityCheck" class="row-fluid">
+    <div class="container-narrow">
+        <div class="row-fluid">
+            <div class="span4">
+                <div class="TTarrowTextArea" data-sr="enter top over 1s and move 25px scale up 0%, after 0.3s">
+                    <div class="arrowBG"></div>
                 </div>
-            </div>
-        </div>
-
-
-
-
-        <!--<div id="TTavailabilityCheck2" class="textArea row-fluid">-->
-            <!--<div class="container-narrow">-->
-                <!--<div class="row-fluid">-->
-                    <!--<div class="span7 noBg">-->
-                        <!--<h2>Hoe werkt beschikbaarheidsbewaking?</h2>-->
-                        <!--<p>De manier waarop de beschikbaarheid wordt bewaakt is geavanceerd, want de functie monitort het aantal beschikbare zorgmedewerkers en onderneemt vervolgens zelf actie op twee fronten tegelijk: oplossen van acute onderbezetting en voorkomen van dreigende onderbezetting.</p>-->
-                        <!--<ul>-->
-                            <!--<li>-->
-                                <!--In het geval van acute onderbezetting benadert het systeem zelfstandig beschikbare teamleden en vraagt of zij dit tekort willen oplossen.-->
-                            <!--</li>-->
-                            <!--<li>-->
-                                <!--Omdat het systeem ver van tevoren de beschikbaarheid uitvraagt, ziet het dreigende onderbezetting aankomen. In dit geval benadert het systeem van tevoren al zelfstandig beschikbare teamleden en vraagt of zij dit tekort willen oplossen.-->
-                            <!--</li>-->
-                        <!--</ul>-->
-                    <!--</div>-->
-                    <!--<div class="span5">-->
-                        <!--<div class="talkCloud">-->
-                            <!--<h2>Escalatie</h2>-->
-                            <!--<p>In het onwaarschijnlijke geval dat er geen enkele zorgmedewerker beschikbaar is, kan het systeem multi-level escaleren: het systeem informeert eerst de teamleider en als laatste de algemene helpdesk van uw zorgorganisatie.</p>-->
-                            <!--<p>Is de urgentie minder hoog, dan kan de beller een voicemail achterlaten voor het zorgteam. Standaard wordt deze door de eerst beschikbare medewerker afgehandeld.</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-
-
-
-
-        <!--<div id="TTphotoArea2" class="photoArea row-fluid">-->
-            <!--<div class="container-narrow">-->
-                <!--<div class="row-fluid">-->
-                    <!--<div class="span2 TTarrowTextArea offset3">-->
-                        <!--<p>-->
-                            <!--Eenvoudig onderling-->
-                            <!--communiceren via-->
-                            <!--team-chat, SMS,-->
-                            <!--email en spraak.-->
-                        <!--</p>-->
-                        <!--<div class="arrowBG flipLeft"></div>-->
-                    <!--</div>-->
-                    <!--<div class="span6 TTphotoTextArea floatRight">-->
-                        <!--<h2>Escalatie</h2>-->
-                        <!--<p>-->
-                            <!--In het onwaarschijnlijke geval dat er geen enkele-->
-                            <!--zorgmedewerker beschikbaar is, kan het systeem-->
-                            <!--multi-level escaleren: het systeem informeert-->
-                            <!--eerst de teamleider en als laatste de algemene-->
-                            <!--helpdesk van uw zorgorganisatie.-->
-                        <!--</p>-->
-                        <!--<p>-->
-                            <!--Is de urgentie minder hoog, dan kan de beller-->
-                            <!--een voicemail achterlaten voor het zorgteam.-->
-                            <!--Standaard wordt deze door de eerst beschikbare-->
-                            <!--medewerker afgehandeld.-->
-                        <!--</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="container-narrow">-->
-                <!--<div class="row-fluid">-->
-                    <!--<div class="span4 talkCloud">-->
-                        <!--<h2>Eenvoudig onderling communiceren</h2>-->
-                        <!--<p>Om het communiceren binnen het team zo makkelijk mogelijk te maken, kunnen er onderling berichten worden uitgewisseld via de app, het opzetten van een team-chat, SMS, email en spraak.</p>-->
-                    <!--</div>-->
-
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-
-
-
-        <!--<div id="TTgirlArea1" class="girlArea row-fluid">-->
-            <!--<div class="container-narrow">-->
-                <!--<div class="row-fluid">-->
-                    <!--<div class="span8">-->
-                        <!--<div class="rightArrow"></div>-->
-                        <!--<div class="deviceInfo talkCloud">-->
-                            <!--<h2>Altijd het juiste team en de juiste mensen beschikbaar</h2>-->
-                            <!--<p>De Teamup Teamtelefoon kan ieder team zijn eigen nummer geven. Bovendien kunnen meerdere soorten nummers in gebruik worden genomen die aansluiten bij de expertise van het zorgteam. Hierdoor wordt het gebruik van meerdere telefoons overbodig. Zo komt een beller altijd uit bij het juiste team en de juiste persoon.</p>-->
-                            <!--<p>Dankzij de beschikbaarheidsbewaking wordt automatisch de beschikbaarheid uitgevraagd. Dit gebeurt op een slimme manier doordat er geselecteerd wordt op bijvoorbeeld expertise. Hierdoor staat binnen het team niet alleen het beschíkbare teamlid paraat, maar ook degene met de juiste kennis.</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="span4 tuGirl">-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-
-
-
-        <!--<div id="TTbubbles" class="row-fluid">-->
-            <!--<div class="container-narrow">-->
-                <!--<div class="row-fluid">-->
-                    <!--<div class="span4">-->
-                        <!--<div class="bub1 mobileBubble" data-sr="wait 0.3s and enter bottom and scale up 15% after 2s"><p>Nooit<br> meer onder-<br>bezetting</p></div>-->
-                        <!--<div class="bub2 mobileBubble" data-sr="wait 0.6s scale down 20% after 2s"><p>Meteen<br> de juiste<br> medewerker<br> aan de<br> lijn</p></div>-->
-                    <!--</div>&lt;!&ndash;/span&ndash;&gt;-->
-                    <!--<div class="span4">-->
-                        <!--<div class="bub3 mobileBubble" data-sr="wait 0.9s scale down 20% after 2s"><p>Wacht-<br>tijden voor<br> cliënten korter<br> dan ooit</p></div>-->
-                        <!--<div class="bub4 mobileBubble" data-sr="wait 1.2s scale up 15% after 2s"><p>Geen<br> mobieltjes<br> meer door-<br>geven</p></div>-->
-                        <!--<div class="bub5 mobileBubble" data-sr="wait 1.5s scale down 20% after 2s"><p>Niet<br> meer zelf<br> hoeven door-<br>schakelen</p></div>-->
-                    <!--</div>&lt;!&ndash;/span&ndash;&gt;-->
-                    <!--<div class="span4">-->
-                        <!--<div class="bub6 mobileBubble" data-sr="wait 1.8s scale up 15% after 2s"><p>Makkelijk<br> beschikbaarheid<br> wijzigen</p></div>-->
-                        <!--<div class="bub7 mobileBubble" data-sr="wait 2.1s scale down 20% after 2s"><p>Minder<br> handmatig<br> plannen</p></div>-->
-                    <!--</div>&lt;!&ndash;/span&ndash;&gt;-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-
-        <div id="contact" class="row-fluid contactTeamTelephone">
-            <div class="container-narrow">
-                <h1>
-                    Neem contact op
-                </h1>
-                <div class="row-fluid">
-                <div class="span4 contactInfo">
-                    <p class="contactText"><span>Vragen?</span><br>Neem contact op met ASK Community Systems!</p>
-                    <p><i class="icon-phone5 contactIcon"></i>010 225 0130</p>
-                    <p><i class="icon-envelop contactIcon"></i><a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
+                <div class="TTarrowTextArea" data-sr="enter top over 1s and move 25px scale up 0%, after 0.3s">
+                    <div class="arrowBG flipLeft"></div>
                 </div>
-                <div class="span8">
-			<script>
-			function IsEmail(email) {
-				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-				return regex.test(email);
-			}
-
-function sendMail(){
-	var contactName = $.trim($("#contactName").val());
-	var contactEmail = $.trim($("#contactEmail").val());
-	var contactSubject = $.trim($("#contactSubject").val());
-	var message = $.trim($("#message").val());
-
-	var errorColor = "#c85a3c";
-	var errorFontColor = "white";
-	var rightColor = "white";
-	var rightFontColor = "#833C11";
-
-	var sendMailURL = "https://standby.ask-cs.nl/tymon/sendMail.php";
-	sendMailURL += "?contactName="+contactName +
-		"&contactEmail="+contactEmail+
-		"&contactSubject="+contactSubject+
-		"&message="+message ;
-	if(contactName == '' ){
-		alert("Vul alstublieft uw naam in.");
-		$("#contactName").css("background-color" ,errorColor).css("color" ,errorFontColor);
-		return ;
-	}else{
-		$("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
-	}
-	if(contactEmail == '' ){
-		alert("Vul alstublieft uw emailadres in.");
-		$("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-		return ;
-	}else{
-		if(!IsEmail(contactEmail)){
-			alert("Uw emailadres is ongeldig.");
-			$("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-			return;
-		}else{
-			$("#contactEmail").css("background-color" ,rightColor).css("color" ,rightFontColor);
-		}
-	}
-	if(contactSubject == '' ){
-		alert("Vul alstublieft een onderwerp in.");
-		$("#contactSubject").css("background-color" ,errorColor).css("color" ,errorFontColor);
-		return ;
-	}else{
-		$("#contactSubject").css("background-color" ,rightColor).css("color" ,rightFontColor);
-	}
-	if(message == '' ){
-		alert("Vul alstublieft een bericht in.");
-		$("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
-		return ;
-	}else{
-		$("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
-	}
-
-	$.ajax({
-url: sendMailURL
-}).done(function( data ) {
-	console.log(data);
-	alert("Bericht is verzonden!");
-	}).fail(function( error){
-		console.log(error);
-		alert("Bericht is verzonden!");
-		});
-}
-                	</script>
-                        <form>
-                            <div class="span6">
-                                <input class="span12 contactInput" type="text" placeholder="Naam" id="contactName">
-                                <input class="span12 contactInput" type="text" placeholder="E-mail" id="contactEmail">
-                                <input class="span12 contactInput" type="text" placeholder="Onderwerp" id="contactSubject">
-                            </div>
-                            <div class="span6">
-                                <textarea class="span12 contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>
-                            </div>
-                            <div class="span12 sendButton" id="sendMailBtn">
-                                <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
-                            </div>
-                        </form>
+                <div class="quoteBox">
+                    <div class="boxIcon">
+                        <span class="fa fa-4x fa-html5">1</span>
+                    </div>
+                    <div class="info">
+                        <p>
+                            Het aantal beschikbare
+                            zorgmedewerkers wordt
+                            continu gemonitord.
+                        </p>
+                    </div>
+                </div>
+                <div class="quoteBox">
+                    <div class="boxIcon">
+                        <span class="fa fa-4x fa-html5">2</span>
+                    </div>
+                    <div class="info">
+                        <p>
+                            In het geval van <strong>acute
+                            onderbezetting</strong> benadert
+                            het systeem beschikbare
+                            teamleden en vraagt of zij dit
+                            tekort willen oplossen.
+                        </p>
+                    </div>
+                </div>
+                <div class="quoteBox">
+                    <div class="boxIcon">
+                        <span class="fa fa-4x fa-html5">3</span>
+                    </div>
+                    <div class="info">
+                        <p>
+                            Omdat het systeem ver van
+                            tevoren de beschikbaarheid
+                            uitvraagt, ziet het ook
+                            <strong>dreigende onderbezetting</strong>
+                            aankomen. In dit geval vraagt
+                            het systeem aan beschikbare
+                            teamleden of zij dit tekort
+                            willen oplossen.
+                        </p>
                     </div>
                 </div>
             </div>
+            <div class="span5 TTmobiles">
+                <div class="TTmobile"></div>
+                <!--<div class="TTmobile secondMobile"></div>-->
+            </div>
+            <div class="span3">
+                <div class="quoteBox">
+                    <div class="boxIcon">
+                        <span class="fa fa-4x fa-html5"></span>
+                    </div>
+                    <div class="info">
+                        <p>
+                            “Als de eerste
+                            verantwoordelijke
+                            voor de teamtelefoon
+                            bezet is, dan schakelt
+                            de teamtelefoon
+                            automatisch door
+                            naar de volgende.
+                            Bellers krijgen dus
+                            altijd iemand aan de
+                            lijn.”
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="span5 TTmobile" data-sr="hustle 500px, over 1.5s">-->
         </div>
+    </div>
+</div>
 
 
 
 
-        <footer id="footerTeamTelephone">
-            <p>
+<!--<div id="TTavailabilityCheck2" class="textArea row-fluid">-->
+<!--<div class="container-narrow">-->
+<!--<div class="row-fluid">-->
+<!--<div class="span7 noBg">-->
+<!--<h2>Hoe werkt beschikbaarheidsbewaking?</h2>-->
+<!--<p>De manier waarop de beschikbaarheid wordt bewaakt is geavanceerd, want de functie monitort het aantal beschikbare zorgmedewerkers en onderneemt vervolgens zelf actie op twee fronten tegelijk: oplossen van acute onderbezetting en voorkomen van dreigende onderbezetting.</p>-->
+<!--<ul>-->
+<!--<li>-->
+<!--In het geval van acute onderbezetting benadert het systeem zelfstandig beschikbare teamleden en vraagt of zij dit tekort willen oplossen.-->
+<!--</li>-->
+<!--<li>-->
+<!--Omdat het systeem ver van tevoren de beschikbaarheid uitvraagt, ziet het dreigende onderbezetting aankomen. In dit geval benadert het systeem van tevoren al zelfstandig beschikbare teamleden en vraagt of zij dit tekort willen oplossen.-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--<div class="span5">-->
+<!--<div class="talkCloud">-->
+<!--<h2>Escalatie</h2>-->
+<!--<p>In het onwaarschijnlijke geval dat er geen enkele zorgmedewerker beschikbaar is, kan het systeem multi-level escaleren: het systeem informeert eerst de teamleider en als laatste de algemene helpdesk van uw zorgorganisatie.</p>-->
+<!--<p>Is de urgentie minder hoog, dan kan de beller een voicemail achterlaten voor het zorgteam. Standaard wordt deze door de eerst beschikbare medewerker afgehandeld.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+
+<!--<div id="TTphotoArea2" class="photoArea row-fluid">-->
+<!--<div class="container-narrow">-->
+<!--<div class="row-fluid">-->
+<!--<div class="span2 TTarrowTextArea offset3">-->
+<!--<p>-->
+<!--Eenvoudig onderling-->
+<!--communiceren via-->
+<!--team-chat, SMS,-->
+<!--email en spraak.-->
+<!--</p>-->
+<!--<div class="arrowBG flipLeft"></div>-->
+<!--</div>-->
+<!--<div class="span6 TTphotoTextArea floatRight">-->
+<!--<h2>Escalatie</h2>-->
+<!--<p>-->
+<!--In het onwaarschijnlijke geval dat er geen enkele-->
+<!--zorgmedewerker beschikbaar is, kan het systeem-->
+<!--multi-level escaleren: het systeem informeert-->
+<!--eerst de teamleider en als laatste de algemene-->
+<!--helpdesk van uw zorgorganisatie.-->
+<!--</p>-->
+<!--<p>-->
+<!--Is de urgentie minder hoog, dan kan de beller-->
+<!--een voicemail achterlaten voor het zorgteam.-->
+<!--Standaard wordt deze door de eerst beschikbare-->
+<!--medewerker afgehandeld.-->
+<!--</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="container-narrow">-->
+<!--<div class="row-fluid">-->
+<!--<div class="span4 talkCloud">-->
+<!--<h2>Eenvoudig onderling communiceren</h2>-->
+<!--<p>Om het communiceren binnen het team zo makkelijk mogelijk te maken, kunnen er onderling berichten worden uitgewisseld via de app, het opzetten van een team-chat, SMS, email en spraak.</p>-->
+<!--</div>-->
+
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+<!--<div id="TTgirlArea1" class="girlArea row-fluid">-->
+<!--<div class="container-narrow">-->
+<!--<div class="row-fluid">-->
+<!--<div class="span8">-->
+<!--<div class="rightArrow"></div>-->
+<!--<div class="deviceInfo talkCloud">-->
+<!--<h2>Altijd het juiste team en de juiste mensen beschikbaar</h2>-->
+<!--<p>De Teamup Teamtelefoon kan ieder team zijn eigen nummer geven. Bovendien kunnen meerdere soorten nummers in gebruik worden genomen die aansluiten bij de expertise van het zorgteam. Hierdoor wordt het gebruik van meerdere telefoons overbodig. Zo komt een beller altijd uit bij het juiste team en de juiste persoon.</p>-->
+<!--<p>Dankzij de beschikbaarheidsbewaking wordt automatisch de beschikbaarheid uitgevraagd. Dit gebeurt op een slimme manier doordat er geselecteerd wordt op bijvoorbeeld expertise. Hierdoor staat binnen het team niet alleen het beschíkbare teamlid paraat, maar ook degene met de juiste kennis.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="span4 tuGirl">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+<!--<div id="TTbubbles" class="row-fluid">-->
+<!--<div class="container-narrow">-->
+<!--<div class="row-fluid">-->
+<!--<div class="span4">-->
+<!--<div class="bub1 mobileBubble" data-sr="wait 0.3s and enter bottom and scale up 15% after 2s"><p>Nooit<br> meer onder-<br>bezetting</p></div>-->
+<!--<div class="bub2 mobileBubble" data-sr="wait 0.6s scale down 20% after 2s"><p>Meteen<br> de juiste<br> medewerker<br> aan de<br> lijn</p></div>-->
+<!--</div>&lt;!&ndash;/span&ndash;&gt;-->
+<!--<div class="span4">-->
+<!--<div class="bub3 mobileBubble" data-sr="wait 0.9s scale down 20% after 2s"><p>Wacht-<br>tijden voor<br> cliënten korter<br> dan ooit</p></div>-->
+<!--<div class="bub4 mobileBubble" data-sr="wait 1.2s scale up 15% after 2s"><p>Geen<br> mobieltjes<br> meer door-<br>geven</p></div>-->
+<!--<div class="bub5 mobileBubble" data-sr="wait 1.5s scale down 20% after 2s"><p>Niet<br> meer zelf<br> hoeven door-<br>schakelen</p></div>-->
+<!--</div>&lt;!&ndash;/span&ndash;&gt;-->
+<!--<div class="span4">-->
+<!--<div class="bub6 mobileBubble" data-sr="wait 1.8s scale up 15% after 2s"><p>Makkelijk<br> beschikbaarheid<br> wijzigen</p></div>-->
+<!--<div class="bub7 mobileBubble" data-sr="wait 2.1s scale down 20% after 2s"><p>Minder<br> handmatig<br> plannen</p></div>-->
+<!--</div>&lt;!&ndash;/span&ndash;&gt;-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<div id="contact" class="row-fluid contactTeamTelephone">
+    <div class="container-narrow">
+        <h1>
+            Neem contact op
+        </h1>
+        <div class="row-fluid">
+            <div class="span4 contactInfo">
+                <p class="contactText"><span>Vragen?</span><br>Neem contact op met ASK Community Systems!</p>
+                <p><i class="icon-phone5 contactIcon"></i>010 225 0130</p>
+                <p><i class="icon-envelop contactIcon"></i><a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
+            </div>
+            <div class="span8">
+                <script>
+                    function IsEmail(email) {
+                        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                        return regex.test(email);
+                    }
+
+                    function sendMail(){
+                        var contactName = $.trim($("#contactName").val());
+                        var contactEmail = $.trim($("#contactEmail").val());
+                        var contactSubject = $.trim($("#contactSubject").val());
+                        var message = $.trim($("#message").val());
+
+                        var errorColor = "#c85a3c";
+                        var errorFontColor = "white";
+                        var rightColor = "white";
+                        var rightFontColor = "#833C11";
+
+                        var sendMailURL = "https://standby.ask-cs.nl/tymon/sendMail.php";
+                        sendMailURL += "?contactName="+contactName +
+                                "&contactEmail="+contactEmail+
+                                "&contactSubject="+contactSubject+
+                                "&message="+message ;
+                        if(contactName == '' ){
+                            alert("Vul alstublieft uw naam in.");
+                            $("#contactName").css("background-color" ,errorColor).css("color" ,errorFontColor);
+                            return ;
+                        }else{
+                            $("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
+                        }
+                        if(contactEmail == '' ){
+                            alert("Vul alstublieft uw emailadres in.");
+                            $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
+                            return ;
+                        }else{
+                            if(!IsEmail(contactEmail)){
+                                alert("Uw emailadres is ongeldig.");
+                                $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
+                                return;
+                            }else{
+                                $("#contactEmail").css("background-color" ,rightColor).css("color" ,rightFontColor);
+                            }
+                        }
+                        if(contactSubject == '' ){
+                            alert("Vul alstublieft een onderwerp in.");
+                            $("#contactSubject").css("background-color" ,errorColor).css("color" ,errorFontColor);
+                            return ;
+                        }else{
+                            $("#contactSubject").css("background-color" ,rightColor).css("color" ,rightFontColor);
+                        }
+                        if(message == '' ){
+                            alert("Vul alstublieft een bericht in.");
+                            $("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
+                            return ;
+                        }else{
+                            $("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
+                        }
+
+                        $.ajax({
+                            url: sendMailURL
+                        }).done(function( data ) {
+                            console.log(data);
+                            alert("Bericht is verzonden!");
+                        }).fail(function( error){
+                            console.log(error);
+                            alert("Bericht is verzonden!");
+                        });
+                    }
+                </script>
+                <form>
+                    <div class="span6">
+                        <input class="span12 contactInput" type="text" placeholder="Naam" id="contactName">
+                        <input class="span12 contactInput" type="text" placeholder="E-mail" id="contactEmail">
+                        <input class="span12 contactInput" type="text" placeholder="Onderwerp" id="contactSubject">
+                    </div>
+                    <div class="span6">
+                        <textarea class="span12 contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>
+                    </div>
+                    <div class="span12 sendButton" id="sendMailBtn">
+                        <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<footer id="footerTeamTelephone">
+    <p>
 	    	<span>
                 &copy; <a href="http://ask-cs.nl" target="_blank">ASK Community Systems</a>
             </span>
             <span>
                 <a href="http://teamup.ask-cs.nl" target="_blank">TeamUp website</a>
             </span>
-            Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 010 225 0130 |
-            <a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
-        </footer>
+        Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 010 225 0130 |
+        <a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
+</footer>
 
-        <!-- Modal -->
-        <div class="modal fade bs-example-modal-lg" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">NEEM CONTACT OP</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="">
-                                <input class="contactInput " type="text" placeholder="Naam" id="contactName">
-                                <input class="contactInput " type="text" placeholder="Bedrijfsnaam" id="contactCompagnyName">
-                                <input class="contactInput " type="text" placeholder="E-mail" id="contactEmail">
-                                <input class="contactInput " type="text" placeholder="" id="contactTelephone">
-                                <!--<input class="contactInput span6" type="text" placeholder="Onderwerp" id="contactSubject">-->
+<!-- Modal -->
+<div class="modal fade bs-example-modal-lg" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">NEEM CONTACT OP</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div>
+                        <div class="form-group has-feedback">
+                            <div class="col-xs-5">
+                                <input class="contactInput " type="text" placeholder="Naam *" id="contactName">
+                                <i class="form-control-feedback fa fa-asterisk"></i>
                             </div>
-                            <!--<div class="span6">-->
-                                <!--<textarea class="contactTextarea span10" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>-->
-                            <!--</div>-->
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="sendButton" id="sendMailBtn">
-                            <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
                         </div>
+                        <input class="contactInput" type="text" placeholder="Bedrijfsnaam *" id="contactCompagnyName">
+                        <input class="contactInput" type="text" placeholder="E-mail *" id="contactEmail">
+                        <input class="contactInput" type="text" placeholder="Telefoonnummer" id="contactTelephone">
+                        <input class="contactInput form_datetime" type="text" id="contactDateTime" placeholder="Tijdstip *">
                     </div>
+                    <div>
+                        <p class="contactText">
+                            * Verplicht veld
+                        </p>
+                    </div>
+                    <!--<div class="span6">-->
+                    <!--<textarea class="contactTextarea span10" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>-->
+                    <!--</div>-->
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="sendButton" id="sendMailBtn">
+                    <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
 
 
 
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="promo/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="promo/js/vendor/bootstrap.js"></script>
-        <script src="promo/js/vendor/scrollReveal.js"></script>
-        <script src="promo/js/plugins.js"></script>
-        <script src="promo/js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="promo/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="promo/js/vendor/bootstrap.js"></script>
+<script src="promo/js/vendor/scrollReveal.js"></script>
+<script type="text/javascript" src="promo/js/vendor/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="promo/js/vendor/locales/bootstrap-datetimepicker.nl.js" charset="UTF-8"></script>
+<script src="promo/js/plugins.js"></script>
+<script src="promo/js/main.js"></script>
 
-        <!-- Google Analytics -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+<!-- Google Analytics -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-49063927-2');ga('send','pageview');
-        </script>
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-49063927-2');ga('send','pageview');
+</script>
 
 
-        <!-- Google-code voor remarketingtag -->
-        <!--------------------------------------------------
-        Remarketingtags mogen niet worden gekoppeld aan gegevens waarmee iemand persoonlijk kan worden geïdentificeerd of op pagina's worden geplaatst die binnen gevoelige categorieën vallen. Meer informatie en instructies voor het instellen van de tag zijn te vinden op: http://google.com/ads/remarketingsetup
-        --------------------------------------------------->
-        <script type="text/javascript">
-            /* <![CDATA[ */
-            var google_conversion_id = 957938795;
-            var google_custom_params = window.google_tag_params;
-            var google_remarketing_only = true;
-            /* ]]> */
-        </script>
-        <div style="display:none;">
-            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
-        </div>
-        <noscript>
-            <div style="display:inline;">
-                <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/957938795/?value=0&amp;guid=ON&amp;script=0"/>
-            </div>
-        </noscript>
+<!-- Google-code voor remarketingtag -->
+<!--------------------------------------------------
+Remarketingtags mogen niet worden gekoppeld aan gegevens waarmee iemand persoonlijk kan worden geïdentificeerd of op pagina's worden geplaatst die binnen gevoelige categorieën vallen. Meer informatie en instructies voor het instellen van de tag zijn te vinden op: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 957938795;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<div style="display:none;">
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+</div>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/957938795/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
 
-    </body>
+</body>
 </html>
