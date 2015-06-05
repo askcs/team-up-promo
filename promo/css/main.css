@@ -3728,24 +3728,27 @@ p.asteriks {
     padding: 0;
     margin-left: 0;
     background-position: top; }
-  .navbar-inverse .navbar-inner .loginBtn {
-    float: right !important;
-    width: 140px; }
-    .navbar-inverse .navbar-inner .loginBtn a {
-      text-decoration: none; }
-    .navbar-inverse .navbar-inner .loginBtn button {
-      padding: auto 10px;
-      margin-top: 4px !important; }
-  .navbar-inverse .navbar-inner .contactBtn {
-    float: left !important;
-    width: 140px; }
-    .navbar-inverse .navbar-inner .contactBtn a {
-      display: block;
-      text-decoration: none;
-      padding: 4px;
-      padding-left: 10px; }
-      .navbar-inverse .navbar-inner .contactBtn a button {
-        margin: 0; }
+  .navbar-inverse .navbar-inner .buttonNav {
+    float: right;
+    min-width: 380px; }
+    .navbar-inverse .navbar-inner .buttonNav .loginBtn {
+      float: right;
+      width: 140px; }
+      .navbar-inverse .navbar-inner .buttonNav .loginBtn a {
+        text-decoration: none; }
+      .navbar-inverse .navbar-inner .buttonNav .loginBtn button {
+        padding: auto 10px;
+        margin-top: 4px !important; }
+    .navbar-inverse .navbar-inner .buttonNav .contactBtn {
+      float: right;
+      width: 200px; }
+      .navbar-inverse .navbar-inner .buttonNav .contactBtn a {
+        display: block;
+        text-decoration: none;
+        padding: 4px;
+        padding-left: 10px; }
+        .navbar-inverse .navbar-inner .buttonNav .contactBtn a button {
+          margin: 0; }
 
 /*INTRO*/
 .intro .container-narrow {
