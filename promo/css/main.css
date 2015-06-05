@@ -4698,6 +4698,14 @@ footer {
     #contactModal .modal-content .modal-body .contactText span {
       font-weight: bold;
       font-style: normal; }
+  #contactModal .modal-content .modal-body .contactRadio {
+    font-style: italic;
+    color: #fff;
+    font-size: 18px;
+    margin: 0 auto 20px;
+    max-width: 323px; }
+    #contactModal .modal-content .modal-body .contactRadio label:first-child {
+      margin-bottom: 5px; }
   #contactModal .modal-content .modal-footer {
     border: none; }
 
