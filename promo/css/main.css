@@ -4124,7 +4124,7 @@ footer {
     #TTintro.intro .container-narrow #heroLogoContainer .logo {
       margin-bottom: 15px; }
     #TTintro.intro .container-narrow #heroLogoContainer .contactBtn {
-      padding-top: 11px; }
+      padding-top: 15px; }
       #TTintro.intro .container-narrow #heroLogoContainer .contactBtn button {
         margin: 0 auto;
         width: 215px; }
@@ -4523,7 +4523,11 @@ footer {
   .photoArea {
     background-position: top !important; }
     .photoArea h2, .photoArea .photoBub {
-      margin: 0 !important; } }
+      margin: 0 !important; }
+  #TTintro.intro .container-narrow {
+    margin-top: 0; }
+  .navbar-fixed-top {
+    margin-bottom: 0; } }
 
 @media (min-width: 768px) {
   .floatRight {

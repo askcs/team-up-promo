@@ -746,7 +746,7 @@ footer {
         margin-bottom: 15px;
       }
       .contactBtn {
-        padding-top: 11px;
+        padding-top: 15px;
         button {
           margin: 0 auto;
           width: 215px;
@@ -1362,6 +1362,13 @@ footer {
     }
   }
 
+  #TTintro.intro .container-narrow {
+    margin-top: 0;
+  }
+
+  .navbar-fixed-top {
+    margin-bottom: 0;
+  }
 }
 
 
