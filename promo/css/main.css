@@ -2897,6 +2897,13 @@ td {
 .clearfix:after {
   clear: both; }
 
+Accessible yet invisible text .hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
 .input-block-level {
   display: block;
   width: 100%;
@@ -3732,16 +3739,6 @@ p.asteriks {
       .navbar-inverse .navbar-inner .buttonNav .loginBtn button {
         padding: auto 10px;
         margin-top: 4px !important; }
-    .navbar-inverse .navbar-inner .buttonNav .contactBtn {
-      float: right;
-      width: 200px; }
-      .navbar-inverse .navbar-inner .buttonNav .contactBtn a {
-        display: block;
-        text-decoration: none;
-        padding: 4px;
-        padding-left: 10px; }
-        .navbar-inverse .navbar-inner .buttonNav .contactBtn a button {
-          margin: 0; }
 
 /*INTRO*/
 .intro .container-narrow {
@@ -3883,6 +3880,13 @@ footer {
   background-color: #3FBDB2 !important; }
   #footerTeamTelephone p {
     background-color: #3FBDB2 !important; }
+  #footerTeamTelephone .contactBtn {
+    text-align: center;
+    padding: 10px 0; }
+    #footerTeamTelephone .contactBtn button {
+      display: block;
+      width: 200px;
+      margin: 0 auto; }
 
 /*-----------------------------------------------------------------------------TeamUp-----------------------------------------------------------------------------*/
 /*TU INTRO*/
@@ -4113,10 +4117,17 @@ footer {
     max-width: 372px;
     height: 82px;
     margin: 0 auto 360px;
-    padding-bottom: 180px; }
+    padding-bottom: 250px; }
     #TTintro.intro .container-narrow #heroLogoContainer #heroLogo {
       background-image: url("../img/teamtelefoon/logo.png");
       width: 100%; }
+    #TTintro.intro .container-narrow #heroLogoContainer .logo {
+      margin-bottom: 15px; }
+    #TTintro.intro .container-narrow #heroLogoContainer .contactBtn {
+      padding-top: 11px; }
+      #TTintro.intro .container-narrow #heroLogoContainer .contactBtn button {
+        margin: 0 auto;
+        width: 215px; }
     #TTintro.intro .container-narrow #heroLogoContainer ul {
       list-style: none; }
       #TTintro.intro .container-narrow #heroLogoContainer ul li {
@@ -4125,20 +4136,20 @@ footer {
         #TTintro.intro .container-narrow #heroLogoContainer ul li .TTarrowTextArea .arrowBG {
           background: url("../img/teamtelefoon/arrowSmall.png") no-repeat 60% 0; }
         #TTintro.intro .container-narrow #heroLogoContainer ul li:first-child {
-          top: 40%;
+          top: 45%;
           left: -60px; }
         #TTintro.intro .container-narrow #heroLogoContainer ul li:nth-child(2) {
-          top: 28%;
+          top: 33%;
           left: 115px; }
         #TTintro.intro .container-narrow #heroLogoContainer ul li:nth-child(3) {
-          top: 182px;
+          top: 255px;
           left: 50%; }
           #TTintro.intro .container-narrow #heroLogoContainer ul li:nth-child(3) .TTarrowTextArea .arrowBG {
             background: url("../img/teamtelefoon/arrowMedium.png") no-repeat 44% 0;
             height: 135px; }
         #TTintro.intro .container-narrow #heroLogoContainer ul li:nth-child(4) {
-          top: 38%;
-          right: 93px; }
+          top: 45%;
+          right: 99px; }
           #TTintro.intro .container-narrow #heroLogoContainer ul li:nth-child(4) .TTarrowTextArea .arrowBG {
             margin-left: -103px;
             background: url("../img/teamtelefoon/arrowBig.png") no-repeat 100% 0;
@@ -4149,7 +4160,7 @@ footer {
                     transform: rotate(58deg) scaleX(-1);
             margin-top: 50px; }
         #TTintro.intro .container-narrow #heroLogoContainer ul li:nth-child(5) {
-          top: 40%;
+          top: 50%;
           right: -30px; }
         #TTintro.intro .container-narrow #heroLogoContainer ul li:nth-child(6) {
           bottom: -320px;

@@ -227,19 +227,6 @@ p.asteriks {
           margin-top: 4px !important;
         }
       }
-      .contactBtn {
-        float: right;
-        width: 200px;
-        a {
-          display: block;
-          text-decoration: none;
-          padding: 4px;
-          padding-left: 10px;
-          button {
-            margin: 0;
-          }
-        }
-      }
     }
 
   }
@@ -433,6 +420,15 @@ footer {
   background-color: $turqDark !important;
   p {
     background-color: $turqDark !important;
+  }
+  .contactBtn {
+    text-align: center;
+    padding: 10px 0;
+    button {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -741,10 +737,20 @@ footer {
       max-width: 372px;
       height: 82px;
       margin: 0 auto 360px;
-      padding-bottom: 180px;
+      padding-bottom: 250px;
       #heroLogo {
         background-image: url("../img/teamtelefoon/logo.png");
         width: 100%;
+      }
+      .logo {
+        margin-bottom: 15px;
+      }
+      .contactBtn {
+        padding-top: 11px;
+        button {
+          margin: 0 auto;
+          width: 215px;
+        }
       }
       ul {
         list-style: none;
@@ -757,15 +763,15 @@ footer {
             }
           }
           &:first-child {
-            top: 40%;
+            top: 45%;
             left: -60px;
           }
           &:nth-child(2) {
-            top: 28%;
+            top: 33%;
             left: 115px;
           }
           &:nth-child(3) {
-            top: 182px;
+            top: 255px;
             left: 50%;
             .TTarrowTextArea {
               .arrowBG {
@@ -775,8 +781,8 @@ footer {
             }
           }
           &:nth-child(4) {
-            top: 38%;
-            right: 93px;
+            top: 45%;
+            right: 99px;
             .TTarrowTextArea {
               .arrowBG {
                 margin-left: -103px;
@@ -788,7 +794,7 @@ footer {
             }
           }
           &:nth-child(5) {
-            top: 40%;
+            top: 50%;
             right: -30px
           }
           &:nth-child(6) {
