@@ -43,6 +43,25 @@ jQuery(function() {
 
   jQuery(".contactRadios").change();
 
+  //Open contactform
+  jQuery('.contactBtn button').click(function ()
+  {
+    var buttonName = jQuery(this).attr('id');
+
+    if(buttonName == 'moreInfoButton')
+    {
+      jQuery('#radioInfo').prop("checked", true);
+      jQuery('.contactTextarea').show();
+      jQuery('#contactDateTime').hide();
+    }
+    else
+    {
+      jQuery('#radioDemonstration').prop("checked", true);
+      jQuery('.contactTextarea').hide();
+      jQuery('#contactDateTime').show();
+    }
+  });
+
   jQuery('.alertContact').hide();
 
   function sendMail()
