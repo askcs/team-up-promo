@@ -15,8 +15,11 @@ jQuery(function() {
   // Datetimepicker
   jQuery(".form_datetime").datetimepicker(
     {
-      format: 'dd-mm-yyyy hh:ii',
-      language:  'nl'
+      format: 'dd-mm-yyyy hh:00',
+      language:  'nl',
+      minView: 'day',
+      daysOfWeekDisabled: '0,6',
+      hoursDisabled: '00, 01, 02, 03, 04, 05, 06, 18, 19, 20, 21, 22, 23'
     }
   );
 
@@ -125,17 +128,17 @@ jQuery(function() {
       jQuery("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
     }
 
-    if(jQuery('#radioDemonstration').is(':checked') && contactDateTime == '')
-    {
-      alert("Vul alstublieft een datum en tijd in.");
-      console.log("Vul alstublieft een datum en tijd in");
-      jQuery("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
-      return ;
-    }
-    else
-    {
-      jQuery("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
-    }
+    //if(jQuery('#radioDemonstration').is(':checked') && contactDateTime == '')
+    //{
+    //  alert("Vul alstublieft een datum en tijd in.");
+    //  console.log("Vul alstublieft een datum en tijd in");
+    //  jQuery("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
+    //  return ;
+    //}
+    //else
+    //{
+    //  jQuery("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
+    //}
 
     var alertText = jQuery('.alertContact');
 
