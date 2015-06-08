@@ -8,10 +8,10 @@
   @include clearfix();
 }
 
-// Accessible yet invisible text
-//.hide-text {
-//  @include hide-text();
-//}
+ Accessible yet invisible text
+.hide-text {
+  @include hide-text();
+}
 
 // Uses box-sizing mixin, so must be defined here
 .input-block-level {
