@@ -3728,17 +3728,14 @@ p.asteriks {
     padding: 0;
     margin-left: 0;
     background-position: top; }
-  .navbar-inverse .navbar-inner .buttonNav {
+  .navbar-inverse .navbar-inner .loginBtn {
     float: right;
-    min-width: 380px; }
-    .navbar-inverse .navbar-inner .buttonNav .loginBtn {
-      float: right;
-      width: 140px; }
-      .navbar-inverse .navbar-inner .buttonNav .loginBtn a {
-        text-decoration: none; }
-      .navbar-inverse .navbar-inner .buttonNav .loginBtn button {
-        padding: auto 10px;
-        margin-top: 4px !important; }
+    width: 140px; }
+    .navbar-inverse .navbar-inner .loginBtn a {
+      text-decoration: none; }
+    .navbar-inverse .navbar-inner .loginBtn button {
+      padding: auto 10px;
+      margin-top: 4px !important; }
 
 /*INTRO*/
 .intro .container-narrow {

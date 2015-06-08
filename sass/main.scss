@@ -213,27 +213,19 @@ p.asteriks {
       margin-left: 0;
       background-position: top;
     }
-    .buttonNav {
+    .loginBtn {
       float: right;
-      min-width: 380px;
-      .loginBtn {
-        float: right;
-        width: 140px;
-        a {
-          text-decoration: none;
-        }
-        button {
-          padding: auto 10px;
-          margin-top: 4px !important;
-        }
+      width: 140px;
+      a {
+        text-decoration: none;
+      }
+      button {
+        padding: auto 10px;
+        margin-top: 4px !important;
       }
     }
-
   }
 }
-
-
-
 
 /*INTRO*/
 
