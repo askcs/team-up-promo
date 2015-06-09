@@ -31,12 +31,12 @@ html, body { height:100%; }
 body {
   @include typeface;
   background-color: $turq;
+  padding-right: 0 !important;
 }
 
 @font-face {
   font-family: 'Artbrush';
   src: url('../fonts/Artbrush.ttf');
-  //format('truetype');
 }
 
 h2{
@@ -81,28 +81,8 @@ p, li {
   font-size: 22px;
 }
 
-// Bounce effect
-//@include keyframes(bounce) {
-//  0%, 20%, 50%, 80%, 100% {
-//    @include transform(translateY(0));
-//  }
-//  40% {
-//    @include transform(translateY(-30px));
-//  }
-//  60% {
-//    @include transform(translateY(-15px));
-//  }
-//}
-//
-//.bounce {
-//  @include animation(bounce 2s infinite);
-//}
-
 
 /*-----------------------------------------------------------------------------General Specific-----------------------------------------------------------------------------*/
-
-
-
 
 .photoArea{
   padding: 100px 0;
@@ -196,9 +176,6 @@ p.asteriks {
   line-height: 18px;
   font-style: italic;
 }
-
-
-
 
 /*NAVBAR*/
 
@@ -1619,6 +1596,10 @@ footer {
   overflow-y: auto;
 }
 
+.modal-backdrop.in {
+  @include opacityImportant(.5);
+}
+
 // Shell div to position the modal with bottom padding
 .modal-dialog {
   position: relative;
@@ -1824,11 +1805,48 @@ footer {
   background-image: -webkit-linear-gradient(top, #96d4ca,#3ebdb2) !important;
 }
 
-.datetimepicker td, .datetimepicker th {
+.datetimepicker td, .datetimepicker th .modal, .modal-open,{
   line-height: 19px;
 }
 
-//** Alert
+//** FADE
+.fade {
+  opacity: 0;
+  @include transition(opacity .15s linear);
+  &.in {
+    opacity: 1;
+  }
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+}
+
+.collapse {
+  display: none;
+
+  &.in      { display: block; }
+  // [converter] extracted tr&.in to tr.collapse.in
+  // [converter] extracted tbody&.in to tbody.collapse.in
+}
+
+tr.collapse.in    { display: table-row; }
+
+tbody.collapse.in { display: table-row-group; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  @include transition-property(height, visibility);
+  @include transition-duration(.35s);
+  @include transition-timing-function(ease);
+}
+
+//** ALERT
 .alertContact {
   position: absolute;
   background-color: #dff0d8;

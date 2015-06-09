@@ -1161,7 +1161,9 @@ legend + .control-group {
   .btn.disabled, .btn[disabled] {
     cursor: default;
     background-image: none;
-    opacity: 0.65;
+    opacity: 65;
+    -moz-opacity: 65;
+    -khtml-opacity: 65;
     filter: alpha(opacity=65);
     box-shadow: none; }
 
@@ -1837,13 +1839,17 @@ button.btn, input[type="submit"].btn {
   line-height: 1;
   color: #000;
   text-shadow: 0 1px 0 #fff;
-  opacity: 0.002;
+  opacity: 0.2;
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
   filter: alpha(opacity=0.2); }
   .close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-    opacity: 0.005;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
     filter: alpha(opacity=0.5); }
 
 button.close {
@@ -3597,7 +3603,8 @@ html, body {
 
 body {
   font-family: "Helvetica", Arial, sans-serif;
-  background-color: #1dc8b6; }
+  background-color: #1dc8b6;
+  padding-right: 0 !important; }
 
 @font-face {
   font-family: 'Artbrush';
@@ -4645,6 +4652,12 @@ footer {
   overflow-x: hidden;
   overflow-y: auto; }
 
+.modal-backdrop.in {
+  opacity: 0.5 !important;
+  -moz-opacity: 0.5 !important;
+  -khtml-opacity: 0.5 !important;
+  filter: alpha(opacity=0.5) !important; }
+
 .modal-dialog {
   position: relative;
   width: auto;
@@ -4797,8 +4810,42 @@ footer {
 .datetimepicker table tr td span.active, .datetimepicker table tr td span.active:hover, .datetimepicker table tr td span.active.disabled, .datetimepicker table tr td span.active.disabled:hover {
   background-image: -webkit-linear-gradient(top, #96d4ca, #3ebdb2) !important; }
 
-.datetimepicker td, .datetimepicker th {
+.datetimepicker td, .datetimepicker th .modal, .modal-open {
   line-height: 19px; }
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  transition: opacity .15s linear; }
+  .fade.in {
+    opacity: 1; }
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+.collapse {
+  display: none; }
+  .collapse.in {
+    display: block; }
+
+tr.collapse.in {
+  display: table-row; }
+
+tbody.collapse.in {
+  display: table-row-group; }
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-property: height, visibility;
+  transition-property: height, visibility;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease; }
 
 .alertContact {
   position: absolute;

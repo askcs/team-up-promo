@@ -418,8 +418,18 @@
 
 // Opacity
 @mixin opacity($opacity) {
-  opacity: $opacity / 100;
+  opacity: $opacity;
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
   filter: alpha(opacity=$opacity);
+}
+
+// Opacity
+@mixin opacityImportant($opacity) {
+  opacity: $opacity !important;
+  -moz-opacity: $opacity !important;
+  -khtml-opacity: $opacity !important;
+  filter: alpha(opacity=$opacity) !important;
 }
 
 
