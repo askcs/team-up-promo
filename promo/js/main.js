@@ -19,7 +19,7 @@ jQuery(function() {
       language:  'nl',
       minView: 'day',
       daysOfWeekDisabled: '0,6',
-      hoursDisabled: '00, 01, 02, 03, 04, 05, 06, 18, 19, 20, 21, 22, 23'
+      hoursDisabled: '00, 01, 02, 03, 04, 05, 06, 07, 08, 18, 19, 20, 21, 22, 23'
     }
   );
 
