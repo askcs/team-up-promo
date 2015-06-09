@@ -237,6 +237,13 @@ p.asteriks {
       max-width: 380px;
       padding: 22px 22px 12px;
       @include border-radius(20px);
+      .contactBtn {
+        padding: 7px 0;
+        button {
+          width: 230px;
+          margin: 0 auto;
+        }
+      }
       p {
         font-size: 22px;
         font-style: italic;
@@ -381,6 +388,18 @@ footer {
     }
     a, a:hover, a:focus, a:active, a:visited {
       color: $offwhite;
+    }
+  }
+}
+
+#TUfooter {
+  .contactBtn {
+    text-align: center;
+    padding: 10px 0;
+    button {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
     }
   }
 }
@@ -1566,6 +1585,15 @@ footer {
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
+  padding-right: 0;
+}
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+  margin-right: 0;
+}
+
+#TTavailabilityCheck, #TTbubbles, #deviceArea3, .modal, .modal-open, .presentProduct2 {
+  overflow: visible;
 }
 
 // Container that the modal scrolls within
@@ -1777,6 +1805,10 @@ footer {
       border: none;
     }
   }
+}
+
+.contactModalTU .modal-content {
+  background: $turq !important;
 }
 
 //** Datepicker

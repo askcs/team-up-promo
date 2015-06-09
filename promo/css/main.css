@@ -3772,6 +3772,11 @@ p.asteriks {
     max-width: 380px;
     padding: 22px 22px 12px;
     border-radius: 20px; }
+    .intro .container-narrow #welcome .contactBtn {
+      padding: 7px 0; }
+      .intro .container-narrow #welcome .contactBtn button {
+        width: 230px;
+        margin: 0 auto; }
     .intro .container-narrow #welcome p {
       font-size: 22px;
       font-style: italic;
@@ -3879,6 +3884,14 @@ footer {
       margin-right: 20px; }
     footer p a, footer p a:hover, footer p a:focus, footer p a:active, footer p a:visited {
       color: #fffaf0; }
+
+#TUfooter .contactBtn {
+  text-align: center;
+  padding: 10px 0; }
+  #TUfooter .contactBtn button {
+    display: block;
+    width: 200px;
+    margin: 0 auto; }
 
 #footerTeamTelephone {
   background-color: #3FBDB2 !important; }
@@ -4624,7 +4637,14 @@ footer {
 
 /****** MODALSS *******/
 .modal-open {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-right: 0; }
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+  margin-right: 0; }
+
+#TTavailabilityCheck, #TTbubbles, #deviceArea3, .modal, .modal-open, .presentProduct2 {
+  overflow: visible; }
 
 .modal {
   display: none;
@@ -4794,6 +4814,9 @@ footer {
     font-size: 15px; }
   #contactModal .modal-content .modal-footer {
     border: none; }
+
+.contactModalTU .modal-content {
+  background: #1dc8b6 !important; }
 
 .datetimepicker {
   background-color: #fff;
