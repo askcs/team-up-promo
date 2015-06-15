@@ -492,7 +492,7 @@ footer {
 }
 
 #videoCall {
-  padding: 50px 0;
+  padding: 50px 0 20px 0;
   clear: both;
   .span12 {
     position: relative;
@@ -511,7 +511,7 @@ footer {
       }
     }
     .bub1{
-      top: 22%;
+      top: 0;
       left: 11%;
       background-color: $orange;
       width: 100px!important;
@@ -522,7 +522,7 @@ footer {
     }
     .bub2{
       bottom: 22%;
-      right: 11%;
+      right: 14%;
       background-color: $brown;
       width: 110px!important;
       height: 110px;
@@ -1551,7 +1551,7 @@ footer {
   #videoCall {
     .span12 {
       .bub1 {
-        top: 10%;
+        top: 0%;
         left: 9%;
       }
       .bub2 {
@@ -1624,14 +1624,15 @@ footer {
   }
 
   #videoCall {
+    padding: 70px 0 50px 0;
     .span12 {
       .bub1 {
-        top: -5%;
-        left: -5%;
+        top: -30%;
+        left: -10%;
       }
       .bub2 {
-        bottom: -10%;
-        right: -5%;
+        bottom: -30%;
+        right: -10%;
       }
     }
   }
