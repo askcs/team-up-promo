@@ -1568,6 +1568,10 @@ footer {
 
 @media (max-width: 480px) {
 
+  .talkCloud h2 {
+    word-break: break-word;
+  }
+
   #contactModal .contactInput {
     width: 93% !important;
   }
