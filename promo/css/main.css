@@ -4700,7 +4700,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   margin-right: 0; }
 
 #TTavailabilityCheck, #TTbubbles, #deviceArea3, .modal, .modal-open, .presentProduct2 {
-  overflow: visible; }
+  overflow: hidden; }
 
 .modal {
   display: none;
