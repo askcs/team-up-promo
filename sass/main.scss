@@ -491,6 +491,49 @@ footer {
   clear: both;
 }
 
+#videoCall {
+  padding: 100px 0;
+  clear: both;
+  .span12 {
+    position: relative;
+    .mobileBubble{
+      position:absolute;
+      z-index:1;
+      text-align: center;
+      word-wrap: break-word;
+      -webkit-hyphens: auto;
+      -moz-hyphens: auto;
+      hyphens: auto;
+      padding: 10px;
+      @include border-radius(50%);
+      p {
+        text-align: center;
+      }
+    }
+    .bub1{
+      top: 22%;
+      left: 11%;
+      background-color: $orange;
+      width: 100px!important;
+      height: 100px;
+      p {
+        margin-top: 16px;
+      }
+    }
+    .bub2{
+      bottom: 22%;
+      right: 11%;
+      background-color: $brown;
+      width: 110px!important;
+      height: 110px;
+      p {
+        margin-top: 8px;
+        color: $orange !important;
+      }
+    }
+  }
+}
+
 
 
 /*GIRL AREA 1*/
@@ -1484,7 +1527,6 @@ footer {
       display: none;
     }
   }
-
 }
 
 
@@ -1505,7 +1547,20 @@ footer {
   }
 }
 
-
+@media (min-width: 481px) and (max-width: 550px) {
+  #videoCall {
+    .span12 {
+      .bub1 {
+        top: 10%;
+        left: 9%;
+      }
+      .bub2 {
+        bottom: 0%;
+        right: 8%;
+      }
+    }
+  }
+}
 
 @media (max-width: 480px) {
 
@@ -1553,6 +1608,19 @@ footer {
   #mainPhone {
     img {
       max-height: 550px;
+    }
+  }
+
+  #videoCall {
+    .span12 {
+      .bub1 {
+        top: -5%;
+        left: -5%;
+      }
+      .bub2 {
+        bottom: -10%;
+        right: -5%;
+      }
     }
   }
 
