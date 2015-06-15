@@ -4651,9 +4651,13 @@ footer {
     left: 9%; }
   #videoCall .span12 .bub2 {
     bottom: 0%;
-    right: 8%; } }
+    right: 8%; }
+  #contactModal .contactInput {
+    width: 95% !important; } }
 
 @media (max-width: 480px) {
+  #contactModal .contactInput {
+    width: 93% !important; }
   #TUintro .container-narrow #welcome {
     margin: 0 auto 100px; }
   .presentProduct .row-fluid p {
