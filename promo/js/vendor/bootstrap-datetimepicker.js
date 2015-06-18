@@ -918,7 +918,7 @@
 								month = this.viewDate.getUTCMonth(),
 								day = this.viewDate.getUTCDate(),
 								hours = this.viewDate.getUTCHours(),
-								minutes = this.viewDate.getUTCMinutes(),
+								minutes = 0//this.viewDate.getUTCMinutes(),
 								seconds = this.viewDate.getUTCSeconds();
 
 							if (target.is('.month')) {
@@ -993,7 +993,7 @@
 							var year = this.viewDate.getUTCFullYear(),
 								month = this.viewDate.getUTCMonth(),
 								hours = this.viewDate.getUTCHours(),
-								minutes = this.viewDate.getUTCMinutes(),
+								minutes = 0//this.viewDate.getUTCMinutes(),
 								seconds = this.viewDate.getUTCSeconds();
 							if (target.is('.old')) {
 								if (month === 0) {

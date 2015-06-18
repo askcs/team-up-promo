@@ -15,11 +15,14 @@ jQuery(function() {
   // Datetimepicker
   jQuery(".form_datetime").datetimepicker(
     {
-      format: 'dd-mm-yyyy hh:00',
+      startDate: new Date(),
+      format: 'dd-mm-yyyy hh:ii',
       language:  'nl',
       minView: 'day',
       daysOfWeekDisabled: '0,6',
-      hoursDisabled: '00, 01, 02, 03, 04, 05, 06, 07, 08, 18, 19, 20, 21, 22, 23'
+      hoursDisabled: '00, 01, 02, 03, 04, 05, 06, 07, 08, 18, 19, 20, 21, 22, 23',
+      minutesDisabled: '00-60',
+      autoclose: true
     }
   );
 
