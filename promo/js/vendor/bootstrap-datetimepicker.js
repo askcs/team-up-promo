@@ -715,13 +715,14 @@
 				.find('span').removeClass('active');
 			if (currentYear == year) {
 				// getUTCMonths() returns 0 based, and we need to select the next one
-				months.eq(this.date.getUTCMonth() + 2).addClass('active');
+				months.eq(startMonth - 1).addClass('active');
 			}
 			if (year < startYear || year > endYear) {
 				months.addClass('disabled');
 			}
+			
 			if (year == startYear) {
-				months.slice(0, startMonth + 1).addClass('disabled');
+				months.slice(0, startMonth - 1).addClass('disabled');
 			}
 			if (year == endYear) {
 				months.slice(endMonth).addClass('disabled');

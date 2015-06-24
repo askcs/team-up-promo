@@ -15,7 +15,7 @@ jQuery(function() {
   // Datetimepicker
   jQuery(".form_datetime").datetimepicker(
     {
-      startDate: new Date(),
+      startDate: moment().format('DD-MM-YYYY HH:mm'),
       format: 'dd-mm-yyyy hh:ii',
       language:  'nl',
       minView: 'day',
