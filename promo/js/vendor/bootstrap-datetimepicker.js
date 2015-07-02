@@ -715,7 +715,7 @@
 				.find('span').removeClass('active');
 			if (currentYear == year) {
 				// getUTCMonths() returns 0 based, and we need to select the next one
-				months.eq(startMonth - 1).addClass('active');
+				months.eq(this.date.getUTCMonth() + 2).addClass('active');
 			}
 			if (year < startYear || year > endYear) {
 				months.addClass('disabled');
