@@ -3976,19 +3976,28 @@ footer {
       top: 0;
       left: 11%;
       background-color: #f5a962;
-      width: 100px !important;
-      height: 100px; }
+      width: 120px !important;
+      height: 120px; }
       #videoCall .span12 .bub1 p {
-        margin-top: 16px; }
+        margin-top: 1px; }
     #videoCall .span12 .bub2 {
-      bottom: 22%;
-      right: 14%;
+      bottom: -2%;
+      right: 17%;
       background-color: #833c11;
       width: 110px !important;
       height: 110px; }
       #videoCall .span12 .bub2 p {
-        margin-top: 8px;
+        margin-top: 7px;
         color: #f5a962 !important; }
+    #videoCall .span12 .bub3 {
+      bottom: 66%;
+      right: 7%;
+      background-color: #f5a962;
+      width: 135px !important;
+      height: 135px; }
+      #videoCall .span12 .bub3 p {
+        margin-top: 11px;
+        color: #fff !important; }
 
 /*GIRL AREA 1*/
 #girlArea1 {

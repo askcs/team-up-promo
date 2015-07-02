@@ -514,21 +514,32 @@ footer {
       top: 0;
       left: 11%;
       background-color: $orange;
-      width: 100px!important;
-      height: 100px;
+      width: 120px!important;
+      height: 120px;
       p {
-        margin-top: 16px;
+        margin-top: 1px;
       }
     }
     .bub2{
-      bottom: 22%;
-      right: 14%;
+      bottom: -2%;
+      right: 17%;
       background-color: $brown;
       width: 110px!important;
       height: 110px;
       p {
-        margin-top: 8px;
+        margin-top: 7px;
         color: $orange !important;
+      }
+    }
+    .bub3{
+      bottom: 66%;
+      right: 7%;
+      background-color: $orange;
+      width: 135px!important;
+      height: 135px;
+      p {
+        margin-top: 11px;
+        color: $white !important;
       }
     }
   }
