@@ -1926,12 +1926,22 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
 .datetimepicker table tr td span.active:hover,
 .datetimepicker table tr td span.active.disabled,
 .datetimepicker table tr td span.active.disabled:hover {
-  background-image: -webkit-linear-gradient(top, #96d4ca,#3ebdb2) !important;
+  @include gradientButton('top', #96d4ca, #3ebdb2);
 }
 
 .datetimepicker td, .datetimepicker th .modal, .modal-open,{
   line-height: 19px;
 }
+
+//.datetimepicker table tr td.active:active, .datetimepicker table tr td.active:hover:active,
+//.datetimepicker table tr td.disabled.active:active,
+//.datetimepicker table tr td.disabled.active:hover:active,
+//.datetimepicker table tr td.active.active,
+//.datetimepicker table tr td.active.active:hover,
+//.datetimepicker table tr td.active.disabled.active,
+//.datetimepicker table tr td.active.disabled.active:hover {
+//  background-color: #3ebdb2 !important;
+//}
 
 //** FADE
 .fade {

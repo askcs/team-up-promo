@@ -456,6 +456,12 @@
   border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fade-in(rgba(0,0,0,.1), 0.15);
 }
 
+
+@mixin gradientButton($location, $startColor, $endColor) {
+  background-image: -webkit-linear-gradient($location, $startColor,$endColor) !important;
+  background-image: -ms-linear-gradient($location, $startColor, $endColor) !important;
+}
+
 // Gradients
 @mixin gradient-horizontal($startColor: #555, $endColor: #333) {
   background-color: $endColor;

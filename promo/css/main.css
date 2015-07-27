@@ -4898,7 +4898,8 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   background-image: -webkit-linear-gradient(top, #96d4ca, #3ebdb2) !important; }
 
 .datetimepicker table tr td span.active, .datetimepicker table tr td span.active:hover, .datetimepicker table tr td span.active.disabled, .datetimepicker table tr td span.active.disabled:hover {
-  background-image: -webkit-linear-gradient(top, #96d4ca, #3ebdb2) !important; }
+  background-image: -webkit-linear-gradient('top', #96d4ca, #3ebdb2) !important;
+  background-image: -ms-linear-gradient('top', #96d4ca, #3ebdb2) !important; }
 
 .datetimepicker td, .datetimepicker th .modal, .modal-open {
   line-height: 19px; }

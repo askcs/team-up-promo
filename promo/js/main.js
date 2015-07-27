@@ -12,6 +12,9 @@ jQuery(function() {
   });
   jQuery("[data-sr]").css("visibility", "hidden");
 
+  //translate plugin
+  jQuery('#langPicker').translate();
+
   // Datetimepicker
   jQuery(".form_datetime").datetimepicker(
     {
