@@ -1,3 +1,7 @@
+/**
+ * Created by Henk on 28/07/2015.
+ */
+
 var Translator = function(element, options)
 {
   this.element = element;
@@ -16,13 +20,13 @@ Translator.prototype = {
   setLang: function(currentLang)
   {
     var langElements = jQuery('[data-translate]'),
-        self = this;
+      self = this;
 
     jQuery.each(langElements, function(i, val)
     {
       var target = jQuery(val),
-          transAttr = target.data('translate'),
-          translatedVal = self.languages[currentLang][transAttr.toString()];
+        transAttr = target.data('translate'),
+        translatedVal = self.languages[currentLang][transAttr.toString()];
 
       if (target.is("input, textarea"))
       {
@@ -45,21 +49,23 @@ Translator.prototype = {
   },
   init: function ()
   {
-    var language = null,
-        self = this;
-
-    if(self.options.byHostName)
-    {
-      //window.location.hostname
-      var hostName = "teamtelefoon.de",
-        language = (hostName.indexOf('.de') > -1)
-          ? 'de'
-          : 'nl';
-    }
+    var self = this;
 
     jQuery.getJSON(self.options.langDir, function(languages)
     {
+      var language = null;
       self.languages = languages;
+
+      if(self.options.byHostName)
+      {
+        var hostName = window.location.hostname;
+        Object.keys(self.languages).forEach(function (lang)
+        {
+          language = (hostName.indexOf('.' + lang) > -1)
+            ? lang
+            : self.options.defaultLang;
+        });
+      }
       if(self.options.picker)
       {
         self.pick();
@@ -69,10 +75,10 @@ Translator.prototype = {
   }
 };
 
-(function($) {
+(function( $ ) {
   $.fn.translate = function(options)
   {
     new Translator(this, options);
     return this;
   };
-}(jQuery));
+}( jQuery ));
