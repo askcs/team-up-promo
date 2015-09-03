@@ -1,4 +1,8 @@
-team-up-web
+team-up-promo
 ===========
 
-TeamUp web app version
+## Install
+npm install
+
+## Run
+gulp

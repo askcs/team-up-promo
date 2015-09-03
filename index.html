@@ -17,14 +17,11 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="promo/css/bootstrap.css">
-        <link rel="stylesheet" href="promo/css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="promo/css/app.min.css">
-        <link rel="stylesheet" href="promo/css/main.css">
-        <link rel="stylesheet" href="promo/css/ie.css">
+        <link rel="stylesheet" href="promo/css/main.min.css">
+        <link href="promo/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
         <!-- Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
         <!-- favicons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="promo/img/ico/apple-touch-icon-144-precomposed.png">
@@ -33,11 +30,6 @@
         <link rel="apple-touch-icon-precomposed" sizes="57x57" href="promo/img/ico/apple-touch-icon-57-precomposed.png">
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="icon" href="/favicon.ico">
-
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<!--<script src="war/libs/jquery/1.9.1/jquery-1.9.1.min.js"></script> -->
-
         </head>
     <body>
         <!--[if lt IE 7]>
@@ -52,10 +44,12 @@
                     <div class="container-fluid">
                         <a class="brand" href="#"></a>
                         <div class="row-fluid">
-                            <div class="loginBtn">
-                                <a href="app/index.html">
-                                    <button class="btn btn-large btn-block btn-primary ng-binding" type="submit">Inloggen</button>
-                                </a>
+                            <div class="buttonNav">
+                                <div class="loginBtn">
+                                    <a href="app/index.html">
+                                        <button class="btn btn-large btn-block btn-primary ng-binding" type="submit">Inloggen</button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -76,6 +70,11 @@
                                - Alledaagse probleemsituaties oplossen<br>
                                - Koppeling met ieder systeem mogelijk<br>
                             </p>
+                            <div class="contactBtn">
+                                <button id="freeDemonstrationButton" class="btn btn-large btn-block btn-primary"
+                                        data-toggle="modal"
+                                        data-target="#contactModal">Gratis Demonstratie</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -96,11 +95,11 @@
                     <div class="span12">
                         <img src="promo/img/devices01.png">
                     </div>
-                    <div class="row-fluid">
-                        <a href="http://www.nursingcongressen.nl/thuiszorg" target="_blank" class="span6 photoBub">
-                            <p>TeamUp<br> ontmoet u graag<br> op 2 april tijdens het<br> congres 'De Grote<br> Thuiszorg Dag'.</p>
-                        </a>
-                    </div>
+                    <!--<div class="row-fluid">-->
+                        <!--<a href="http://www.nursingcongressen.nl/thuiszorg" target="_blank" class="span6 photoBub">-->
+                            <!--<p>TeamUp<br> ontmoet u graag<br> op 2 april tijdens het<br> congres 'De Grote<br> Thuiszorg Dag'.</p>-->
+                        <!--</a>-->
+                    <!--</div>-->
                     <div class="row-fluid">
                         <div class="span6">
                             <h2>Inzet van ICT</h2>
@@ -193,7 +192,7 @@
                     <div class="span4">
                         <img src="promo/img/mobile02.png">
                         <div class="bub3 mobileBubble"><p>Meer<br> arbeidsvreug-<br>de, lager verzuim</p></div>
-                        <div class="bub4 mobileBubble"><p>Minder registreren, meer zorg leveren</p></div>
+                        <div class="bub4 mobileBubble"><p>Minder<br>registreren, meer zorg leveren</p></div>
                         <div class="bub5 mobileBubble"><p>Uw<br> medewerkers<br> zijn altijd en<br>overal goed geïnformeerd</p></div>
                     </div><!--/span-->
                     <div class="span4">
@@ -217,124 +216,98 @@
             </div>
         </div><!--/row-->
 
-
-
-
-        <div id="contact" class="row-fluid">
+        <div id="videoCall" class="row-fluid">
             <div class="container-narrow">
-                <h1>Neem contact op</h1>
                 <div class="row-fluid">
-                <div class="span4 contactInfo">
-                    <p class="contactText"><span>Vragen?</span><br>Neem contact op met ASK Community Systems!</p>
-                    <p><i class="icon-phone5 contactIcon"></i>010 225 0130</p>
-                    <p><i class="icon-envelop contactIcon"></i><a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
-                </div>
-                <div class="span8">
-			<script>
-			function IsEmail(email) {
-				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-				return regex.test(email);
-			}
-
-function sendMail(){
-	var contactName = $.trim($("#contactName").val());
-	var contactEmail = $.trim($("#contactEmail").val());
-	var contactSubject = $.trim($("#contactSubject").val());
-	var message = $.trim($("#message").val());
-
-	var errorColor = "#c85a3c";
-	var errorFontColor = "white";
-	var rightColor = "white";
-	var rightFontColor = "#833C11";
-
-	var sendMailURL = "https://standby.ask-cs.nl/tymon/sendMail.php";
-	sendMailURL += "?contactName="+contactName +
-		"&contactEmail="+contactEmail+
-		"&contactSubject="+contactSubject+
-		"&message="+message ;
-	if(contactName == '' ){
-		alert("Vul alstublieft uw naam in.");
-		$("#contactName").css("background-color" ,errorColor).css("color" ,errorFontColor);
-		return ;
-	}else{
-		$("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
-	}
-	if(contactEmail == '' ){
-		alert("Vul alstublieft uw emailadres in.");
-		$("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-		return ;
-	}else{
-		if(!IsEmail(contactEmail)){
-			alert("Uw emailadres is ongeldig.");
-			$("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-			return;
-		}else{
-			$("#contactEmail").css("background-color" ,rightColor).css("color" ,rightFontColor);
-		}
-	}
-	if(contactSubject == '' ){
-		alert("Vul alstublieft een onderwerp in.");
-		$("#contactSubject").css("background-color" ,errorColor).css("color" ,errorFontColor);
-		return ;
-	}else{
-		$("#contactSubject").css("background-color" ,rightColor).css("color" ,rightFontColor);
-	}
-	if(message == '' ){
-		alert("Vul alstublieft een bericht in.");
-		$("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
-		return ;
-	}else{
-		$("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
-	}
-
-	$.ajax({
-url: sendMailURL
-}).done(function( data ) {
-	console.log(data);
-	alert("Bericht is verzonden!");
-	}).fail(function( error){
-		console.log(error);
-		alert("Bericht is verzonden!");
-		});
-}
-                	</script>
-                        <form>
-                            <div class="span6">
-                                <input class="span12 contactInput" type="text" placeholder="Naam" id="contactName">
-                                <input class="span12 contactInput" type="text" placeholder="E-mail" id="contactEmail">
-                                <input class="span12 contactInput" type="text" placeholder="Onderwerp" id="contactSubject">
-                            </div>
-                            <div class="span6">
-                                <textarea class="span12 contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"> </textarea>
-                            </div>
-                            <div class="span12 sendButton" id="sendMailBtn">
-                                <button class="btn-large btn-block btn-primary ng-binding" type="button" onclick="sendMail()" >Verzenden</button>
-                            </div>
-                        </form>
+                    <div class="span12">
+                        <img src="promo/img/video_call.png">
+                        <div class="bub1 mobileBubble"><p>Met <br>videobellen<br> haalt u meer<br>uit telefoon-<br>gesprekken</p></div>
+                        <div class="bub2 mobileBubble"><p>Vind het<br>juiste teamlid o.b.v bezoek-<br>en belhistorie</p></div>
+                        <div class="bub3 mobileBubble"><p>Videobellen<br>declareren?<br> TeamUp genereert<br> kant en klare<br>rapportages!</p></div>
                     </div>
                 </div>
             </div>
         </div>
 
-
-
-
-        <footer>
+        <footer id="TUfooter">
+            <div class="contactBtn">
+                <button id="moreInfoButton" class="btn btn-large btn-block btn-primary"
+                        data-toggle="modal"
+                        data-target="#contactModal">Meer informatie</button>
+            </div>
             <p>
-	    	<span>&copy; <a href="http://ask-cs.nl" target="_blank">ASK Community Systems</a></span>
-		<span><a href="http://teamtelefoon.nl" target="_blank">TeamTelefoon website</a></span></span>  
-		Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 010 225 0130 | 
-		<a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
+                <span>&copy; <a href="http://ask-cs.nl" target="_blank">ASK Community Systems</a></span>
+                <span><a href="http://teamtelefoon.nl" target="_blank">TeamTelefoon website</a></span></span>
+                    Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 010 225 0130 |
+                <a href="mailto:info@ask-cs.com">info@ask-cs.com</a>
+            </p>
         </footer>
 
+        <!-- Modal -->
+        <div class="modal fade bs-example-modal-lg contactModalTU" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">NEEM CONTACT OP</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-success alertContact" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            Bedankt voor uw interesse in TeamUp. Uw aanvraag is verstuurd en er wordt z.s.m contact met u opgenomen!
+                        </div>
+                        <form>
+                            <div>
+                                <div class="form-group has-feedback contactRadio">
+                                    <label>Ik wil:</label>
+                                    <div class="radio">
+                                        <label>
+                                            <input class='contactRadios' type="radio" name="optionsRadios" value="demonstration" id="radioDemonstration">
+                                            Een gratis demonstratie op locatie inplannen
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input class='contactRadios' type="radio" name="optionsRadios" value="info" id="radioInfo" checked>
+                                            Meer informatie over TeamUp
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback">
+                                    <div class="col-xs-5">
+                                        <input class="contactInput " type="text" placeholder="Naam *" id="contactName">
+                                        <i class="form-control-feedback fa fa-asterisk"></i>
+                                    </div>
+                                </div>
+                                <input class="contactInput" type="text" placeholder="Bedrijfsnaam *" id="contactCompagnyName">
+                                <input class="contactInput" type="text" placeholder="E-mail *" id="contactEmail">
+                                <input class="contactInput" type="text" placeholder="Telefoonnummer" id="contactTelephone">
+                                <input class="contactInput form_datetime" type="text" id="contactDateTime" readonly placeholder="Voorstel Datum en Tijd">
+                                <textarea class="contactInput contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"></textarea>
+                            </div>
+                            <div>
+                                <p class="contactText">
+                                    * Verplicht veld
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="sendButton" id="sendMailBtn">
+                            <button class="btn-large btn-block btn-primary ng-binding" type="button" >Verzenden</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-
-
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="promo/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="promo/js/vendor/bootstrap.js"></script>
+        <script src="promo/js/vendor/scrollReveal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+        <script type="text/javascript" src="promo/js/vendor/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="promo/js/vendor/locales/bootstrap-datetimepicker.nl.js" charset="UTF-8"></script>
         <script src="promo/js/plugins.js"></script>
         <script src="promo/js/main.js"></script>
 
@@ -360,8 +333,10 @@ url: sendMailURL
             var google_remarketing_only = false;
             /* ]]> */
         </script>
-        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-        </script>
+        <div style="display: none;">
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+        </div>
+
         <noscript>
             <div style="display:inline;">
                 <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/957938795/?label=N_58CKT55lkQ6_jjyAM&amp;guid=ON&amp;script=0"/>

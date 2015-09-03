@@ -1,0 +1,25 @@
+/**
+ * Bootstrap
+ */
+
+// CSS Reset
+@import "reset";
+
+// Grid system and page structure
+@import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+@import "bootstrap/layouts";
+
+// Base CSS
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/forms";
+
+
+// Others
+@import "bootstrap/buttons";
+@import "bootstrap/button-groups";
+@import "bootstrap/navbar";
+//@import "bootstrap/modals";
+@import "bootstrap/close";
+@import "bootstrap/alerts";
