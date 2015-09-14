@@ -204,9 +204,77 @@ p.asteriks {
   }
 }
 
-/*INTRO*/
+.welcomeArrow {
+  border-bottom: 15px solid #FFFAF0;
+  border-left: 32px solid rgba(0, 0, 0, 0);
+  border-right: 32px solid rgba(0, 0, 0, 0);
+  height: 0;
+  left: 50%;
+  margin: -15px 0 0 -80px;
+  position: absolute;
+  width: 0;
+}
 
+.welcome {
+  background-color: #FFFAF0;
+  margin: 0 auto 280px;
+  max-width: 380px;
+  padding: 22px 22px 12px;
+  @include border-radius(20px);
+  .contactBtn {
+    padding: 7px 0;
+    button {
+      width: 230px;
+      margin: 0 auto;
+    }
+  }
+  p {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 26px;
+    text-align: center;
+    span{
+      color: $orange;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: 20px;
+    }
+  }
+}
+
+/*INTRO*/
 .intro{
+  .demonstration {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 204px;
+    z-index: 9999;
+    .welcomeArrow {
+      @include rotate(-270deg);
+      margin: 130px 0 0 60px;
+      @include opacity(0.8);
+    }
+    .welcome {
+      @include opacity(0.8);
+      width: 130px;
+      padding: 20px;
+      p {
+        font-size: 18px !important;
+        a {
+          &:hover, &:active, &:focus, &:visited {
+            background-color: $white !important;
+            right: 0 !important;;
+            position: inherit !important;;
+            padding: 0 !important;;
+            margin-top: 0 !important;;
+            border-radius: 0 !important;
+          }
+        }
+      }
+    }
+  }
   .container-narrow {
     position: relative;
     margin-top: 50px;
@@ -220,43 +288,6 @@ p.asteriks {
       width: 160px;
       height: 82px;
       margin: 0 auto 40px;
-    }
-    #welcomeArrow {
-      border-bottom: 15px solid #FFFAF0;
-      border-left: 32px solid rgba(0, 0, 0, 0);
-      border-right: 32px solid rgba(0, 0, 0, 0);
-      height: 0;
-      left: 50%;
-      margin: -15px 0 0 -80px;
-      position: absolute;
-      width: 0;
-    }
-    #welcome {
-      background-color: #FFFAF0;
-      margin: 0 auto 280px;
-      max-width: 380px;
-      padding: 22px 22px 12px;
-      @include border-radius(20px);
-      .contactBtn {
-        padding: 7px 0;
-        button {
-          width: 230px;
-          margin: 0 auto;
-        }
-      }
-      p {
-        font-size: 22px;
-        font-style: italic;
-        line-height: 26px;
-        text-align: center;
-        span{
-          color: $orange;
-          font-size: 16px;
-          font-weight: bold;
-          font-style: normal;
-          line-height: 20px;
-        }
-      }
     }
   }
 }
@@ -774,6 +805,23 @@ footer {
   background: -ms-linear-gradient(top, rgba(61,188,177,1) 0%, rgba(152,212,202,1) 100%);
   background: linear-gradient(to bottom, rgba(61,188,177,1) 0%, rgba(152,212,202,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dbcb1', endColorstr='#98d4ca', GradientType=0 );
+  .quoteBox {
+    @include opacity(0.8);
+    margin-top: 0;
+    border-top: $turq solid 8px;
+    border-bottom: $turq solid 8px;
+    border-left: $turq solid 8px;
+    position: fixed;
+    width: 120px;
+    top: 70px;
+    z-index: 9999;
+    right: 0;
+    p {
+      a {
+        color: $turq;
+      }
+    }
+  }
   .container-narrow {
     #heroLogoContainer {
       max-width: 372px;

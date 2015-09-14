@@ -3744,7 +3744,70 @@ p.asteriks {
       padding: auto 10px;
       margin-top: 4px !important; }
 
+.welcomeArrow {
+  border-bottom: 15px solid #FFFAF0;
+  border-left: 32px solid transparent;
+  border-right: 32px solid transparent;
+  height: 0;
+  left: 50%;
+  margin: -15px 0 0 -80px;
+  position: absolute;
+  width: 0; }
+
+.welcome {
+  background-color: #FFFAF0;
+  margin: 0 auto 280px;
+  max-width: 380px;
+  padding: 22px 22px 12px;
+  border-radius: 20px; }
+  .welcome .contactBtn {
+    padding: 7px 0; }
+    .welcome .contactBtn button {
+      width: 230px;
+      margin: 0 auto; }
+  .welcome p {
+    font-size: 22px;
+    font-style: italic;
+    line-height: 26px;
+    text-align: center; }
+    .welcome p span {
+      color: #f5a962;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      line-height: 20px; }
+
 /*INTRO*/
+.intro .demonstration {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  width: 204px;
+  z-index: 9999; }
+  .intro .demonstration .welcomeArrow {
+    webkit-transform: rotate(-270deg);
+    -ms-transform: rotate(-270deg);
+    -webkit-transform: rotate(-270deg);
+            transform: rotate(-270deg);
+    margin: 130px 0 0 60px;
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8; }
+  .intro .demonstration .welcome {
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    width: 130px;
+    padding: 20px; }
+    .intro .demonstration .welcome p {
+      font-size: 18px !important; }
+      .intro .demonstration .welcome p a:hover, .intro .demonstration .welcome p a:active, .intro .demonstration .welcome p a:focus, .intro .demonstration .welcome p a:visited {
+        background-color: #fff !important;
+        right: 0 !important;
+        position: inherit !important;
+        padding: 0 !important;
+        margin-top: 0 !important;
+        border-radius: 0 !important; }
 .intro .container-narrow {
   position: relative;
   margin-top: 50px;
@@ -3757,37 +3820,6 @@ p.asteriks {
     width: 160px;
     height: 82px;
     margin: 0 auto 40px; }
-  .intro .container-narrow #welcomeArrow {
-    border-bottom: 15px solid #FFFAF0;
-    border-left: 32px solid transparent;
-    border-right: 32px solid transparent;
-    height: 0;
-    left: 50%;
-    margin: -15px 0 0 -80px;
-    position: absolute;
-    width: 0; }
-  .intro .container-narrow #welcome {
-    background-color: #FFFAF0;
-    margin: 0 auto 280px;
-    max-width: 380px;
-    padding: 22px 22px 12px;
-    border-radius: 20px; }
-    .intro .container-narrow #welcome .contactBtn {
-      padding: 7px 0; }
-      .intro .container-narrow #welcome .contactBtn button {
-        width: 230px;
-        margin: 0 auto; }
-    .intro .container-narrow #welcome p {
-      font-size: 22px;
-      font-style: italic;
-      line-height: 26px;
-      text-align: center; }
-      .intro .container-narrow #welcome p span {
-        color: #f5a962;
-        font-size: 16px;
-        font-weight: bold;
-        font-style: normal;
-        line-height: 20px; }
 
 /*PRESENT PRODUCT 1*/
 .presentProduct {
@@ -4175,6 +4207,21 @@ footer {
   background: -webkit-linear-gradient(top, #3dbcb1 0%, #98d4ca 100%);
   background: linear-gradient(to bottom, #3dbcb1 0%, #98d4ca 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3dbcb1', endColorstr='#98d4ca', GradientType=0 ); }
+  #TTintro.intro .quoteBox {
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    margin-top: 0;
+    border-top: #1dc8b6 solid 8px;
+    border-bottom: #1dc8b6 solid 8px;
+    border-left: #1dc8b6 solid 8px;
+    position: fixed;
+    width: 120px;
+    top: 70px;
+    z-index: 9999;
+    right: 0; }
+    #TTintro.intro .quoteBox p a {
+      color: #1dc8b6; }
   #TTintro.intro .container-narrow #heroLogoContainer {
     max-width: 372px;
     height: 82px;
