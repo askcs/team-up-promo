@@ -7,14 +7,13 @@ var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var reload = browserSync.reload;
 var port = '4000';
-var indexFile = 'indexTeamtelefoon.html';
+var indexFile = 'indexTeamUp.html';
 
 gulp.task('sass', function ()
 {
   return gulp.src('sass/main.scss')
     .pipe(sass({style: 'expanded'}))
     .pipe(autoprefixer('last 2 version'))
-    .pipe(gulp.dest('promo/css'))
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('promo/css'))
