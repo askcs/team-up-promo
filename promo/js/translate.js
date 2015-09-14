@@ -53,17 +53,16 @@ Translator.prototype = {
 
     jQuery.getJSON(self.options.langDir, function(languages)
     {
-      var language = null;
+      var language = self.options.defaultLang;
       self.languages = languages;
 
       if(self.options.byHostName)
       {
         var hostName = window.location.hostname;
-        Object.keys(self.languages).forEach(function (lang)
+        Object.keys(self.languages).every(function (lang)
         {
-          language = (hostName.indexOf('.' + lang) > -1)
-            ? lang
-            : self.options.defaultLang;
+          language = lang;
+          return hostName.indexOf('.' + lang) > -1;
         });
       }
       if(self.options.picker)
