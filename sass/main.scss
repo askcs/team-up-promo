@@ -1968,18 +1968,21 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   .modal-body {
     overflow: hidden;
     min-height: 85px;
+    label {
+      text-transform: none;
+    }
     #teamPhoneNumber {
       position: absolute;
       width: 92%;
       top: 0px;
       color: #fffaf0;
-      font-style: italic;
-
       input {
         margin-bottom: 5px;
       }
       i {
-        color: red;
+        color: $red;
+        font-size: 14px;
+        display: none;
       }
     }
     #nameUser {
@@ -1991,7 +1994,8 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
     }
     .contactText {
       position: absolute;
-      bottom: -12px;
+      bottom: 13px;
+      right: 30px;
     }
     .contactInput {
       width: 50%;

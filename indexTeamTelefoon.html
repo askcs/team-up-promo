@@ -519,7 +519,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Start een videogesprek met met uw team</h4>
+                <h4 class="modal-title" id="myModalLabel">Start een videogesprek met met een team</h4>
             </div>
             <div class="modal-body">
                 <form>
@@ -527,7 +527,7 @@
                         <div id="teamPhoneNumber" class="form-group has-feedback">
                             <label for="telephoneNumber">Geef het telefoonnummer van uw team op: </label>
                             <div class="col-xs-5">
-                                <input name="telephoneNumber" class="contactInput " type="text" placeholder="Telefoonnummer *" id="contactName">
+                                <input id="teamPhoneInput" name="telephoneNumber" class="contactInput " type="text" placeholder="Telefoonnummer *">
                                 <i class="empty-phone form-control-feedback fa fa-asterisk">Geen telefoonnummer ingevuld</i>
                                 <br />
                                 <i class="not-valid-phone form-control-feedback fa fa-asterisk">Dit telefoonnummer behoord niet tot een team</i>
@@ -540,8 +540,6 @@
                                 <i class="form-control-feedback fa fa-asterisk">Geen naam ingevuld.</i>
                             </div>
                         </div>
-                    </div>
-                    <div>
                         <p class="contactText">
                             * Verplicht veld
                         </p>
@@ -549,8 +547,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <div class="sendButton" id="sendMailBtn">
-                    <button class="btn-large btn-block btn-primary ng-binding" type="button" >Verzenden</button>
+                <div id="nextVideoCoversationBtn">
+                    <button class="btn-large btn-block btn-primary ng-binding" onclick="checkTeamPhone()" type="button" >Volgende</button>
                 </div>
             </div>
         </div>

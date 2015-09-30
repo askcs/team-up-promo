@@ -81,7 +81,6 @@ jQuery(function() {
     var radioInfo = jQuery('#radioInfo').is(':checked');
 
     var errorColor = "#c85a3c";
-    var errorFontColor = "white";
     var rightColor = "white";
     var rightFontColor = "#833C11";
 
@@ -209,4 +208,19 @@ jQuery(function() {
   }
 
 });
+
+function checkTeamPhone()
+{
+  var errorColor = "#c85a3c";
+  var errorFontColor = "white";
+
+  if(! jQuery('#teamPhoneInput').val())
+  {
+    $('.empty-phone').show();
+    $('#teamPhoneInput').css({
+      //"background-color": errorColor,
+      "color": '#fff !important'
+    });
+  }
+}
 
