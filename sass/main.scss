@@ -1635,6 +1635,10 @@ footer {
     width: 93% !important;
   }
 
+  #videoConversationModal {
+    width: 50% !important;
+  }
+
   #TUintro {
     .container-narrow {
       #welcome {
@@ -1877,7 +1881,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   .modal-lg { width: $modal-lg; }
 }
 
-#contactModal {
+#contactModal, #videoConversationModal {
   .modal-content {
     background: rgba(152,212,202,1);
     background: -moz-linear-gradient(top, rgba(152,212,202,1) 0%, rgba(61,188,177,1) 100%);
@@ -1943,6 +1947,54 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
     }
     .modal-footer {
       border: none;
+    }
+  }
+}
+
+//position: absolute;
+//top: 30px;
+//width: 95%;
+
+//position: absolute;
+//top: 100px;
+//width: 95%;
+
+#videoConversationModal {
+  .modal-header {
+    .modal-title {
+      font-size: 2em !important;
+    }
+  }
+  .modal-body {
+    overflow: hidden;
+    min-height: 85px;
+    #teamPhoneNumber {
+      position: absolute;
+      width: 92%;
+      top: 0px;
+      color: #fffaf0;
+      font-style: italic;
+
+      input {
+        margin-bottom: 5px;
+      }
+      i {
+        color: red;
+      }
+    }
+    #nameUser {
+      position: absolute;
+      width: 92%;
+      bottom: -105px;
+      color: #fffaf0;
+      font-style: italic;
+    }
+    .contactText {
+      position: absolute;
+      bottom: -12px;
+    }
+    .contactInput {
+      width: 50%;
     }
   }
 }

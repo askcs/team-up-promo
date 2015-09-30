@@ -55,6 +55,11 @@
                             <button class="btn btn-large btn-block btn-primary ng-binding" type="submit">Inloggen</button>
 			</a>
                     </div>
+                        <button id="videoConversationBtn"
+                                class="btn btn-large btn-block btn-primary ng-binding"
+                                type="submit"
+                                data-toggle="modal"
+                                data-target="#videoConversationModal">Videobellen naar een team</button>
                 </div>
             </div>
         </div>
@@ -146,7 +151,6 @@
                                 data-toggle="modal"
                                 data-target="#contactModal">Gratis Demonstratie</button>
                     </div>
-
                 </div>
                 <div id="introTeamMember">
                     <img src="promo/img/teamtelefoon/teamMember.png" data-sr="enter left over 1s and move 300px scale up 0%, after 0.4s">
@@ -508,6 +512,50 @@
         Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 010 225 0130 |
         <a href="mailto:info@ask-cs.com">info@ask-cs.com</a></p>
 </footer>
+
+<!-- Modal -->
+<div class="modal fade bs-example-modal-lg" id="videoConversationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Start een videogesprek met met uw team</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div>
+                        <div id="teamPhoneNumber" class="form-group has-feedback">
+                            <label for="telephoneNumber">Geef het telefoonnummer van uw team op: </label>
+                            <div class="col-xs-5">
+                                <input name="telephoneNumber" class="contactInput " type="text" placeholder="Telefoonnummer *" id="contactName">
+                                <i class="empty-phone form-control-feedback fa fa-asterisk">Geen telefoonnummer ingevuld</i>
+                                <br />
+                                <i class="not-valid-phone form-control-feedback fa fa-asterisk">Dit telefoonnummer behoord niet tot een team</i>
+                            </div>
+                        </div>
+                        <div id="nameUser" class="form-group has-feedback">
+                            <label for="name">Geef uw naam op: </label>
+                            <div class="col-xs-5">
+                                <input name="name" class="contactInput" type="text" placeholder="Naam *" id="contactCompagnyName">
+                                <i class="form-control-feedback fa fa-asterisk">Geen naam ingevuld.</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="contactText">
+                            * Verplicht veld
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="sendButton" id="sendMailBtn">
+                    <button class="btn-large btn-block btn-primary ng-binding" type="button" >Verzenden</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Modal -->
 <div class="modal fade bs-example-modal-lg" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
