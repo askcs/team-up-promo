@@ -201,6 +201,15 @@ p.asteriks {
         margin-top: 4px !important;
       }
     }
+    .openVideoConversationModal {
+      width: 260px;
+      float: right;
+      margin-right: 5px;
+      button {
+        margin-top: 4px;
+        text-transform: none;
+      }
+    }
   }
 }
 
@@ -1588,7 +1597,18 @@ footer {
   }
 }
 
-
+@media (max-width: 767px) {
+  #videoConversationModal {
+    width: 100% !important;
+  }
+  #nextBtn {
+    text-indent: -9999em;
+    background-image:url('../img/teamtelefoon/arrow-right-c.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 40px 40px;
+  }
+}
 
 @media (min-width: 481px) and (max-width: 767px){
   #deviceArea3 {
@@ -1633,10 +1653,6 @@ footer {
 
   #contactModal .contactInput {
     width: 93% !important;
-  }
-
-  #videoConversationModal {
-    width: 50% !important;
   }
 
   #TUintro {
@@ -1967,39 +1983,53 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   }
   .modal-body {
     overflow: hidden;
-    min-height: 85px;
+    height: 55px;
     label {
       text-transform: none;
     }
+    @include input-placeholder('#fff');
     #teamPhoneNumber {
-      position: absolute;
-      width: 92%;
-      top: 0px;
       color: #fffaf0;
+      position: relative;
       input {
         margin-bottom: 5px;
+        width: 89%;
       }
       i {
         color: $red;
         font-size: 14px;
         display: none;
       }
+
+      #nextBtn {
+        position: absolute;
+        bottom: 4px;
+        right: 0px;
+        width: 17%;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
     }
     #nameUser {
-      position: absolute;
-      width: 92%;
-      bottom: -105px;
       color: #fffaf0;
       font-style: italic;
+      display: none;
     }
+  }
+  .modal-footer {
+    padding: 0 15px 15px 15px;
     .contactText {
-      position: absolute;
-      bottom: 13px;
-      right: 30px;
+      text-align: left;
+      font-style: italic;
+      font-size: 14px;
     }
-    .contactInput {
-      width: 50%;
+    #nextVideoCoversationBtn {
+      display: none;
+      a {
+        text-decoration: none;
+      }
     }
+    
   }
 }
 

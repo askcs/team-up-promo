@@ -209,17 +209,94 @@ jQuery(function() {
 
 });
 
+/**
+ * Check if the team phone was filled in, if it is show the next inputfield
+ * @returns {boolean}
+ */
 function checkTeamPhone()
 {
-  var errorColor = "#c85a3c";
-  var errorFontColor = "white";
-
   if(! jQuery('#teamPhoneInput').val())
   {
-    $('.empty-phone').show();
-    $('#teamPhoneInput').css({
-      //"background-color": errorColor,
-      "color": '#fff !important'
+    var emptyTeamPhoneNumber = "Voer een geldig team telefoonnummer in<br>";
+    emptyTeamPhoneNumber += "* Verplicht veld";
+    error(emptyTeamPhoneNumber, "#teamPhoneInput");
+  }
+  else
+  {
+    jQuery('#teamPhoneNumber')
+      .fadeOut(600, function ()
+      {
+        jQuery('#nameUser').fadeIn(800);
+        jQuery("#nextVideoCoversationBtn").fadeIn(800);
+      });
+    error("* Verplicht veld", "teamPhoneInput");
+  }
+  return false;
+}
+
+/**
+ * Start the conversation, if the form is valid
+ * @returns {boolean} return true is the form is valid
+ */
+function startVideoConversation()
+{
+  var valid = false,
+    fullName = jQuery('#nameInput').val();
+  if(! fullName)
+  {
+    var emptyFullName = "Voer een naam in <br>";
+    emptyFullName += "* Verplicht veld";
+    error(emptyFullName, "#nameInput");
+  }
+  else
+  {
+    var sendButton = jQuery("#nextVideoCoversationBtn a"),
+        currentURLtext = sendButton.attr('href'),
+        teamPhoneNumber = jQuery('#teamPhoneInput').val();
+
+    sendButton
+      .attr('target', '_blank')
+      .attr('href', currentURLtext + '/#/video?teamPhoneNumber=' + teamPhoneNumber + '&fullName=' + fullName);
+    reset();
+    valid = true;
+  }
+  return valid;
+}
+
+/**
+ * Reset html elements in there default state
+ */
+function reset()
+{
+  jQuery('.modal-body input')
+    .val('')
+    .css("border", "solid 1px #ccc")
+  jQuery("#nextVideoCoversationBtn").hide();
+  jQuery('#nameUser').hide(800);
+  jQuery('#teamPhoneNumber').show();
+}
+
+/**
+ * Fade error message in
+ * @param message
+ * @param input
+ */
+function error(message, input)
+{
+  var errorDiv = jQuery('.contactText');
+  console.log('errorDiv.html().length', errorDiv.html().length);
+  console.log('message.length', message.length);
+  
+  if(errorDiv.html().length !== message.length)
+  {
+    errorDiv.fadeOut(400, function ()
+    {
+      jQuery(input).css({
+        "border": "solid 1px #c85a3c"
+      });
+      errorDiv
+        .html(message)
+        .fadeIn();
     });
   }
 }

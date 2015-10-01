@@ -54,12 +54,13 @@
                         <a href="/app/index.html">
                             <button class="btn btn-large btn-block btn-primary ng-binding" type="submit">Inloggen</button>
 			</a>
-                    </div>
-                        <button id="videoConversationBtn"
-                                class="btn btn-large btn-block btn-primary ng-binding"
+                </div>
+                    <div class="openVideoConversationModal">
+                        <button class="btn btn-large btn-block btn-primary ng-binding"
                                 type="submit"
                                 data-toggle="modal"
-                                data-target="#videoConversationModal">Videobellen naar een team</button>
+                                data-target="#videoConversationModal">Start videogesprek</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -518,37 +519,42 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Start een videogesprek met met een team</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="reset()"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Start een videogesprek met een team</h4>
             </div>
             <div class="modal-body">
+                <div class="alert alert-success alertContact" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    Bedankt voor uw interesse in TeamTelefoon. Uw aanvraag is verstuurd en er wordt z.s.m contact met u opgenomen!
+                </div>
                 <form>
                     <div>
                         <div id="teamPhoneNumber" class="form-group has-feedback">
-                            <label for="telephoneNumber">Geef het telefoonnummer van uw team op: </label>
+                            <label for="telephoneNumber">Welk team wilt u bellen? </label>
                             <div class="col-xs-5">
                                 <input id="teamPhoneInput" name="telephoneNumber" class="contactInput " type="text" placeholder="Telefoonnummer *">
                                 <i class="empty-phone form-control-feedback fa fa-asterisk">Geen telefoonnummer ingevuld</i>
                                 <br />
                                 <i class="not-valid-phone form-control-feedback fa fa-asterisk">Dit telefoonnummer behoord niet tot een team</i>
                             </div>
+                            <button id="nextBtn" class="btn-large btn-block btn-primary ng-binding" onclick="return checkTeamPhone()" type="button" >Volgende</button>
                         </div>
                         <div id="nameUser" class="form-group has-feedback">
-                            <label for="name">Geef uw naam op: </label>
+                            <label for="name">Voer uw naam in: </label>
                             <div class="col-xs-5">
-                                <input name="name" class="contactInput" type="text" placeholder="Naam *" id="contactCompagnyName">
+                                <input id="nameInput" name="name" class="contactInput" type="text" placeholder="Naam *" id="contactCompagnyName" >
                                 <i class="form-control-feedback fa fa-asterisk">Geen naam ingevuld.</i>
                             </div>
                         </div>
-                        <p class="contactText">
-                            * Verplicht veld
-                        </p>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
+                <p class="contactText">* Verplicht veld</p>
                 <div id="nextVideoCoversationBtn">
-                    <button class="btn-large btn-block btn-primary ng-binding" onclick="checkTeamPhone()" type="button" >Volgende</button>
+                    <a href="/app/index.html">
+                        <button class="btn-large btn-block btn-primary ng-binding" onclick="return startVideoConversation()" type="button" >Start videogesprek</button>
+                    </a>
                 </div>
             </div>
         </div>
