@@ -253,10 +253,11 @@ function startVideoConversation()
     var sendButton = jQuery("#nextVideoCoversationBtn a"),
         currentURLtext = sendButton.attr('href'),
         teamPhoneNumber = jQuery('#teamPhoneInput').val();
+    currentURLtext += '#/video?teamPhoneNumber=' + encodeURIComponent(teamPhoneNumber) + '&fullName=' + fullName;
 
     sendButton
       .attr('target', '_blank')
-      .attr('href', currentURLtext + '#/video?teamPhoneNumber=' + teamPhoneNumber + '&fullName=' + fullName);
+      .attr('href', currentURLtext);
     reset();
     valid = true;
   }
@@ -284,8 +285,6 @@ function reset()
 function error(message, input)
 {
   var errorDiv = jQuery('.contactText');
-  console.log('errorDiv.html().length', errorDiv.html().length);
-  console.log('message.length', message.length);
   
   if(errorDiv.html().length !== message.length)
   {
