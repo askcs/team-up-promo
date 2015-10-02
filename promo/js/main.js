@@ -256,7 +256,7 @@ function startVideoConversation()
 
     sendButton
       .attr('target', '_blank')
-      .attr('href', currentURLtext + '/#/video?teamPhoneNumber=' + teamPhoneNumber + '&fullName=' + fullName);
+      .attr('href', currentURLtext + '#/video?teamPhoneNumber=' + teamPhoneNumber + '&fullName=' + fullName);
     reset();
     valid = true;
   }
