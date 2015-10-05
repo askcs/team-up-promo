@@ -256,8 +256,6 @@ function startVideoConversation()
     currentURLtext += '#/video/?teamPhoneNumber=' + encodeURIComponent(teamPhoneNumber);
     currentURLtext += '&fullName=' + encodeURI(fullName);
 
-    console.error('currentURLtext', currentURLtext);
-
     sendButton
       .attr('target', '_blank')
       .attr('href', currentURLtext);
@@ -274,7 +272,8 @@ function reset()
 {
   jQuery('.modal-body input')
     .val('')
-    .css("border", "solid 1px #ccc")
+    .css("border", "solid 1px #ccc");
+  jQuery('#teamPhoneInput').val("/app/index.html");
   jQuery("#nextVideoCoversationBtn").hide();
   jQuery('#nameUser').hide(800);
   jQuery('#teamPhoneNumber').show();
