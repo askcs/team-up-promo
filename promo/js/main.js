@@ -253,8 +253,10 @@ function startVideoConversation()
     var sendButton = jQuery("#nextVideoCoversationBtn a"),
         currentURLtext = sendButton.attr('href'),
         teamPhoneNumber = jQuery('#teamPhoneInput').val();
-    currentURLtext += '#/video?teamPhoneNumber=' + encodeURIComponent(teamPhoneNumber);
+    currentURLtext += '#/video/?teamPhoneNumber=' + encodeURIComponent(teamPhoneNumber);
     currentURLtext += '&fullName=' + encodeURI(fullName);
+
+    console.error('currentURLtext', currentURLtext);
 
     sendButton
       .attr('target', '_blank')
