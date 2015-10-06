@@ -273,7 +273,7 @@ function reset()
   jQuery('.modal-body input')
     .val('')
     .css("border", "solid 1px #ccc");
-  jQuery('#teamPhoneInput').val("/app/index.html");
+  jQuery('#teamPhoneInput').attr("href", "http://test.teamup.ask-cs.com/index.html");
   jQuery("#nextVideoCoversationBtn").hide();
   jQuery('#nameUser').hide(800);
   jQuery('#teamPhoneNumber').show();
