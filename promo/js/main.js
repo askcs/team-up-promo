@@ -240,7 +240,6 @@ function checkTeamPhone()
  */
 function startVideoConversation()
 {
-  var valid = false,
     fullName = jQuery('#nameInput').val();
   if(! fullName)
   {
@@ -251,18 +250,14 @@ function startVideoConversation()
   else
   {
     var sendButton = jQuery("#nextVideoCoversationBtn a"),
-        currentURLtext = sendButton.attr('href'),
+        currentURLtext = 'http://test.teamup.ask-cs.com/index.html',
         teamPhoneNumber = jQuery('#teamPhoneInput').val();
     currentURLtext += '#/video/?teamPhoneNumber=' + encodeURIComponent(teamPhoneNumber);
     currentURLtext += '&fullName=' + encodeURI(fullName);
 
-    sendButton
-      .attr('target', '_blank')
-      .attr('href', currentURLtext);
     reset();
-    valid = true;
+    window.location.href = currentURLtext;
   }
-  return valid;
 }
 
 /**
@@ -273,7 +268,7 @@ function reset()
   jQuery('.modal-body input')
     .val('')
     .css("border", "solid 1px #ccc");
-  jQuery('#teamPhoneInput').attr("href", "http://test.teamup.ask-cs.com/index.html");
+  //jQuery('#teamPhoneInput').attr("href", "http://test.teamup.ask-cs.com/index.html");
   jQuery("#nextVideoCoversationBtn").hide();
   jQuery('#nameUser').hide(800);
   jQuery('#teamPhoneNumber').show();
