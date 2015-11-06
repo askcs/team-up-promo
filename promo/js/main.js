@@ -75,6 +75,7 @@ jQuery(function() {
     var contactName = jQuery.trim(jQuery("#contactName").val());
     var contactEmail = jQuery.trim(jQuery("#contactEmail").val());
     var contactCompagnyName = jQuery.trim(jQuery("#contactCompagnyName").val());
+    var contactPhone = jQuery.trim(jQuery("#contactTelephone").val());
     var contactSubject = jQuery.trim(jQuery("#contactSubject").val());
     var contactDateTime = jQuery.trim(jQuery("#contactDateTime").val());
     var message = jQuery.trim(jQuery("#message").val());
@@ -114,6 +115,11 @@ jQuery(function() {
     else
     {
       jQuery("#contactCompagnyName").css("background-color" ,rightColor).css("color" ,rightFontColor);
+    }
+
+    if(contactPhone)
+    {
+      sendMailURL += "&contactCompagnyPhone="+contactPhone;
     }
 
     if(contactEmail == '' ){
