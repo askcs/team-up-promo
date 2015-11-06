@@ -2062,6 +2062,32 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   line-height: 19px;
 }
 
+.datetimepicker table tr td.active:active,
+.datetimepicker table tr td.active:hover:active,
+.datetimepicker table tr td.active.disabled:active,
+.datetimepicker table tr td.active.disabled:hover:active,
+.datetimepicker table tr td.active.active, .datetimepicker table tr td.active:hover.active,
+.datetimepicker table tr td.active.disabled.active,
+.datetimepicker table tr td.active.disabled:hover.active {
+  background-image: -webkit-linear-gradient(top, #96d4ca,#3ebdb2) !important;
+  background-image: -webkit-linear-gradient(top, #96d4ca,#3ebdb2) !important;
+  background-image: -moz-linear-gradient(top, #96d4ca,#3ebdb2) !important;
+}
+
+.datetimepicker table tr td span.active:active,
+.datetimepicker table tr td span.active:hover:active,
+.datetimepicker table tr td span.active.disabled:active,
+.datetimepicker table tr td span.active.disabled:hover:active,
+.datetimepicker table tr td span.active.active, .datetimepicker table tr td span.active:hover.active,
+.datetimepicker table tr td span.active.disabled.active, .datetimepicker table tr td span.active.disabled:hover.active,
+.datetimepicker table tr td.active, .datetimepicker table tr td.active:hover,
+.datetimepicker table tr td.active.disabled, .datetimepicker table tr td.active.disabled:hover {
+  background-image: -webkit-linear-gradient(top, #96d4ca,#3ebdb2) !important;
+  background-image: -moz-linear-gradient(top, #96d4ca,#3ebdb2) !important;
+  background-image: -o-linear-gradient(top, #96d4ca,#3ebdb2) !important;
+}
+
+
 //.datetimepicker table tr td.active:active, .datetimepicker table tr td.active:hover:active,
 //.datetimepicker table tr td.disabled.active:active,
 //.datetimepicker table tr td.disabled.active:hover:active,
