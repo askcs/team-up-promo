@@ -212,7 +212,6 @@ jQuery(function() {
     jQuery('#radioInfo').prop("checked", true);
     jQuery(".contactRadios").change();
   }
-
 });
 
 /**
@@ -256,10 +255,18 @@ function startVideoConversation()
   else
   {
     var sendButton = jQuery("#nextVideoCoversationBtn a"),
-        currentURLtext = 'http://test.teamup.ask-cs.com/index.html',
-        teamPhoneNumber = jQuery('#teamPhoneInput').val();
+        getDomain = function ()
+        {
+          return (window.location.pathname.indexOf('demo') > 0)
+            ? 'demo'
+            : 'test';
+        },
+    currentURLtext = 'http://' + getDomain() + '.teamup.ask-cs.com /index.html',//http://localhost:4000
+    teamPhoneNumber = jQuery('#teamPhoneInput').val();
     currentURLtext += '#/video/?teamPhoneNumber=' + encodeURIComponent(teamPhoneNumber);
     currentURLtext += '&fullName=' + encodeURI(fullName);
+
+    console.error('getDomain', getDomain());
 
     reset();
     window.location.href = currentURLtext;
