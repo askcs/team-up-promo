@@ -82,7 +82,6 @@ jQuery(function() {
     var radioInfo = jQuery('#radioInfo').is(':checked');
 
     var errorColor = "#c85a3c";
-    var errorFontColor = "white";
     var rightColor = "white";
     var rightFontColor = "#833C11";
 
@@ -213,6 +212,101 @@ jQuery(function() {
     jQuery('#radioInfo').prop("checked", true);
     jQuery(".contactRadios").change();
   }
-
 });
+
+/**
+ * Check if the team phone was filled in, if it is show the next inputfield
+ * @returns {boolean}
+ */
+function checkTeamPhone()
+{
+  if(! jQuery('#teamPhoneInput').val())
+  {
+    var emptyTeamPhoneNumber = "Voer een geldig team telefoonnummer in<br>";
+    emptyTeamPhoneNumber += "* Verplicht veld";
+    error(emptyTeamPhoneNumber, "#teamPhoneInput");
+  }
+  else
+  {
+    jQuery('#teamPhoneNumber')
+      .fadeOut(600, function ()
+      {
+        jQuery('#nameUser').fadeIn(800);
+        jQuery("#nextVideoCoversationBtn").fadeIn(800);
+      });
+    error("* Verplicht veld", "teamPhoneInput");
+  }
+  return false;
+}
+
+/**
+ * Start the conversation, if the form is valid
+ * @returns {boolean} return true is the form is valid
+ */
+function startVideoConversation()
+{
+    fullName = jQuery('#nameInput').val();
+  if(! fullName)
+  {
+    var emptyFullName = "Voer een naam in <br>";
+    emptyFullName += "* Verplicht veld";
+    error(emptyFullName, "#nameInput");
+  }
+  else
+  {
+    var sendButton = jQuery("#nextVideoCoversationBtn a"),
+        getDomain = function ()
+        {
+          return (window.location.pathname.indexOf('demo') > 0)
+            ? 'demo'
+            : 'test';
+        },
+    currentURLtext = 'http://' + getDomain() + '.teamup.ask-cs.com/index.html',//http://localhost:4000
+    teamPhoneNumber = jQuery('#teamPhoneInput').val();
+    currentURLtext += '#/video/?teamPhoneNumber=' + encodeURIComponent(teamPhoneNumber);
+    currentURLtext += '&fullName=' + encodeURI(fullName);
+
+    console.error('getDomain', getDomain());
+
+    reset();
+    window.location.href = currentURLtext;
+  }
+}
+
+/**
+ * Reset html elements in there default state
+ */
+function reset()
+{
+  jQuery('.modal-body input')
+    .val('')
+    .css("border", "solid 1px #ccc");
+  //jQuery('#teamPhoneInput').attr("href", "http://test.teamup.ask-cs.com/index.html");
+  jQuery("#nextVideoCoversationBtn").hide();
+  jQuery('#nameUser').hide(800);
+  jQuery('#teamPhoneNumber').show();
+}
+
+/**
+ * Fade error message in
+ * @param message
+ * @param input
+ */
+function error(message, input)
+{
+  var errorDiv = jQuery('.contactText');
+  
+  if(errorDiv.html().length !== message.length)
+  {
+    errorDiv.fadeOut(400, function ()
+    {
+      jQuery(input).css({
+        "border": "solid 1px #c85a3c"
+      });
+      errorDiv
+        .html(message)
+        .fadeIn();
+    });
+  }
+}
 
