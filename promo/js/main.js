@@ -261,7 +261,7 @@ function startVideoConversation()
             ? 'demo'
             : 'test';
         },
-    currentURLtext = 'http://' + getDomain() + '.teamup.ask-cs.com/index.html',//http://localhost:4000
+    currentURLtext = 'https://teamup-' + getDomain() + '.ask-cs.nl/index.html',//http://localhost:4000
     teamPhoneNumber = jQuery('#teamPhoneInput').val();
     currentURLtext += '#/video/?teamPhoneNumber=' + encodeURIComponent(teamPhoneNumber);
     currentURLtext += '&fullName=' + encodeURI(fullName);
