@@ -228,6 +228,8 @@ function checkTeamPhone()
   }
   else
   {
+
+
     jQuery('#teamPhoneNumber')
       .fadeOut(600, function ()
       {
