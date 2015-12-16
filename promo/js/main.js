@@ -215,12 +215,15 @@ jQuery(function() {
 });
 
 /**
- * Check if the team phone was filled in, if it is show the next inputfield
+ * Check if the team phone was filled in and valid, if that's the case show the name field
  * @returns {boolean}
  */
 function checkTeamPhone()
 {
-  if(! jQuery('#teamPhoneInput').val())
+  var phoneElement = jQuery('#teamPhoneInput'),
+        phoneValue = phoneElement.val();
+
+  if(! phoneValue)
   {
     var emptyTeamPhoneNumber = "Voer een geldig team telefoonnummer in<br>";
     emptyTeamPhoneNumber += "* Verplicht veld";
@@ -228,17 +231,53 @@ function checkTeamPhone()
   }
   else
   {
+    validateTeamPhone(phoneValue)
+      .then(function (roomId)
+        {
+            jQuery('#teamPhoneNumber')
+              .fadeOut(600, function ()
+              {
+                var nameField  = jQuery('#nameUser');
 
+                nameField.attr('roomId', roomId);
+                nameField.fadeIn(800);
+                jQuery("#nextVideoCoversationBtn").fadeIn(800);
+              });
+          error("* Verplicht veld", "teamPhoneInput");
+        }, function ()
+        {
+          var phoneNotValid = "Het ingevoerde nummer is onjuist. Dit nummer is niet bekend bij een team met videobellen.";
+          error(phoneNotValid + "<br>* Verplicht veld", "teamPhoneInput");
+        });
 
-    jQuery('#teamPhoneNumber')
-      .fadeOut(600, function ()
-      {
-        jQuery('#nameUser').fadeIn(800);
-        jQuery("#nextVideoCoversationBtn").fadeIn(800);
-      });
-    error("* Verplicht veld", "teamPhoneInput");
   }
   return false;
+}
+
+/**
+ * Validate if the phonenumber belongs to a team
+ * If that's the case return the roomId in the reponse
+ * @param phoneNumber the phonenumber of the team
+ * @returns {*} promise
+ */
+function validateTeamPhone(phoneNumber)
+{
+  var url = getDomain() + 'proxy/teamTelephone/call?phoneNumber=' + phoneNumber + '&type=video',
+      defer = jQuery.Deferred();
+
+  $.ajax({
+    url: url,
+    type: 'post',
+    error: function()
+    {
+      defer.reject(false);
+    },
+    success: function(result)
+    {
+      defer.resolve(result.callId);
+    }
+  });
+  return defer.promise();
 }
 
 /**
@@ -247,7 +286,8 @@ function checkTeamPhone()
  */
 function startVideoConversation()
 {
-    fullName = jQuery('#nameInput').val();
+  var fullName = jQuery('#nameInput').val();
+
   if(! fullName)
   {
     var emptyFullName = "Voer een naam in <br>";
@@ -256,23 +296,24 @@ function startVideoConversation()
   }
   else
   {
-    var sendButton = jQuery("#nextVideoCoversationBtn a"),
-        getDomain = function ()
-        {
-          return (window.location.pathname.indexOf('demo') > 0)
-            ? 'demo'
-            : 'test';
-        },
-    currentURLtext = 'https://teamup-' + getDomain() + '.ask-cs.nl/index.html',//http://localhost:4000
-    teamPhoneNumber = jQuery('#teamPhoneInput').val();
-    currentURLtext += '#/video/?teamPhoneNumber=' + encodeURIComponent(teamPhoneNumber);
-    currentURLtext += '&fullName=' + encodeURI(fullName);
+    var backEndUrl = getDomain(),//http://localhost:4000/
+        roomId = jQuery('#nameUser').attr('roomId');
 
-    console.error('getDomain', getDomain());
+    currentURLtext = backEndUrl + 'index.html';
+    currentURLtext += '#/video/?roomId=' + encodeURIComponent(roomId);
+    currentURLtext += '&fullName=' + encodeURI(fullName);
 
     reset();
     window.location.href = currentURLtext;
   }
+}
+
+function getDomain()
+{
+  var backEndLocation = (window.location.pathname.indexOf('demo') > 0)
+      ? 'demo'
+      : 'test';
+  return 'https://teamup-' + backEndLocation + '.ask-cs.nl/';
 }
 
 /**
