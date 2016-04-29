@@ -7,7 +7,7 @@ var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var reload = browserSync.reload;
 var port = '4000';
-var indexFile = 'indexTeamUp.html';
+var indexFile = 'indexTeamTelefoon.html';
 
 gulp.task('sass', function ()
 {
@@ -27,7 +27,7 @@ gulp.task('serve', ['sass'], function(){
   gulp.watch('*.html').on('change', reload);
 });
 
-gulp.task('build', ['sass'])
+gulp.task('build', ['sass']);
 gulp.task('default', ['serve']);
 
 
