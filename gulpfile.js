@@ -6,6 +6,11 @@ var connect = require('gulp-connect');
 var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 var reload = browserSync.reload;
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var glob       = require('glob');
+var uglify = require('gulp-uglify');
 var port = '4000';
 var indexFile = 'indexTeamTelefoon.html';
 
@@ -19,6 +24,23 @@ gulp.task('sass', function ()
     .pipe(gulp.dest('promo/css'))
     .pipe(reload({stream: true}));
 });
+
+//wrong order
+gulp.task('scripts', function (cb) {
+  glob('promo/**/*.js', {}, function (err, files)
+  {
+   var b = browserify();
+   files.forEach(function (file) {
+    b.add(file);
+   });
+   b.bundle()
+     .pipe(source('app.js'))
+     .pipe(buffer())
+     .pipe(uglify())
+     .pipe(gulp.dest('promo/dist'));
+     cb();
+   });
+ });
 
 gulp.task('serve', ['sass'], function(){
   browserSync.init(startBrowserSync());

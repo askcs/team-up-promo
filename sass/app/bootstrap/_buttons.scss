@@ -276,3 +276,18 @@ input[type="submit"].btn {
 .marginLeftTen {
   margin-left: 10px;
 }
+
+
+.icon-arrow-right, .icon-arrow-left {
+  &:before {
+    font-style: normal;
+  }
+}
+
+.icon-arrow-right::before {
+  content: '>';
+}
+
+.icon-arrow-left::before {
+  content: '<'
+}
