@@ -1,0 +1,52 @@
+{
+  "stage": {
+     "production": [
+      {
+        "url": "https://backend1.example.com",
+        "name": "Back-end",
+        "desc": "First example back-end"
+      },
+      {
+        "url": "https://backend2.example.com",
+        "name": "Back-end 2",
+        "desc": "Second example back-end"
+      }
+    ],
+    "demo": [
+      {
+        "url": "https://demo.example.com",
+        "name": "Demo",
+        "desc": "Demo/acceptance back-end"
+      }
+    ],
+    "test": [
+      {
+        "url": "https://test.example.com",
+        "name": "Test",
+        "desc": "Test back-end"
+      }
+    ],
+    "development": [
+      {
+        "url": "https://dev.example.com",
+        "name": "Dev",
+        "desc": "Development back-end"
+      }
+    ]
+  },
+  "android": {
+    "test": 4,
+    "demo": 3,
+    "production": 2
+  },
+  "ios": {
+    "test": 4,
+    "demo": 3,
+    "production": 2
+  },
+  "webapp": {
+    "test": 4,
+    "demo": 3,
+    "production": 2
+  }
+}
