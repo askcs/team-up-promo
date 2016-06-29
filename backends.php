@@ -18,6 +18,11 @@
 // 'frontend'		required	String	Which frontend we want a back-end url(s) for. One of: [android, ios, webapp] (case insensitive)
 // 'buildnumber'	required	int	The buildnumber of the given frontend. Must be > 0.
 
+// Stupid CORS things..
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, OPTIONS"); 
+header("Access-Control-Allow-Headers: *");
+header("Access-Control-Request-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 // Allowed values for the 'frontend' query parameter (keep lowercase, as the input will be strtolower()-ed)
 $allowedFrontends = array('android', 'ios', 'webapp');
