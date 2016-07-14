@@ -7,7 +7,7 @@ $contactSubject = isset($_REQUEST['contactSubject'])?$_REQUEST['contactSubject']
 $contactMessage = isset($_REQUEST['message'])?$_REQUEST['message']:"";
 */
 
-$toEmail = "contact@teamtelefoon.nl";
+$toEmail = "henk@teamtelefoon.nl";
 //$toEmail = "mma@ask-cs.com";
 
 $isDebug = true;
@@ -44,10 +44,10 @@ function sendMail() {
 
 }
 
-// echo sendMail();
+echo sendMail();
 
 
-        $header = "FROM: noreply<no-replyt@icaweb.nl>\r\n";
-        $header.= "Return-Path: <no-reply@icaweb.nl>\r\n";
-        mail( 'henk@teamtelefoon.nl', 'hello', 'testbody',  $header );
+$header = "FROM: noreply<no-replyt@icaweb.nl>\r\n";
+$header.= "Return-Path: <no-reply@icaweb.nl>\r\n";
+mail( 'henk@teamtelefoon.nl', 'hello', 'testbody',  $header );
 ?>
