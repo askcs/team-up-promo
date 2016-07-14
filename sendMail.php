@@ -7,8 +7,6 @@ $contactSubject = isset($_REQUEST['contactSubject'])?$_REQUEST['contactSubject']
 $contactMessage = isset($_REQUEST['message'])?$_REQUEST['message']:"";
 */
 
-$contactEmail = "noreply <noreply@ask-cs.com>";
-
 $toEmail = "contact@teamtelefoon.nl";
 //$toEmail = "mma@ask-cs.com";
 
