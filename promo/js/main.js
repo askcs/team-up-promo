@@ -84,8 +84,8 @@ jQuery(function() {
     var errorColor = "#c85a3c";
     var rightColor = "white";
     var rightFontColor = "#833C11";
-
-    var sendMailURL = "https://standby.ask-cs.nl/tymon/sendMail.php";
+    //"https://standby.ask-cs.nl/tymon/sendMail.php"
+    var sendMailURL = "https://teamtelefoon.nl/sendMail.php";
     sendMailURL += "?contactName="+contactName +
       "&contactEmail="+contactEmail+
       "&contactCompagnyName="+contactCompagnyName;
