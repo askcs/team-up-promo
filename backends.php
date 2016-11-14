@@ -67,14 +67,28 @@ $testBn = $knownBuildnumbers->test;
 $demoBn = $knownBuildnumbers->demo;
 $prodBn = $knownBuildnumbers->production;
 
+$backends = array();
+
 if ($buildnumber > 0 && $buildnumber <= $prodBn) {
-	echo json_encode($json->stage->production);
-} elseif ($buildnumber > $prodBn && $buildnumber <= $demoBn) {
-	echo json_encode($json->stage->demo);
-} elseif ($buildnumber > $demoBn && $buildnumber <= $testBn) {
-	echo json_encode($json->stage->test);
+	$backends = array_merge($backends, $json->stage->production);
+}
+
+if ($buildnumber > $prodBn && $buildnumber <= $demoBn) {
+	$backends = array_merge($backends, $json->stage->demo);
+}
+
+if ($buildnumber > $demoBn && $buildnumber <= $testBn) {
+	$backends = array_merge($backends, $json->stage->test);
+}
+
+if ($buildnumber > $testBn) {
+	$backends = array_merge($backends, $json->stage->development); 
+}
+
+if (count($backends) != 0) {
+	echo json_encode($backends);
 } else {
-	echo json_encode($json->stage->development); 
+	echo "[]";
 }
 
 exit();
