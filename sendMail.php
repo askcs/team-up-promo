@@ -36,13 +36,8 @@ function sendMail() {
 
 
     global $isDebug;
-    if( $isDebug)
-    {
-        //mail("lvdinten@ask-cs.com", 'sendMail form', $message, $header );
-        //mail("xmao@ask-cs.com", 'sendMail form', $message, $header );
-        //              mail("tdejonge@ask-cs.com", "sendMail form", $message, $header );
-        //mail("skroon@ask-cs.com",  'sendMail form', $message, $header );
-        mail("henk@teamtelefoon",  'sendMail form', $message, $header );
+    if( $isDebug) {
+        mail("stefan@teamtelefoon.nl",  'sendMail form', $message, $header );
     }
 
     $ret = mail($toEmail,'contact-formulier',$message ); //,$header);
