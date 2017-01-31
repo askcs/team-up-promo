@@ -7,19 +7,15 @@ $contactSubject = isset($_REQUEST['contactSubject'])?$_REQUEST['contactSubject']
 $contactMessage = isset($_REQUEST['message'])?$_REQUEST['message']:"";
 */
 
-$contactEmail = "noreply <noreply@ask-cs.com>";
-
 $toEmail = "contact@teamtelefoon.nl";
-//$toEmail = "mma@ask-cs.com";
-
-//$isDebug = true;
 
 function sendMail() {
     global $toEmail;
+    $replyAddress = $_GET['contactEmail'];
     $header =
-        'From: webform@ask-cs.com'. "\r\n";
-    'Reply-To: tdejonge@ask-cs.com' . "\r\n";
-    'Return-Path: tdejonge@ask-cs.com' . "\r\n";
+        'FROM: webform@teamtelefoon.nl'."\r\n".
+    	'Reply-To: '.$replyAddress . "\r\n".
+    	'Return-Path: '.$replyAddress . "\r\n";
 
     //risky custom data
     $query = explode('&', $_SERVER['QUERY_STRING'] );
@@ -35,17 +31,17 @@ function sendMail() {
     if( $message == '' )return "FALSE";
 
 
-    global $isDebug;
-    if( $isDebug) {
-        mail("stefan@teamtelefoon.nl",  'sendMail form', $message, $header );
+    if( isset($_GET['isDebug']) ) {
+        $ret = mail("stefan@teamtelefoon.nl",  'sendMail form', $message, $header);
+    }
+    else {
+    	$ret = mail($toEmail, 'contact-formulier', $message, $header);
     }
 
-    $ret = mail($toEmail,'contact-formulier',$message ); //,$header);
 
-
-    $handle = fopen( 'mail.log', 'ab');
+    $handle = fopen( '/tmp/mail.log', 'ab');
     fwrite( $handle, $message."\n".$header );
-    fwrite( "\n\n" );
+    fwrite( $handle, "\n\n" );
     fclose($handle);
 
 
