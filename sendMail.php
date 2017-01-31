@@ -12,7 +12,7 @@ $contactEmail = "noreply <noreply@ask-cs.com>";
 $toEmail = "contact@teamtelefoon.nl";
 //$toEmail = "mma@ask-cs.com";
 
-$isDebug = true;
+//$isDebug = true;
 
 function sendMail() {
     global $toEmail;
