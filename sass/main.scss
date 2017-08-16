@@ -2220,11 +2220,13 @@ tbody.collapse.in { display: table-row-group; }
   -webkit-transform: rotate(-45deg);
   font-size: 17.5px;
 }
-.corner-ribbon.green{background: #f5a962;
-a:visited{
-  color: brown;
 
-}
+.corner-ribbon.green {
+  background: #f5a962;
+  a {
+    color: #833c11;
+
+  }
 }
 .title-Vacatures{
   color: #1dc8b6;
@@ -2246,6 +2248,9 @@ a:visited{
 .header-box{
     @include opacity(0.9);
     margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 300px;
+    align: center;
     padding: 15px 25px;
     background: $orange;
     h2 {
