@@ -956,7 +956,7 @@ footer {
   text-align: center;
   width: 100%;
   padding-top: 100px;
-  z-index: 1;
+  //z-index: 1;
   img {
     margin: -610px 0 100px 0;
   }
@@ -2248,8 +2248,14 @@ tbody.collapse.in { display: table-row-group; }
 .header-box{
     @include opacity(0.9);
     margin-top: 40px;
+  @media screen and (min-width: 1300px) {
+      margin-left: 400px;
+      margin-right: 400px;
+    }
+  @media screen and (min-width: 1700px) {
     margin-left: 500px;
     margin-right: 500px;
+  }
     align: center;
     padding: 15px 25px;
     background: $orange;

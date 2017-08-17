@@ -15,6 +15,48 @@ jQuery(function() {
   //translate plugin
   //jQuery('#langPicker').translate();
 
+    //Vacatures link
+  var jobclassName;
+  var vacatureItem;
+
+  jQuery('.job1').click(function () {
+
+    jobclassName = jQuery(this).attr('class');
+    vacatureItem = '';
+
+    if (jobclassName == 'job1' && vacatureItem == undefined || vacatureItem == '') {
+
+      jQuery('#TextContainer1').show();
+      jQuery('#TextContainer2').hide();
+      return false;
+    }
+  });
+
+
+
+  jQuery('.job2').click(function () {
+
+    jobclassName = jQuery(this).attr('class');
+    vacatureItem = '';
+
+    if (jobclassName == 'job2' && vacatureItem == undefined || vacatureItem == '') {
+      jQuery('#TextContainer1').hide();
+      jQuery('#TextContainer2').show();
+      return false;
+    }
+  });
+
+
+  jQuery('.vacatures-item').click(function () {
+
+    vacatureItem = jQuery(this).attr('class');
+
+    if (jobclassName == 'job2' || jobclassName == 'job1' && vacatureItem == 'vacatures-item') {
+      jQuery('#TextContainer1').hide();
+      jQuery('#TextContainer2').hide();
+    }
+   });
+
   // Datetimepicker
   jQuery(".form_datetime").datetimepicker(
     {
