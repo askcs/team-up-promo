@@ -287,7 +287,6 @@ p.asteriks {
   .container-narrow {
     position: relative;
     margin-top: 50px;
-    //margin-top:60px;
     padding: 60px 20px;
     margin-bottom: 0;
     font-size: 18px;
@@ -299,6 +298,7 @@ p.asteriks {
       margin: 0 auto 40px;
     }
   }
+
 }
 
 
@@ -2202,68 +2202,91 @@ tbody.collapse.in { display: table-row-group; }
   -webkit-transform: rotate(-45deg);
 }
 
-/* Custom styles */
+  /* Custom styles */
 
-.corner-ribbon.sticky{
-  position: fixed;
-}
-
-.corner-ribbon.shadow{
-  box-shadow: 0 0 3px rgba(0,0,0,.3);
-}
-.corner-ribbon.bottom-right{
-  top: auto;
-  right: -50px;
-  bottom: 25px;
-  left: auto;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  font-size: 17.5px;
-}
-
-.corner-ribbon.green {
-  background: #f5a962;
-  a {
-    color: #833c11;
-
+  .corner-ribbon.sticky {
+    position: fixed;
   }
-}
-.title-Vacatures{
-  color: #1dc8b6;
-  font-size: 30px;
-  text-align: center;
-}
-.vacatures-item{
-  a
-  {
-    color: $white;
-    font-size: 25px;
-    text-align: center;
+
+  .corner-ribbon.shadow {
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
   }
-}
-.vacature-content{
-  color: rgba(0,0,0,0.7);
-  padding: 2rem;
-}
-.header-box{
-    @include opacity(0.9);
-    margin-top: 40px;
-  @media screen and (min-width: 1300px) {
-      margin-left: 400px;
-      margin-right: 400px;
+
+  .corner-ribbon.bottom-right {
+    top: auto;
+    right: -50px;
+    bottom: 25px;
+    left: auto;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    font-size: 17.5px;
+  }
+
+  .corner-ribbon.green {
+    background: #f5a962;
+    a {
+      color: #833c11;
+
     }
-  @media screen and (min-width: 1700px) {
-    margin-left: 500px;
-    margin-right: 500px;
   }
-    align: center;
-    padding: 15px 25px;
-    background: $orange;
-    h2 {
+
+  .vacatures-item {
+    position: relative;
+    margin-top: 70px;
+
+    padding: 15px 20px;
+    a {
       color: $white;
+      font-size: 25px;
+      text-align: center;
     }
-    p {
-      color: $brown;
+    #title-Vacatures {
+      color: #1dc8b6;
+      font-size: 30px;
+      text-align: center;
     }
+    #header-box {
+      @include opacity(0.9);
+      margin-top: 40px;
+      @media screen and (min-width: 1300px) {
+        margin-left: 400px;
+        margin-right: 400px;
+      }
+      @media screen and (min-width: 1700px) {
+        margin-left: 500px;
+        margin-right: 500px;
+      }
+      align: center;
+      padding: 15px 25px;
+      background: $orange;
+      h2 {
+        color: $white;
+      }
+      p {
+        color: $brown;
+      }
+    }
+    #vacature-footer {
+      position: relative;
+      margin-top: 550px;
+      padding: 1px 20px;
+      margin-bottom: 0;
+      background-color: $turqDark !important;
+      a{
+        font-size: 16px;
+      }
+      p {
+        background-color: $turqDark !important;
+      }
+      .contactBtn {
+        text-align: center;
+        padding: 10px 0;
+        button {
+          display: block;
+          width: 200px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 
-}

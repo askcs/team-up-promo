@@ -16,34 +16,52 @@ jQuery(function() {
   //jQuery('#langPicker').translate();
 
     //Vacatures link
-  var jobclassName;
-  var vacatureItem;
+  var jobclassName, vacatureItem,
+      clickCount = 0;
 
-  jQuery('.job1').click(function () {
 
-    jobclassName = jQuery(this).attr('class');
-    vacatureItem = '';
+  jQuery('.job1').click(function (event) {
 
-    if (jobclassName == 'job1' && vacatureItem == undefined || vacatureItem == '') {
+      jobclassName = jQuery(this).attr('class');
+      vacatureItem = '';
 
-      jQuery('#TextContainer1').show();
-      jQuery('#TextContainer2').hide();
-      return false;
-    }
+      if (clickCount == 0) {
+          if (jobclassName == 'job1' && vacatureItem == undefined || vacatureItem == '') {
+
+              jQuery('#jobdescription1').show();
+              jQuery('#jobdescription2').hide();
+              clickCount = clickCount + 1;
+              return false;
+          }
+      }
+      else {
+          clickCount = 0;
+          jQuery('#jobdescription1').hide();
+          return false;
+      }
   });
+
 
 
 
   jQuery('.job2').click(function () {
 
-    jobclassName = jQuery(this).attr('class');
-    vacatureItem = '';
+      jobclassName = jQuery(this).attr('class');
+      vacatureItem = '';
+      if (clickCount == 0) {
 
-    if (jobclassName == 'job2' && vacatureItem == undefined || vacatureItem == '') {
-      jQuery('#TextContainer1').hide();
-      jQuery('#TextContainer2').show();
-      return false;
-    }
+      if (jobclassName == 'job2' && vacatureItem == undefined || vacatureItem == '') {
+          jQuery('#jobdescription1').hide();
+          jQuery('#jobdescription2').show();
+          clickCount = clickCount + 1;
+          return false;
+      }
+        }
+        else{
+          clickCount = 0;
+          jQuery('#jobdescription2').hide();
+          return false;
+      }
   });
 
 
@@ -52,8 +70,9 @@ jQuery(function() {
     vacatureItem = jQuery(this).attr('class');
 
     if (jobclassName == 'job2' || jobclassName == 'job1' && vacatureItem == 'vacatures-item') {
-      jQuery('#TextContainer1').hide();
-      jQuery('#TextContainer2').hide();
+      jQuery('#jobdescription1').hide();
+      jQuery('#jobdescription2').hide();
+        clickCount = 0;
     }
    });
 
