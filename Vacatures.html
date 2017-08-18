@@ -10,10 +10,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="TeamUp" />
+    <meta property="og:title" content="TeamTelefoon" />
     <meta property="og:type" content="image" />
-    <meta property="og:url" content="http://teamup.ask-cs.nl/" />
+    <meta property="og:url" content="https://teamtelefoon.nl/" />
     <meta property="og:image" content="promo/img/logoTeamUp02.png" />
+    <meta name="google-site-verification" content="pkXnE8y2f71y0c_ZFqNB6wQYIPILDJ30YF4jdw9zrGs" />
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -33,6 +34,15 @@
 </head>
 <body style="background-color: #fffaf0;" >
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="promo/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="promo/js/vendor/bootstrap.js"></script>
+<script src="promo/js/vendor/scrollReveal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+<script type="text/javascript" src="promo/js/vendor/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="promo/js/vendor/locales/bootstrap-datetimepicker.nl.js" charset="UTF-8"></script>
+<script src="promo/js/plugins.js"></script>
+<script src="promo/js/main.js"></script>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -49,23 +59,14 @@
 </div>
 <!-- end navbar -->
 
-
-<div class="intro" >
-
-    <div class="container-narrow">
-
-        <div class="row-fluid">
-        </div>
-    </div>
-</div>
+<!-- Vacatures -->
 <div class="vacatures-item" >
-    <h1 class="title-Vacatures" >Vacatures</h1>
-
-    <div class="header-box" >
-        <div class ="job1">
+    <h1 id="title-Vacatures" >Vacatures</h1>
+    <div id="header-box" >
+        <div class ="job1" >
             <div class="vacature-header1" >
-                <h2 style="text-align:center"><a href="#">Business Developer</a></h2>
-                <div id="TextContainer1" style="display: none">
+                <h2 style="text-align:center"><a href="#" class ='mylink'>Business Developer</a></h2>
+                <div id="jobdescription1" style="display: none">
                     <p>
                         TeamTelefoon is zowel de naam van ons bedrijf als ons product, waarmee we zorgen voor een
                         optimale telefonische bereikbaarheid van thuiszorgteams. Door teamleden van kleinschalige
@@ -103,7 +104,7 @@
         <div class = "job2">
             <div class="vacature-header2" >
                 <h2 style="text-align:center"><a href='#'>Backend Developer</a></h2>
-                <div id="TextContainer2" style="display: none">
+                <div id="jobdescription2" style="display: none">
                     <p>
                         TeamTelefoon is zowel de naam van ons bedrijf als ons product, waarmee we zorgen voor een
                         optimale telefonische bereikbaarheid van thuiszorgteams. Door teamleden van kleinschalige
@@ -160,96 +161,21 @@
         </div>
     </div>
 
-
-    <div class="intro">
-
-        <div class="container-narrow">
-
-            <div class="row-fluid">
-            </div>
+    <footer id="vacature-footer">
+        <div class="contactBtn">
+            <button id="moreInfoButton" class="btn btn-large btn-block btn-primary pulse"
+                    data-toggle="modal"
+                    data-target="#contactModal">Meer informatie
+            </button>
         </div>
-    </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p>
 
-<footer id="footerTeamTelephone">
-    <div class="contactBtn">
-        <button id="moreInfoButton" class="btn btn-large btn-block btn-primary pulse"
-                data-toggle="modal"
-                data-target="#contactModal">Meer informatie</button>
-    </div>
-    <p>
+            Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 085 888 4445 |
+            <a href="mailto:contact@teamtelefoon.nl">contact@teamtelefoon.nl</a></p>
+    </footer>
 
-        Heemraadssingel 89 | 3022 CA Rotterdam | Nederland | 085 888 4445 |
-        <a style="font-size: 16px" href="mailto:contact@teamtelefoon.nl">contact@teamtelefoon.nl</a></p>
-</footer>
-
-<!-- Modal -->
-<div class="modal fade bs-example-modal-lg contactModalTU" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">NEEM CONTACT OP</h4>
-            </div>
-            <div class="modal-body">
-                <div class="alert alert-success alertContact" role="alert">
-                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                    Bedankt voor uw interesse in TeamUp. Uw aanvraag is verstuurd en er wordt z.s.m contact met u opgenomen!
-                </div>
-                <form>
-                    <div>
-                        <div class="form-group has-feedback contactRadio">
-                            <label>Ik wil:</label>
-                            <div class="radio">
-                                <label>
-                                    <input class='contactRadios' type="radio" name="optionsRadios" value="demonstration" id="radioDemonstration">
-                                    Een gratis demonstratie op locatie inplannen
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input class='contactRadios' type="radio" name="optionsRadios" value="info" id="radioInfo" checked>
-                                    Meer informatie over TeamUp
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group has-feedback">
-                            <div class="col-xs-5">
-                                <input class="contactInput " type="text" placeholder="Naam *" id="contactName">
-                                <i class="form-control-feedback fa fa-asterisk"></i>
-                            </div>
-                        </div>
-                        <input class="contactInput" type="text" placeholder="Bedrijfsnaam *" id="contactCompagnyName">
-                        <input class="contactInput" type="text" placeholder="E-mail *" id="contactEmail">
-                        <input class="contactInput" type="text" placeholder="Telefoonnummer" id="contactTelephone">
-                        <input class="contactInput form_datetime" type="text" id="contactDateTime" readonly placeholder="Voorstel Datum en Tijd">
-                        <textarea class="contactInput contactTextarea" name="message" placeholder="Bericht" rows="6" id="message"></textarea>
-                    </div>
-                    <div>
-                        <p class="contactText">
-                            * Verplicht veld
-                        </p>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <div class="sendButton" id="sendMailBtn">
-                    <button class="btn-large btn-block btn-primary ng-binding" type="button" >Verzenden</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="promo/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-<script src="promo/js/vendor/bootstrap.js"></script>
-<script src="promo/js/vendor/scrollReveal.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
-<script type="text/javascript" src="promo/js/vendor/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="promo/js/vendor/locales/bootstrap-datetimepicker.nl.js" charset="UTF-8"></script>
-<script src="promo/js/plugins.js"></script>
-<script src="promo/js/main.js"></script>
 
 <!-- Google Analytics -->
 <script>
@@ -260,42 +186,5 @@
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-49063927-1');ga('send','pageview');
 </script>
-
-
-<!-- Google Code for Contactformulier Conversion Page -->
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 957938795;
-    var google_conversion_language = "en";
-    var google_conversion_format = "2";
-    var google_conversion_color = "ffffff";
-    var google_conversion_label = "N_58CKT55lkQ6_jjyAM";
-    var google_remarketing_only = false;
-    /* ]]> */
-</script>
-<div style="display: none;">
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
-</div>
-
-<noscript>
-    <img height="1" width="1" style="border-style:none; display: none;" alt="" src="//www.googleadservices.com/pagead/conversion/957938795/?label=N_58CKT55lkQ6_jjyAM&amp;guid=ON&amp;script=0"/>
-</noscript>
-
-
-<!-- Google-code voor remarketingtag -->
-<!--------------------------------------------------
-Remarketingtags mogen niet worden gekoppeld aan gegevens waarmee iemand persoonlijk kan worden geïdentificeerd of op pagina's worden geplaatst die binnen gevoelige categorieën vallen. Meer informatie en instructies voor het instellen van de tag zijn te vinden op: http://google.com/ads/remarketingsetup
---------------------------------------------------->
-<script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 957938795;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    /* ]]> */
-</script>
-<noscript>
-    <img height="1" width="1" style="border-style:none; display:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/957938795/?value=0&amp;guid=ON&amp;script=0"/>
-</noscript>
-
 </body>
 </html>
