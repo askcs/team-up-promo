@@ -2237,7 +2237,6 @@ tbody.collapse.in { display: table-row-group; }
     padding: 15px 20px;
     a {
       color: $white;
-      font-size: 25px;
       text-align: center;
     }
     #title-Vacatures {
@@ -2258,13 +2257,25 @@ tbody.collapse.in { display: table-row-group; }
       }
       align: center;
       padding: 15px 25px;
-      background: $orange;
       h2 {
         color: $white;
       }
       p {
         color: $brown;
       }
+    }
+    #header-box div {
+      background: $orange;
+      padding:5px;
+      margin:2px;
+    }
+    .jobdescription {
+      a {
+          color:$brown
+        }
+      a:hover {
+          color:$white;
+        }
     }
     #vacature-footer {
       position: relative;

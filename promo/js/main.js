@@ -16,17 +16,17 @@ jQuery(function() {
   //jQuery('#langPicker').translate();
 
     //Vacatures link
-  var jobclassName, vacatureItem,
+  var jobId, vacatureItem,
       clickCount = 0;
 
 
-  jQuery('.job1').click(function (event) {
+  jQuery('#job1 h2').click(function (event) {
 
-      jobclassName = jQuery(this).attr('class');
+      jobId = jQuery(this).attr('id');
       vacatureItem = '';
 
       if (clickCount == 0) {
-          if (jobclassName == 'job1' && vacatureItem == undefined || vacatureItem == '') {
+          if (jobId == 'job1' && vacatureItem == undefined || vacatureItem == '') {
 
               jQuery('#jobdescription1').show();
               jQuery('#jobdescription2').hide();
@@ -44,13 +44,13 @@ jQuery(function() {
 
 
 
-  jQuery('.job2').click(function () {
+  jQuery('#job2 h2').click(function () {
 
-      jobclassName = jQuery(this).attr('class');
+      jobId = jQuery(this).attr('id');
       vacatureItem = '';
       if (clickCount == 0) {
 
-      if (jobclassName == 'job2' && vacatureItem == undefined || vacatureItem == '') {
+      if (jobId == 'job2' && vacatureItem == undefined || vacatureItem == '') {
           jQuery('#jobdescription1').hide();
           jQuery('#jobdescription2').show();
           clickCount = clickCount + 1;
@@ -69,7 +69,7 @@ jQuery(function() {
 
     vacatureItem = jQuery(this).attr('class');
 
-    if (jobclassName == 'job2' || jobclassName == 'job1' && vacatureItem == 'vacatures-item') {
+    if (jobId == 'job2' || jobId == 'job1' && vacatureItem == 'vacatures-item') {
       jQuery('#jobdescription1').hide();
       jQuery('#jobdescription2').hide();
         clickCount = 0;
