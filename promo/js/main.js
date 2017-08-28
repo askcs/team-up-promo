@@ -17,49 +17,86 @@ jQuery(function() {
 
     //Vacatures link
   var jobId, vacatureItem,
-      clickCount = 0;
+      clickCountJobId1 = 0,
+      jobId1Check = 0,
+      jobId2Check = 0,
+      clickCountJobId2 = 0;
 
 
-  jQuery('#job1 h2').click(function (event) {
+  jQuery('#job1').click(function (event) {
 
       jobId = jQuery(this).attr('id');
       vacatureItem = '';
 
-      if (clickCount == 0) {
-          if (jobId == 'job1' && vacatureItem == undefined || vacatureItem == '') {
-
-              jQuery('#jobdescription1').show();
-              jQuery('#jobdescription2').hide();
-              clickCount = clickCount + 1;
-              return false;
-          }
+      if (clickCountJobId1 == 0 && jobId2Check == 0) {
+        if (jobId == 'job1' && vacatureItem == undefined || vacatureItem == '') {
+            jQuery('#jobdescription1').show();
+            jQuery('#jobdescription2').hide();
+            clickCountJobId1 = clickCountJobId1 + 1;
+            jobId1Check = 1;
+            return false;
+        }
       }
-      else {
-          clickCount = 0;
-          jQuery('#jobdescription1').hide();
-          return false;
+      else if (clickCountJobId1 == 1 && jobId2Check == 0) {
+            jQuery('#jobdescription1').hide();
+      }
+      else if (clickCountJobId1 == 1 && jobId2Check == 1) {
+         jobId2Check = 2;
+         jQuery('#jobdescription1').show();
+         jQuery('#jobdescription2').hide();
+         clickCountJobId1 = 0;
+         jobId1Check = 0;
+         return false;
+      }
+      else if (clickCountJobId1 == 0 && jobId2Check == 2) {
+        jQuery('#jobdescription1').hide();
+        jobId2Check = 0;
+        return false;
+      }
+      else if (clickCountJobId1 == 0 && jobId2Check == 1) {
+        jQuery('#jobdescription1').show();
+        jQuery('#jobdescription2').hide();
+        jobId2Check = 2;
+        jobId1Check = 1;
+        return false;
       }
   });
 
 
-
-
-  jQuery('#job2 h2').click(function () {
+  jQuery('#job2').click(function () {
 
       jobId = jQuery(this).attr('id');
       vacatureItem = '';
-      if (clickCount == 0) {
 
-      if (jobId == 'job2' && vacatureItem == undefined || vacatureItem == '') {
+      if (clickCountJobId2 == 0 && jobId1Check == 0) {
+        if (jobId == 'job2' && vacatureItem == undefined || vacatureItem == '') {
           jQuery('#jobdescription1').hide();
           jQuery('#jobdescription2').show();
-          clickCount = clickCount + 1;
+          clickCountJobId2 = clickCountJobId2 + 1;
+          jobId2Check = 1;
+          return false;
+        }
+      }
+      else if ((clickCountJobId2 == 1   ) && jobId1Check == 0) {
+          jQuery('#jobdescription2').hide();
+      }
+      else if (clickCountJobId2 == 1 && jobId1Check == 1) {
+          jobId1Check = 2;
+          jQuery('#jobdescription2').show();
+          jQuery('#jobdescription1').hide();
+          clickCountJobId2 = 0;
+          jobId2Check = 0;
           return false;
       }
-        }
-        else{
-          clickCount = 0;
+      else if (clickCountJobId2 == 0 && jobId1Check == 2) {
           jQuery('#jobdescription2').hide();
+          jobId1Check = 0;
+      }
+      else if (clickCountJobId2 == 0 && jobId1Check == 1) {
+          jQuery('#jobdescription2').show();
+          jQuery('#jobdescription1').hide();
+          jobId1Check = 2;
+          jobId2Check = 1;
           return false;
       }
   });
@@ -72,9 +109,12 @@ jQuery(function() {
     if (jobId == 'job2' || jobId == 'job1' && vacatureItem == 'vacatures-item') {
       jQuery('#jobdescription1').hide();
       jQuery('#jobdescription2').hide();
-        clickCount = 0;
+      clickCountJobId2 = 0;
+      clickCountJobId1 = 0;
+      jobId1Check = 0;
+      jobId2Check = 0;
     }
-   });
+  });
 
   // Datetimepicker
   jQuery(".form_datetime").datetimepicker(
