@@ -287,7 +287,6 @@ p.asteriks {
   .container-narrow {
     position: relative;
     margin-top: 50px;
-    //margin-top:60px;
     padding: 60px 20px;
     margin-bottom: 0;
     font-size: 18px;
@@ -299,6 +298,7 @@ p.asteriks {
       margin: 0 auto 40px;
     }
   }
+
 }
 
 
@@ -956,7 +956,7 @@ footer {
   text-align: center;
   width: 100%;
   padding-top: 100px;
-  z-index: 1;
+  //z-index: 1;
   img {
     margin: -610px 0 100px 0;
   }
@@ -2187,3 +2187,117 @@ tbody.collapse.in { display: table-row-group; }
   80% { transform: scale(1); }
   100% { transform: scale(1); }
 }
+
+.corner-ribbon{
+  width: 200px;
+  background: #e43;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+  /* Custom styles */
+
+  .corner-ribbon.sticky {
+    position: fixed;
+  }
+
+  .corner-ribbon.shadow {
+    box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+  }
+
+  .corner-ribbon.bottom-right {
+    top: auto;
+    right: -50px;
+    bottom: 25px;
+    left: auto;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    font-size: 17.5px;
+  }
+
+  .corner-ribbon.green {
+    background: #f5a962;
+    a {
+      color: #833c11;
+
+    }
+  }
+
+  .vacatures-item {
+    position: relative;
+    margin-top: 70px;
+
+    padding: 15px 20px;
+    a {
+      color: $white;
+      text-align: center;
+    }
+    #title-Vacatures {
+      color: #1dc8b6;
+      font-size: 30px;
+      text-align: center;
+    }
+    #header-box {
+      @include opacity(0.9);
+      margin-top: 40px;
+      @media screen and (min-width: 1300px) {
+        margin-left: 400px;
+        margin-right: 400px;
+      }
+      @media screen and (min-width: 1700px) {
+        margin-left: 500px;
+        margin-right: 500px;
+      }
+      align: center;
+      padding: 15px 25px;
+      h2 {
+        color: $white;
+      }
+      p {
+        color: $brown;
+      }
+    }
+    #header-box div {
+      background: $orange;
+      padding:5px;
+      margin:2px;
+    }
+    .jobdescription {
+      a {
+          color:$brown
+        }
+      a:hover {
+          color:$white;
+        }
+    }
+    #vacature-footer {
+      position: relative;
+      margin-top: 550px;
+      padding: 1px 20px;
+      margin-bottom: 0;
+      background-color: $turqDark !important;
+      a{
+        font-size: 16px;
+      }
+      p {
+        background-color: $turqDark !important;
+      }
+      .contactBtn {
+        text-align: center;
+        padding: 10px 0;
+        button {
+          display: block;
+          width: 200px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
