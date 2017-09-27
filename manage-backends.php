@@ -126,7 +126,8 @@ if (isset($_POST['submit']) && $_POST['submit'] === "Submit") {
 /**
  * Returns true when valid, otherwise a string with the failure reason.
  */
-function validateVersionNumberInput($input, $name) {
+function validateVersionNumberInput($input, $name)
+{
 
     if (is_numeric($input) === false) {
         oplog('warning', "Expecting version number for '$name' to be an int! It is now not even numberic.");
@@ -143,7 +144,8 @@ function validateVersionNumberInput($input, $name) {
     return true;
 }
 
-function output_oplog() {
+function output_oplog()
+{
 
     global $oplog;
 
@@ -153,14 +155,15 @@ function output_oplog() {
 
     $innerHtml = "";
 
-    foreach($oplog as $log) {
+    foreach ($oplog as $log) {
         $innerHtml .= '<tr><td class="table-' . $log->level . '">' . $log->message . '</td></tr>';
     }
 
     return '<table class="table"><tbody>' . $innerHtml . '</tbody></table>';
 }
 
-function oplog($level, $message) {
+function oplog($level, $message)
+{
 
     global $oplog;
 
@@ -179,18 +182,28 @@ function oplog($level, $message) {
 <html>
 <head>
     <title>Manage Backends</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <style>
-        body { padding: 2rem; }
+        body {
+            padding: 2rem;
+        }
+
         div.header {
             padding-bottom: 1rem;
             margin-bottom: 1rem;
             border-bottom: .05rem solid #e5e5e5;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -201,14 +214,17 @@ function oplog($level, $message) {
     </div>
 
     <div class="alert alert-warning" role="alert">
-        This form changes <a href="https://teamtelefoon.nl/backends.php">teamtelefoon.nl/backends.php</a>. Only change values if you know what you are doing! <strong>You will be fired otherwise.</strong>
+        This form changes <a href="https://teamtelefoon.nl/backends.php">teamtelefoon.nl/backends.php</a>. Only change
+        values if you know what you are doing! <strong>You will be fired otherwise.</strong>
     </div>
 
     <h2>Change version codes</h2>
 
     <p>Only enters version numbers that you want to change.</p>
 
-    <?php if (!empty($oplog)) { echo output_oplog(); } ?>
+    <?php if (!empty($oplog)) {
+        echo output_oplog();
+    } ?>
 
     <form method="POST" action="">
 
@@ -234,35 +250,35 @@ function oplog($level, $message) {
             <tbody>
             <tr>
                 <th>Android</th>
-                <td><?php echo $json->android->production;?></td>
+                <td><?php echo $json->android->production; ?></td>
                 <td><em>Change manually on server</em></td>
-                <td><?php echo $json->android->demo;?></td>
-                <td><input title="Android Demo" type="number" min="1" name="android_demo" value="" /></td>
-                <td><?php echo $json->android->test;?></td>
-                <td><input title="Android Test" type="number" name="android_test" value="" /></td>
+                <td><?php echo $json->android->demo; ?></td>
+                <td><input title="Android Demo" type="number" min="1" name="android_demo" value=""/></td>
+                <td><?php echo $json->android->test; ?></td>
+                <td><input title="Android Test" type="number" name="android_test" value=""/></td>
             </tr>
             <tr>
                 <th>iOS</th>
-                <td><?php echo $json->ios->production;?></td>
+                <td><?php echo $json->ios->production; ?></td>
                 <td><em>Change manually on server</em></td>
-                <td><?php echo $json->ios->demo;?></td>
-                <td><input title="iOS Demo" type="number" min="1" name="ios_demo" value="" /></td>
-                <td><?php echo $json->ios->test;?></td>
-                <td><input title="iOS Test" type="number" min="1" name="ios_test" value="" /></td>
+                <td><?php echo $json->ios->demo; ?></td>
+                <td><input title="iOS Demo" type="number" min="1" name="ios_demo" value=""/></td>
+                <td><?php echo $json->ios->test; ?></td>
+                <td><input title="iOS Test" type="number" min="1" name="ios_test" value=""/></td>
             </tr>
             <tr>
                 <th>Webapp</th>
-                <td><?php echo $json->webapp->production;?></td>
+                <td><?php echo $json->webapp->production; ?></td>
                 <td><em>Change manually on server</em></td>
-                <td><?php echo $json->webapp->demo;?></td>
-                <td><input title="Webapp Demo" type="number" min="1" name="webapp_demo" value="" /></td>
-                <td><?php echo $json->webapp->test;?></td>
-                <td><input title="Webapp Test" type="number" min="1" name="webapp_test" value="" /></td>
+                <td><?php echo $json->webapp->demo; ?></td>
+                <td><input title="Webapp Demo" type="number" min="1" name="webapp_demo" value=""/></td>
+                <td><?php echo $json->webapp->test; ?></td>
+                <td><input title="Webapp Test" type="number" min="1" name="webapp_test" value=""/></td>
             </tr>
             </tbody>
         </table>
 
-        <input type="submit" name="submit" value="Submit" />
+        <input type="submit" name="submit" value="Submit"/>
 
     </form>
 
