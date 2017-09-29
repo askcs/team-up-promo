@@ -102,6 +102,7 @@ jQuery(function() {
   });
 
 
+  /*
   jQuery('.vacatures-item').click(function () {
 
     vacatureItem = jQuery(this).attr('class');
@@ -115,6 +116,7 @@ jQuery(function() {
       jobId2Check = 0;
     }
   });
+  */
 
   // Datetimepicker
   jQuery(".form_datetime").datetimepicker(
