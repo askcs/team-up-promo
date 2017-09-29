@@ -23,9 +23,9 @@ jQuery(function() {
       clickCountJobId2 = 0;
 
 
-  jQuery('#job1').click(function (event) {
+  jQuery('#job1 h2').click(function (event) {
 
-      jobId = jQuery(this).attr('id');
+      jobId = jQuery(this).parent().parent().attr('id');
       vacatureItem = '';
 
       if (clickCountJobId1 == 0 && jobId2Check == 0) {
@@ -63,9 +63,9 @@ jQuery(function() {
   });
 
 
-  jQuery('#job2').click(function () {
+  jQuery('#job2 h2').click(function () {
 
-      jobId = jQuery(this).attr('id');
+      jobId = jQuery(this).parent().parent().attr('id');
       vacatureItem = '';
 
       if (clickCountJobId2 == 0 && jobId1Check == 0) {
