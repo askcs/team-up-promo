@@ -82,7 +82,7 @@ if ($buildnumber > $demoBn && $buildnumber <= $testBn) {
 }
 
 if ($buildnumber > $testBn) {
-	$backends = array_merge($backends, $json->stage->development); 
+	$backends = array_merge($backends, $json->stage->test); 
 }
 
 if (count($backends) != 0) {
