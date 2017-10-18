@@ -2222,6 +2222,16 @@ tbody.collapse.in { display: table-row-group; }
     font-size: 17.5px;
   }
 
+  .corner-ribbon.bottom-left {
+    top: auto;
+    left: -50px;
+    bottom: 25px;
+    right: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    font-size: 17.5px;
+  }
+
   .corner-ribbon.green {
     background: #f5a962;
     a {
