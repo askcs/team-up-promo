@@ -666,7 +666,7 @@ FileETag None
 <IfModule mod_auth_basic.c>
 	<Files "manage-backends.php">
 		AuthName "Username and password required for this file"
-		AuthUserFile /etc/apache2/sites-available/teamtelefoon.htpasswd
+		AuthUserFile /etc/apache2/htpasswd/manage-backends.htpasswd
 		Require valid-user
 		AuthType Basic
 	</Files>
