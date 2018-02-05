@@ -177,7 +177,7 @@ jQuery(function() {
   {
     var contactName = jQuery.trim(jQuery("#contactName").val());
     var contactEmail = jQuery.trim(jQuery("#contactEmail").val());
-    var contactCompagnyName = jQuery.trim(jQuery("#contactCompagnyName").val());
+    var contactCompanyName = jQuery.trim(jQuery("#contactCompanyName").val());
     var contactPhone = jQuery.trim(jQuery("#contactTelephone").val());
     var contactSubject = jQuery.trim(jQuery("#contactSubject").val());
     var contactDateTime = jQuery.trim(jQuery("#contactDateTime").val());
@@ -191,7 +191,7 @@ jQuery(function() {
     var sendMailURL = "https://teamtelefoon.nl/sendMail.php";
     sendMailURL += "?contactName="+contactName +
       "&contactEmail="+contactEmail+
-      "&contactCompagnyName="+contactCompagnyName;
+      "&contactCompanyName="+contactCompanyName;
 
     sendMailURL += (radioInfo) ? "&message=" + message : "&contactDateTime=" + contactDateTime;
 
@@ -207,21 +207,21 @@ jQuery(function() {
       jQuery("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
     }
 
-    if(contactCompagnyName == '' )
+    if(contactCompanyName == '' )
     {
       alert("Vul alstublieft uw bedrijfsnaam in.");
       console.log("Vul alstublieft uw bedrijfsnaam in.");
-      jQuery("#contactCompagnyName").css("background-color" ,errorColor).css("color" ,errorFontColor);
+      jQuery("#contactCompanyName").css("background-color" ,errorColor).css("color" ,errorFontColor);
       return ;
     }
     else
     {
-      jQuery("#contactCompagnyName").css("background-color" ,rightColor).css("color" ,rightFontColor);
+      jQuery("#contactCompanyName").css("background-color" ,rightColor).css("color" ,rightFontColor);
     }
 
     if(contactPhone)
     {
-      sendMailURL += "&contactCompagnyPhone="+contactPhone;
+      sendMailURL += "&contactCompanyPhone="+contactPhone;
     }
 
     if(contactEmail == '' ){
@@ -307,7 +307,7 @@ jQuery(function() {
   {
     jQuery("#contactName").val('');
     jQuery("#contactEmail").val('');
-    jQuery("#contactCompagnyName").val('');
+    jQuery("#contactCompanyName").val('');
     jQuery("#contactSubject").val('');
     jQuery("#contactDateTime").val('');
     jQuery("#contactTelephone").val('');
