@@ -279,7 +279,7 @@ jQuery(function() {
     jQuery.ajax({
       url: sendMailURL
     })
-      .done(function(data) {
+      .success(function(data) {
 
         emptyValues();
 
@@ -291,7 +291,7 @@ jQuery(function() {
         }, 6000);
 
       })
-      .fail(function(error) {
+      .error(function(error) {
 
         emptyValues();
 
