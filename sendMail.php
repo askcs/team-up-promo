@@ -51,6 +51,8 @@ function getFreshdeskConfig()
 {
     $decodedConfig = json_decode("contact-form-credentials.json");
 
+    if (DEBUG) print_r($decodedConfig);
+
     if (isset($decodedConfig->apiKey) && is_string($decodedConfig->apiKey)) {
         die("Missing configuration item 'apiKey' or is not a string.");
     }
