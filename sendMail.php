@@ -49,7 +49,7 @@ function collectFormInput()
 
 function getFreshdeskConfig()
 {
-    $decodedConfig = json_decode("contact-form-credentials.json");
+    $decodedConfig = json_decode(file_get_contents("contact-form-credentials.json"));
 
     if (DEBUG) print_r($decodedConfig);
 
