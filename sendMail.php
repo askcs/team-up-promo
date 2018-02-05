@@ -1,6 +1,6 @@
 <?php
 
-define('DEBUG', true);
+define('DEBUG', false);
 
 define('FD_TICKET_DEFAULT_STATUS', 2); // 2 = medium
 define('FD_TICKET_DEFAULT_SOURCE', 1); // 1 = email, see freshdesk api docs for other values
@@ -21,6 +21,12 @@ if (!empty($input->message)) {
 }
 
 $result = createFreshdeskTicket($config, $input->name, $input->company, $input->email, $input->phone, $subject, $message);
+
+if ($result === true) {
+    http_send_status(200);
+} else {
+    http_send_status(500);
+}
 
 echo $result;
 
@@ -123,6 +129,8 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
 
     $jsonBody = json_encode($body);
 
+    logToFile($jsonBody);
+
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $config->ticketApiUrl);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -156,55 +164,19 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
     return $result !== false && $httpStatusCode === 200;
 }
 
-// Previous implementation
-
-/*$toEmail = "contact@teamtelefoon.nl";
-
-function sendMail() {
-    global $toEmail;
-    $replyAddress = $_GET['contactEmail'];
-    $header =
-        'FROM: webform@teamtelefoon.nl'."\r\n".
-        'Reply-To: '.$replyAddress . "\r\n".
-        'Return-Path: '.$replyAddress . "\r\n";
-
-    //risky custom data
-    $query = explode('&', $_SERVER['QUERY_STRING'] );
-    $message = "";
-    foreach($query AS $q )
-    {
-        $kv = explode('=', $q );
-        $k = mysql_escape_string( $kv[0] );
-        $v = mysql_escape_string( urldecode($kv[1] ) ); // somewhere endlines get lost
-        $message .= $k.' = '.$v ."\n";
+// Log to file, in case freshdesk is down...
+function logToFile($body)
+{
+    try {
+        $handle = fopen('/tmp/mail.log', 'ab');
+        fwrite($handle, $body . "\n\n");
+        fclose($handle);
+    } catch (Exception $e) {
+        if (DEBUG) {
+            echo "Write to file failed!";
+            echo $e;
+        }
     }
-
-    if( $message == '' )return "FALSE";
-
-
-    if( isset($_GET['isDebug']) ) {
-        $ret = mail("stefan@teamtelefoon.nl",  'sendMail form', $message, $header);
-    }
-    else {
-        $ret = mail($toEmail, 'contact-formulier', $message, $header);
-    }
-
-
-    $handle = fopen( '/tmp/mail.log', 'ab');
-    fwrite( $handle, $message."\n".$header );
-    fwrite( $handle, "\n\n" );
-    fclose($handle);
-
-
-    if( $ret ){
-        return "TRUE";
-    }else{
-        return "FALSE";
-    }
-
-
 }
-
-echo sendMail();*/
 
 ?>
