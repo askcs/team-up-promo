@@ -443,6 +443,8 @@ function reset()
   jQuery("#nextVideoCoversationBtn").hide();
   jQuery('#nameUser').hide(800);
   jQuery('#teamPhoneNumber').show();
+  jQuery('#contactFormSuccess').hide()
+  jQuery('#contactFormError').hide()
 }
 
 /**
