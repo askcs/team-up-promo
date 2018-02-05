@@ -83,10 +83,10 @@ function getFreshdeskConfig()
         $config->source = FD_TICKET_DEFAULT_SOURCE;
     }
 
-    if (isset($decodedConfig->ticketGroupId) && is_string($decodedConfig->ticketGroupId)) {
+    if (isset($decodedConfig->ticketGroupId) && is_int($decodedConfig->ticketGroupId)) {
         $config->groupId = $decodedConfig->ticketGroupId;
     } else {
-        die("Missing configuration item 'ticketGroupId' or is not a string.");
+        die("Missing configuration item 'ticketGroupId' or is not an int.");
     }
 
     return $config;
