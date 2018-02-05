@@ -116,18 +116,20 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
     $body->priority = $config->priority; // 1 = low, 2 = medium, 3 = high, 4 = urgent
     $body->group_id = $config->groupId; // Product Management group id for TeamTelefoon
 
+    $jsonBody = json_encode($body);
+
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $config->ticketApiUrl);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
     curl_setopt($ch, CURLOPT_USERPWD, "$config->apiKey:X");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonBody);
 
     curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_HEADER, [
-        'Content-Type: application/json'
-    ]);
-
-    $jsonBody = json_encode($body);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($body))
+    );
 
     if (DEBUG) {
         echo "Request: \n";
@@ -135,7 +137,7 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
         echo "body = " . var_export($jsonBody, true) . "\n";
     }
 
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonBody);
+
 
     $result = curl_exec($ch);
 
