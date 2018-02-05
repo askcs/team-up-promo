@@ -128,7 +128,7 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
             'Content-Type: application/json',
-            'Content-Length: ' . strlen($body))
+            'Content-Length: ' . strlen($jsonBody))
     );
 
     if (DEBUG) {
@@ -136,8 +136,6 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
         echo "config = " . var_export($config, true) . "\n";
         echo "body = " . var_export($jsonBody, true) . "\n";
     }
-
-
 
     $result = curl_exec($ch);
 
