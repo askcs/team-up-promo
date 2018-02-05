@@ -299,8 +299,8 @@ jQuery(function() {
         contactFormConfirmation.hide()
 
         window.setTimeout(function() {
-          contactFormConfirmation.hide()
-        }, 6000);
+          contactFormError.hide()
+        }, 30000);
 
       });
   }
