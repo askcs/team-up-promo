@@ -111,6 +111,11 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
     $body->description = $message;
     $body->subject = $subject;
 
+    $body->custom_fields = array(
+        "uw_organisatie" => $company,
+        "telefoonnummer" => $phone
+    );
+
     $body->source = $config->source; // 1 = email, 2 = portal, 3 = phone, 7 = chat, 8 = mobihelp, 9 = feedback widget, 10 = outbound mail
     $body->status = $config->status; // 2 = open, 3 = pending, 4 = resolved, 5 = closed
     $body->priority = $config->priority; // 1 = low, 2 = medium, 3 = high, 4 = urgent
