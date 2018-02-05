@@ -109,10 +109,10 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
     $body->description = $message;
     $body->subject = $subject;
 
-    $body->source = $config->ticketSource; // 1 = email, 2 = portal, 3 = phone, 7 = chat, 8 = mobihelp, 9 = feedback widget, 10 = outbound mail
-    $body->status = $config->ticketStatus; // 2 = open, 3 = pending, 4 = resolved, 5 = closed
-    $body->priority = $config->ticketPriority; // 1 = low, 2 = medium, 3 = high, 4 = urgent
-    $body->group_id = $config->ticketGroupId; // Product Management group id for TeamTelefoon
+    $body->source = $config->source; // 1 = email, 2 = portal, 3 = phone, 7 = chat, 8 = mobihelp, 9 = feedback widget, 10 = outbound mail
+    $body->status = $config->status; // 2 = open, 3 = pending, 4 = resolved, 5 = closed
+    $body->priority = $config->priority; // 1 = low, 2 = medium, 3 = high, 4 = urgent
+    $body->group_id = $config->groupId; // Product Management group id for TeamTelefoon
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $config->ticketApiUrl);
@@ -142,6 +142,7 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
 
     if (DEBUG) {
         echo "cURL result: http status code = $httpStatusCode, body result = $result";
+        echo "cURL getinfo(): " . print_r(curl_getinfo($ch));
     }
 
     return $result !== false && $httpStatusCode === 200;
