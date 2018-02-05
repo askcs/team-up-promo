@@ -273,24 +273,36 @@ jQuery(function() {
     //  jQuery("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
     //}
 
-    var alertText = jQuery('.alertContact');
+    var contactFormConfirmation = jQuery('#contactFormSuccess');
+    var contactFormError = jQuery('#contactFormError');
 
     jQuery.ajax({
       url: sendMailURL
-    }).done(function( data ) {
-      console.log(data);
-      emptyValues();
+    })
+      .done(function(data) {
 
-      alertText.show();
-      window.setTimeout(function() { alertText.hide() }, 6000);
+        emptyValues();
 
-    }).fail(function( error){
-      console.log(error);
-      emptyValues();
+        contactFormError.hide()
+        contactFormConfirmation.show()
 
-      alertText.show();
-      window.setTimeout(function() { alertText.hide() }, 6000);
-    });
+        window.setTimeout(function() {
+          contactFormConfirmation.hide()
+        }, 6000);
+
+      })
+      .fail(function(error) {
+
+        emptyValues();
+
+        contactFormError.show()
+        contactFormConfirmation.hide()
+
+        window.setTimeout(function() {
+          contactFormConfirmation.hide()
+        }, 6000);
+
+      });
   }
 
   function IsEmail(email) {
