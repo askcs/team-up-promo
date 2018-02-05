@@ -2,7 +2,7 @@
 
 define('DEBUG', true);
 
-define('FD_TICKET_DEFAULT_STATUS', "2");
+define('FD_TICKET_DEFAULT_STATUS', 2); // 2 = medium
 define('FD_TICKET_DEFAULT_SOURCE', 1); // 1 = email, see freshdesk api docs for other values
 define('FD_TICKET_DEFAULT_PRIORITY', 1); // 1 = low, see freshdesk api docs for other values
 
@@ -65,7 +65,7 @@ function getFreshdeskConfig()
     $config->ticketApiUrl = $decodedConfig->ticketApiUrl;
     $config->apiKey = $decodedConfig->apiKey;
 
-    if (isset($decodedConfig->ticketStatus) && is_string($decodedConfig->ticketStatus)) {
+    if (isset($decodedConfig->ticketStatus) && is_int($decodedConfig->ticketStatus)) {
         $config->status = $decodedConfig->ticketStatus;
     } else {
         $config->status = FD_TICKET_DEFAULT_STATUS;
