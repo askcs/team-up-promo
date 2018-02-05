@@ -62,6 +62,8 @@ function getFreshdeskConfig()
     }
 
     $config = new StdClass();
+    $config->ticketApiUrl = $decodedConfig->ticketApiUrl;
+    $config->apiKey = $decodedConfig->apiKey;
 
     if (isset($decodedConfig->ticketStatus) && is_string($decodedConfig->ticketStatus)) {
         $config->status = $decodedConfig->ticketStatus;
