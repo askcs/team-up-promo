@@ -53,11 +53,11 @@ function getFreshdeskConfig()
 
     if (DEBUG) print_r($decodedConfig);
 
-    if (isset($decodedConfig->apiKey) && is_string($decodedConfig->apiKey)) {
+    if (!isset($decodedConfig->apiKey) || !is_string($decodedConfig->apiKey)) {
         die("Missing configuration item 'apiKey' or is not a string.");
     }
 
-    if (isset($decodedConfig->ticketApiUrl) && is_string($decodedConfig->ticketApiUrl)) {
+    if (!isset($decodedConfig->ticketApiUrl) || !is_string($decodedConfig->ticketApiUrl)) {
         die("Missing configuration item 'ticketApiUrl' or is not a string.");
     }
 
