@@ -101,7 +101,7 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
     $body->name = $name;
 
     if (!empty($company)) {
-        $body->name .= "(" . $company . ")";
+        $body->name .= " (" . $company . ")";
     }
 
     $body->email = $email;
@@ -136,7 +136,6 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
     curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonBody);
 
     $result = curl_exec($ch);
-    curl_close($ch);
 
     $httpStatusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
@@ -144,6 +143,8 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
         echo "cURL result: http status code = $httpStatusCode, body result = $result";
         echo "cURL getinfo(): " . print_r(curl_getinfo($ch));
     }
+
+    curl_close($ch);
 
     return $result !== false && $httpStatusCode === 200;
 }
