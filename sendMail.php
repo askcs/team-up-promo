@@ -15,8 +15,8 @@ $message = "";
 if (!empty($input->message)) {
     $message = $input->message;
     $subject .= "Contactformulier teamtelefoon.nl. Informatieverzoek van " . $input->name;
-} else if (!empty($input->dateTime)) {
-    $message = "Voorgestelde datum: " . $input->dateTime;
+} else {
+    $message = "Voorgestelde datum: " . (isset($input->dateTime) ? $input->dateTime : "(niets ingevoerd)");
     $subject .= "Contactformulier teamtelefoon.nl. Demonstratie aangevraagd door " . $input->name;
 }
 
