@@ -161,7 +161,7 @@ function createFreshdeskTicket($config, $name, $company, $email, $phone, $subjec
 
     curl_close($ch);
 
-    return $result !== false && $httpStatusCode === 200;
+    return $result !== false && $httpStatusCode === 201;
 }
 
 // Log to file, in case freshdesk is down...
