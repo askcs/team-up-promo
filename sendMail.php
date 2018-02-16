@@ -23,9 +23,9 @@ if (!empty($input->message)) {
 $result = createFreshdeskTicket($config, $input->name, $input->company, $input->email, $input->phone, $subject, $message);
 
 if ($result === true) {
-    http_send_status(200);
+    http_response_code(200);
 } else {
-    http_send_status(500);
+    http_response_code (500);
 }
 
 echo $result;
