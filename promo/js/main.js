@@ -187,6 +187,7 @@ jQuery(function() {
     var errorColor = "#c85a3c";
     var rightColor = "white";
     var rightFontColor = "#833C11";
+    var errorFontColor = "white";
     //"https://standby.ask-cs.nl/tymon/sendMail.php"
     var sendMailURL = "sendMail.php";
     sendMailURL += "?contactName="+contactName +
