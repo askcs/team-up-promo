@@ -402,7 +402,7 @@
                         <div id="nameUser" class="form-group has-feedback">
                             <label for="name">Voer uw naam in: </label>
                             <div class="col-xs-5">
-                                <input id="nameInput" name="name" class="contactInput" type="text" placeholder="Naam *" id="contactCompagnyName" >
+                                <input id="nameInput" name="name" class="contactInput" type="text" placeholder="Naam *" id="contactCompanyName" >
                                 <i class="form-control-feedback fa fa-asterisk">Geen naam ingevuld.</i>
                             </div>
                         </div>
@@ -428,9 +428,13 @@
                 <h4 class="modal-title" id="myModalLabel">NEEM CONTACT OP</h4>
             </div>
             <div class="modal-body">
-                <div class="alert alert-success alertContact" role="alert">
+                <div id="contactFormSuccess" class="alert alert-success alertContact" role="alert">
                     <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
                     Bedankt voor uw interesse in TeamTelefoon. Uw aanvraag is verstuurd en er wordt z.s.m contact met u opgenomen!
+                </div>
+                <div id="contactFormError" class="alert alert-danger alertContact" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    Er is iets misgegaan met het contactformulier. Bel ons alstublieft op 085-8884445 of e-mail naar contact@teamtelefoon.nl.
                 </div>
                 <form>
                     <div>
@@ -455,7 +459,7 @@
                                 <i class="form-control-feedback fa fa-asterisk"></i>
                             </div>
                         </div>
-                        <input class="contactInput" type="text" placeholder="Bedrijfsnaam *" id="contactCompagnyName">
+                        <input class="contactInput" type="text" placeholder="Bedrijfsnaam *" id="contactCompanyName">
                         <input class="contactInput" type="text" placeholder="E-mail *" id="contactEmail">
                         <input class="contactInput" type="text" placeholder="Telefoonnummer" id="contactTelephone">
                         <input class="contactInput form_datetime" type="text" id="contactDateTime" readonly placeholder="Voorstel Datum en Tijd">
