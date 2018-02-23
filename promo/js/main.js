@@ -177,7 +177,7 @@ jQuery(function() {
   {
     var contactName = jQuery.trim(jQuery("#contactName").val());
     var contactEmail = jQuery.trim(jQuery("#contactEmail").val());
-    var contactCompagnyName = jQuery.trim(jQuery("#contactCompagnyName").val());
+    var contactCompanyName = jQuery.trim(jQuery("#contactCompanyName").val());
     var contactPhone = jQuery.trim(jQuery("#contactTelephone").val());
     var contactSubject = jQuery.trim(jQuery("#contactSubject").val());
     var contactDateTime = jQuery.trim(jQuery("#contactDateTime").val());
@@ -187,11 +187,12 @@ jQuery(function() {
     var errorColor = "#c85a3c";
     var rightColor = "white";
     var rightFontColor = "#833C11";
+    var errorFontColor = "white";
     //"https://standby.ask-cs.nl/tymon/sendMail.php"
-    var sendMailURL = "https://teamtelefoon.nl/sendMail.php";
+    var sendMailURL = "sendMail.php";
     sendMailURL += "?contactName="+contactName +
       "&contactEmail="+contactEmail+
-      "&contactCompagnyName="+contactCompagnyName;
+      "&contactCompanyName="+contactCompanyName;
 
     sendMailURL += (radioInfo) ? "&message=" + message : "&contactDateTime=" + contactDateTime;
 
@@ -207,21 +208,21 @@ jQuery(function() {
       jQuery("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
     }
 
-    if(contactCompagnyName == '' )
+    if(contactCompanyName == '' )
     {
       alert("Vul alstublieft uw bedrijfsnaam in.");
       console.log("Vul alstublieft uw bedrijfsnaam in.");
-      jQuery("#contactCompagnyName").css("background-color" ,errorColor).css("color" ,errorFontColor);
+      jQuery("#contactCompanyName").css("background-color" ,errorColor).css("color" ,errorFontColor);
       return ;
     }
     else
     {
-      jQuery("#contactCompagnyName").css("background-color" ,rightColor).css("color" ,rightFontColor);
+      jQuery("#contactCompanyName").css("background-color" ,rightColor).css("color" ,rightFontColor);
     }
 
     if(contactPhone)
     {
-      sendMailURL += "&contactCompagnyPhone="+contactPhone;
+      sendMailURL += "&contactCompanyPhone="+contactPhone;
     }
 
     if(contactEmail == '' ){
@@ -273,24 +274,36 @@ jQuery(function() {
     //  jQuery("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
     //}
 
-    var alertText = jQuery('.alertContact');
+    var contactFormConfirmation = jQuery('#contactFormSuccess');
+    var contactFormError = jQuery('#contactFormError');
 
     jQuery.ajax({
       url: sendMailURL
-    }).done(function( data ) {
-      console.log(data);
-      emptyValues();
+    })
+      .success(function(data) {
 
-      alertText.show();
-      window.setTimeout(function() { alertText.hide() }, 6000);
+        emptyValues();
 
-    }).fail(function( error){
-      console.log(error);
-      emptyValues();
+        contactFormError.hide()
+        contactFormConfirmation.show()
 
-      alertText.show();
-      window.setTimeout(function() { alertText.hide() }, 6000);
-    });
+        window.setTimeout(function() {
+          contactFormConfirmation.hide()
+        }, 6000);
+
+      })
+      .error(function(error) {
+
+        emptyValues();
+
+        contactFormError.show()
+        contactFormConfirmation.hide()
+
+        window.setTimeout(function() {
+          contactFormError.hide()
+        }, 30000);
+
+      });
   }
 
   function IsEmail(email) {
@@ -307,7 +320,7 @@ jQuery(function() {
   {
     jQuery("#contactName").val('');
     jQuery("#contactEmail").val('');
-    jQuery("#contactCompagnyName").val('');
+    jQuery("#contactCompanyName").val('');
     jQuery("#contactSubject").val('');
     jQuery("#contactDateTime").val('');
     jQuery("#contactTelephone").val('');
@@ -431,6 +444,8 @@ function reset()
   jQuery("#nextVideoCoversationBtn").hide();
   jQuery('#nameUser').hide(800);
   jQuery('#teamPhoneNumber').show();
+  jQuery('#contactFormSuccess').hide()
+  jQuery('#contactFormError').hide()
 }
 
 /**
