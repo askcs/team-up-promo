@@ -18,8 +18,11 @@ if ($file == null || empty($file)) {
 
 $json = json_decode($file);
 
-if($file !== null){
+if($json !== null){
         echo json_encode($json);
+}
+else{
+        echo "[]";
 }
 ?>
 
