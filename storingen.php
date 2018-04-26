@@ -11,13 +11,17 @@ header("Content-Type: application/json");
 $file = file_get_contents('storingen.json');
 
 if ($file == null || empty($file)) {
-    header($_SERVER["SERVER_PROTOCOL"]." 400 Bad Request");
-    exit('{"error":"No source available. Contact system admin to fix it."}');
+        header($_SERVER["SERVER_PROTOCOL"]." 400 Bad Request");
+        exit('{"error":"No source available. Contact system admin to fix it."}');
 }
 
 $json = json_decode($file);
 
-if ($file !== null){
-    echo json_encode($json);
+$storingenInfo = array();
+
+if($file !== null){
+        echo json_encode($json);
 }
+
 ?>
+
