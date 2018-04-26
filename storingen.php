@@ -12,8 +12,8 @@ header("Content-Type: application/json");
 $file = file_get_contents('storingen.json');
 
 if ($file == null || empty($file)) {
-        header($_SERVER["SERVER_PROTOCOL"]." 400 Bad Request");
-        exit('{"error":"No source available. Contact system admin to fix it."}');
+        header($_SERVER["SERVER_PROTOCOL"]." 500 Internal Server Error");
+        exit('{"error":"Internal Server Error"}');
 }
 
 $json = json_decode($file);
