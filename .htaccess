@@ -664,10 +664,10 @@ FileETag None
 
 
 <IfModule mod_auth_basic.c>
-	<Files "(manage-backends.php|backends.json|contact-form-credentials.json)">
+	<FilesMatch "(manage-backends.php|backends.json|contact-form-credentials.json)">
 		AuthName "Username and password required for this file"
 		AuthUserFile /etc/apache2/htpasswd/manage-backends.htpasswd
 		Require valid-user
 		AuthType Basic
-	</Files>
+	</FilesMatch>
 </IfModule>
