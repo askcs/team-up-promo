@@ -11,8 +11,8 @@ header("Content-Type: application/json");
 $file = file_get_contents('marketing.json');
 
 if ($file == null || empty($file)) {
-    header($_SERVER["SERVER_PROTOCOL"]." 500 Internal Server Error");
-    exit('{"error":"Internal Server Error"}');
+    header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
+    exit('{"error":"Not found"}');
 }
 
 $json = json_decode($file);
