@@ -63,6 +63,7 @@ if ($file == null || empty($file)) {
 $json = json_decode($file);
 
 $knownBuildnumbers = $json->$frontend;
+$localhostBn = $knownBuildnumbers->localhost;
 $testBn = $knownBuildnumbers->test;
 $demoBn = $knownBuildnumbers->demo;
 $prodBn = $knownBuildnumbers->production;
@@ -81,8 +82,12 @@ if ($buildnumber > $demoBn && $buildnumber <= $testBn) {
 	$backends = array_merge($backends, $json->stage->test);
 }
 
-if ($buildnumber > $testBn) {
+if ($buildnumber > $testBn && $buildnumber <= $localhostBn) {
 	$backends = array_merge($backends, $json->stage->test); 
+}
+
+if ($buildnumber > $localhostBn) {
+	$backends = array_merge($backends, $json->stage->localhost); 
 }
 
 if (count($backends) != 0) {
